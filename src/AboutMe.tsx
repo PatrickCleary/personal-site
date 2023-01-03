@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useContext } from "react";
 import Headshot from "./Images/IMG_3836.jpg";
 import "./AboutMe.css";
 import { WindowContext } from "./WindowContext";
+import { AboutMenu } from "./Components/AboutMenu";
 
 const AboutMe = () => {
   const { clientHeight, clientWidth, mobile } = useContext(WindowContext);
@@ -65,8 +66,6 @@ const AboutMe = () => {
       }}
     >
       <div
-        className="No-Show"
-        ref={topRowRef}
         style={{
           overflow: "hidden",
           display: "flex",
@@ -77,8 +76,8 @@ const AboutMe = () => {
         }}
       >
         <img
-          height={`${mobile ? clientWidth * 0.75 : clientWidth * 0.25}px`}
-          width={`${mobile ? clientWidth * 0.75 : clientWidth * 0.25}px`}
+          height={`${mobile ? clientWidth * 0.65 : clientWidth * 0.25}px`}
+          width={`${mobile ? clientWidth * 0.65 : clientWidth * 0.25}px`}
           style={{
             borderRadius: 12,
             alignItems: mobile ? "center" : "flex-start",
@@ -87,47 +86,48 @@ const AboutMe = () => {
           src={Headshot}
           alt="CarGoLogo"
         />
-        <p>
-          I have experience as
-          <br />
-          a full-stack software <br />
-          <b
-            className="No-Show"
-            ref={wordOneRef}
-            style={{ fontFamily: "ChillaxBold", position: "relative" }}
-          >
-            engineer
-          </b>
-          {mobile ? <br /> : null}
-          <br />a business <br />
-          <b
-            className="No-Show"
-            ref={wordTwoRef}
-            style={{ fontFamily: "ChillaxBold", position: "relative" }}
-          >
-            owner
-          </b>
-          {mobile ? <br /> : null}
-          <br />
-          and now a <br />
-          <b
-            className="No-Show"
-            ref={wordThreeRef}
-            style={{ fontFamily: "ChillaxBold", position: "relative" }}
-          >
-            designer
-          </b>
-          {mobile ? <br /> : null}
-          <br />
-          <br /> This multidisciplinary experience helps me understand the needs
-          of the users in a unique way, and deliver on all aspects of a project.
-          <br />
-          <span style={{ marginTop: "1em" }}>
-            I'm not afraid of the unknown, and a new challenge always excites
-            me.
-          </span>
-        </p>
+        <div ref={topRowRef} className="No-Show">
+          <p>
+            I have experience as
+            <br />
+            a full-stack software <br />
+            <b
+              className="No-Show"
+              ref={wordOneRef}
+              style={{ fontFamily: "ChillaxBold", position: "relative" }}
+            >
+              engineer
+            </b>
+            {mobile ? <br /> : null}
+            <br />a (failed) startup <br />
+            <b
+              className="No-Show"
+              ref={wordTwoRef}
+              style={{ fontFamily: "ChillaxBold", position: "relative" }}
+            >
+              founder
+            </b>
+            {mobile ? <br /> : null}
+            <br />
+            and now a UX/UI
+            <br />
+            <b
+              className="No-Show"
+              ref={wordThreeRef}
+              style={{ fontFamily: "ChillaxBold", position: "relative" }}
+            >
+              designer
+            </b>
+            {mobile ? <br /> : null}
+            <br />
+            <br /> This multidisciplinary experience helps me understand the
+            needs of the users in a unique way, and deliver on all aspects of a
+            project.
+          </p>
+        </div>
+        <div className="More-Menu"></div>
       </div>
+      <AboutMenu />
       <div></div>
     </div>
   );

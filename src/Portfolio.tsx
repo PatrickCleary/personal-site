@@ -22,9 +22,7 @@ export const Portfolio = () => {
     <div className="Portfolio">
       <div className="Header" style={{ width: mobile ? "95%" : "40%", alignSelf:'center' }}>
         <h1 className="Title" style={{ fontSize: mobile ? "2em" : "4em" }}>
-          Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-          Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
-          Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio
+          Portfolio
         </h1>
       </div>
       <div className="Portfolio-Box-Container">

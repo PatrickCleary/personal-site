@@ -22,7 +22,6 @@ function App() {
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
-
           if (entry.isIntersecting) {
             entry.target.classList.add("Grow-Slide");
           }
@@ -54,7 +53,7 @@ function App() {
       },
       {
         root: null,
-        rootMargin: '-25%',
+        rootMargin: "-25%",
         threshold: 0,
       }
     );

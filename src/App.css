@@ -95,7 +95,6 @@ body {
   }
 }
 
-
 .No-Show {
   visibility: hidden;
 }
@@ -104,17 +103,14 @@ body {
   animation: textGrow 1s ease-in-out forwards;
 }
 
-
 @keyframes textGrow {
   from {
     font-size: 1.2em;
     transform: translateY(0px);
-
   }
   to {
     font-size: 4em;
-    transform:translateY(1.4em);
-
+    transform: translateY(1.4em);
   }
 }
 
@@ -123,7 +119,7 @@ body {
     transform: translateY(0px);
   }
   to {
-    transform:translateY(1em);
+    transform: translateY(1em);
   }
 }
 
@@ -146,9 +142,9 @@ body {
 }
 
 p {
-  user-select:none;
+  user-select: none;
   color: #fff;
-  font-size: 6em;
+  font-size: 2em;
   font-family: "Chillax";
   margin: 0px;
 }
