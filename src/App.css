@@ -1,21 +1,12 @@
-.App {
-  text-align: center;
+body {
+  background-color: #0a0d11;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.CarGo {
+  background-color: #fdc500;
+  /* min-height: 100vh; */
+  border-top-right-radius: 35%;
+  border-top-left-radius: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,9 +14,76 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+@property --p {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #ffffffff;
+}
+
+@keyframes backgroundPulse {
+  from {
+    --p: #ffffff00;
+  }
+  to {
+    --p: #ffffff10;
+  }
+}
+.NamePlateBackground {
+  /* animation: backgroundPulse 2s linear infinite alternate; */
+  /* Is the below needed? */
+  animation: backgroundPulse 1.5s ease-in-out infinite alternate;
+  background: radial-gradient(var(--p) 0%, #0a0d11 50%);
+}
+
+.NamePlate {
+  animation: fillNamePlate 1.5s ease-in-out infinite alternate,
+    pulsingLight 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes fillNamePlate {
+  from {
+    fill: #ffffff00;
+  }
+  to {
+    box-shadow: 0px 0px 0px #ffffff;
+    fill: #ffffff80;
+  }
+}
+
+@keyframes pulsingLight {
+  from {
+    filter: drop-shadow(0px 0px 0px #fff);
+  }
+
+  to {
+    filter: drop-shadow(0px 0px 8px #fff);
+  }
+}
 
 .App-link {
   color: #61dafb;
+}
+
+@keyframes CarGo-Slide-In-Mobile {
+  from {
+    transform: rotate(-360deg);
+    right: min(62.5vw);
+  }
+  to {
+    transform: rotate(0);
+    right: 0px;
+  }
+}
+
+@keyframes CarGo-Slide-In-Desktop {
+  from {
+    transform: rotate(-660deg);
+    right: min(62.5vw);
+  }
+  to {
+    transform: rotate(0);
+    right: 0px;
+  }
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +93,73 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.No-Show {
+  visibility: hidden;
+}
+
+.Grow-Slide {
+  animation: textGrow 1s ease-in-out forwards;
+}
+
+
+@keyframes textGrow {
+  from {
+    font-size: 1.2em;
+    transform: translateY(0px);
+
+  }
+  to {
+    font-size: 4em;
+    transform:translateY(1.4em);
+
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform:translateY(1em);
+  }
+}
+
+@keyframes bob {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .CarGo-Slide-In-Mobile {
+    animation: CarGo-Slide-In-Mobile 2.5s ease-out;
+  }
+  .CarGo-Slide-In-Desktop {
+    animation: CarGo-Slide-In-Desktop 2.5s ease-out;
+  }
+}
+
+p {
+  user-select:none;
+  color: #fff;
+  font-size: 6em;
+  font-family: "Chillax";
+  margin: 0px;
+}
+
+@font-face {
+  font-family: "ChillaxBold";
+  src: url(./Fonts/Chillax-Bold.ttf) format("truetype"),
+    url(./Fonts/Chillax-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Chillax";
+  src: url(./Fonts/Chillax-Regular.ttf) format("truetype"),
+    url(./Fonts/Chillax-Regular.otf) format("opentype");
 }

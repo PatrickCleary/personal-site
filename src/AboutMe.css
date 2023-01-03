@@ -1,0 +1,33 @@
+.No-Show {
+  visibility: hidden;
+}
+
+.Words-Slide-In {
+  animation: slideIn 1.5s ease-in forwards;
+}
+
+.Words-Slide-In-Mobile {
+    animation: slideIn 0.5s ease-in forwards;
+  }
+
+@keyframes slideIn {
+  from {
+    left: 80vw;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.AboutMe-Top-Row-Fade-In {
+  animation: fadeIn 2s ease-in forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

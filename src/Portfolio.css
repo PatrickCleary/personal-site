@@ -1,0 +1,131 @@
+.Portfolio {
+  background: linear-gradient(#0a0d11, #32373e 6em);
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.Header {
+  border-radius: 100px;
+  margin-right: 1em;
+  margin-left: 1em;
+  background-color: #32373e;
+  box-shadow: 0px 0px 10px #000;
+  overflow: hidden;
+  isolation: isolate;
+  height: 10em;
+}
+
+h2 {
+  margin: 0px;
+  font-family: "Chillax";
+  font-size: 3vw;
+  color: #ffffff;
+  user-select: none;
+}
+p {
+  font-size: 1.4vw;
+}
+
+.Title {
+    text-align: center;
+  user-select: none;
+  font-family: "Chillax";
+  color: white;
+  margin: 0;
+  animation: scroll 1s linear forwards infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+@keyframes opaque {
+    from {
+        opacity: 1;
+    } to {
+        opacity: .25;
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateY(0);
+    }
+  to {
+    transform: translateY(-5em);
+  }
+}
+
+.Portfolio-Box-Container {
+  overflow: auto;
+  height:100%;
+  white-space: nowrap;
+  padding-top: 6em;
+  padding-bottom:6em;   
+}
+
+.Portfolio-Box-Inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Portfolio-Box:hover {
+  animation: pulsing 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulsing {
+    from {
+        box-shadow: 0px 0px 6px #ffffff00;
+      }
+  to {
+    box-shadow: 0px 0px 6px #fff;
+  }
+ 
+}
+
+.Portfolio-Box {
+  width: 80vw;
+  height: 24vw;
+  margin-right: 3em;
+  margin-left: 6em;
+  border-radius: 2%;
+  display: inline-block;
+  background-color: white;
+  cursor: pointer;
+}
+
+.Portfolio-Item-Description-Div {
+  display: flex;
+  flex-direction: column;
+  top: 1em;
+  align-items: center;
+}
+.Portfolio-Item-Text {
+  width: 90%;
+  word-break: normal;
+  white-space: normal;
+}
+.Right {
+    right:0px;
+    background: linear-gradient(to left, #32373e 40%, #32373e00);
+
+}
+.Left {
+    left:0px;
+    background: linear-gradient(to right, #32373eff 40%, #32373e00);
+}
+
+.Fade-Out-Box {
+    position:absolute;
+    height:24vw;
+    width:6em;
+    z-index: 1;
+}
+
+.Icon {
+  position: absolute;
+}
