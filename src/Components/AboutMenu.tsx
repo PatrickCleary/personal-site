@@ -24,7 +24,7 @@ export const AboutMenu = () => {
         elements[index].current?.classList.add("Flow-In");
         staggerEffects(elements, index + 1);
       },
-      mobile ? 250 : 250
+      250
     );
   };
 
@@ -42,7 +42,7 @@ export const AboutMenu = () => {
       {
         root: null,
         rootMargin: mobile ? "-10px" : "-15%",
-        threshold: 0.9,
+        threshold: 0.5,
       }
     );
 
@@ -57,7 +57,7 @@ export const AboutMenu = () => {
         padding: mobile ? "1rem" : "0px",
         display: "flex",
         flexDirection: mobile ? "column" : "row",
-        paddingTop: "4em",
+        paddingTop: "2em",
         alignSelf: "center",
       }}
     >
@@ -67,17 +67,17 @@ export const AboutMenu = () => {
         style={{
           display: "flex",
           flexDirection: mobile ? "column" : "row",
-          padding: "0.5em",
-          borderRadius: "1em",
+          padding: "0.25em",
+          borderRadius: ".75em",
           backgroundColor: "#ffffff30",
-          columnGap: "0.5rem",
-          rowGap: "0.5rem",
+          columnGap: "0.25rem",
+          rowGap: "0.25rem",
         }}
       >
         <AboutMenuItems
           index={0}
           ref={menuItemOne}
-          name="Why UX design?"
+          name="Why UX Design?"
           selected={selected}
           setSelected={setSelected}
         />

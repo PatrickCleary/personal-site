@@ -59,6 +59,8 @@ h3 {
 
 .About-Menu-Item {
   padding:1rem;
+  padding-left:2rem;
+  padding-right:2rem;
   border-radius: 0.5rem;
   border-color: #ffffff30;
   background-color: #0b0e11;
@@ -67,4 +69,14 @@ h3 {
   background-color: #ffffff30;
   cursor:pointer;
   
+}
+
+.About-Me-Text {
+  border-style: solid;
+  border-width: .2rem;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  border-color: #ffffff30;
 }

@@ -1,5 +1,6 @@
 .Header {
   border-radius: 4rem;
+  margin-bottom: 6rem;
   overflow: hidden;
   isolation: isolate;
   background: linear-gradient(to top, #c7c7c7 10%, #fff 35%, #fff 65%, #c7c7c7 90% );

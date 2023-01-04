@@ -32,38 +32,47 @@ const PortfolioSlider = () => {
   }, [portfolioRef, mobile]);
 
   return (
-    <div className="Portfolio-Container Invisible" ref={portfolioRef}>
-      <div
-        className="Arrows Left-Arrow"
-        onClick={() => {
-          selected.current > 0 &&
-            setSelected({
-              current: selected.current - 1,
-              previous: selected.current,
-            });
-        }}
-      >
-        <Arrow width={"50%"} style={{ transform: "rotateY(180deg)" }} />
+    <div>
+      <div className="Portfolio-Container Invisible" ref={portfolioRef}>
+        <div
+          className="Arrows Left-Arrow"
+          onClick={() => {
+            selected.current > 0 &&
+              setSelected({
+                current: selected.current - 1,
+                previous: selected.current,
+              });
+          }}
+        >
+          {selected.current > 0 && (
+            <Arrow width={"50%"} style={{ transform: "rotateY(180deg)" }} />
+          )}
+        </div>
+        <div className="Current-Portfolio-Item">
+          {portfolioItems.map((name, index) => {
+            return (
+              <PortfolioItem selected={selected} index={index} name={name} />
+            );
+          })}
+        </div>
+        <div
+          className="Arrows Right-Arrow"
+          onClick={() => {
+            selected.current < portfolioItems.length - 1 &&
+              setSelected({
+                current: selected.current + 1,
+                previous: selected.current,
+              });
+          }}
+        >
+          {selected.current + 1 < portfolioItems.length && (
+            <Arrow width={"50%"} />
+          )}
+        </div>
       </div>
-      <div className="Current-Portfolio-Item">
-        {portfolioItems.map((name, index) => {
-          return (
-            <PortfolioItem selected={selected} index={index} name={name}/>
-          );
-        })}
-      </div>
-      <div
-        className="Arrows Right-Arrow"
-        onClick={() => {
-          selected.current < portfolioItems.length - 1 &&
-            setSelected({
-              current: selected.current + 1,
-              previous: selected.current,
-            });
-        }}
-      >
-        <Arrow width={"50%"} />
-      </div>
+      <p style={{ alignSelf: "center", textAlign: "center" }}>
+        {selected.current + 1}/3
+      </p>
     </div>
   );
 };

@@ -39,12 +39,12 @@ const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
     <div
       ref={headerRef}
       className="Header Invisible"
-      style={{ width: mobile ? "95%" : "40%", alignSelf: "center" }}
+      style={{ width: mobile ? "85%" : "40%", alignSelf: "center", marginBottom: mobile ? '2rem' : '6rem' }}
     >
       <h1
         className="Title"
         style={{
-          fontSize: mobile ? "2em" : "4em",
+          fontSize: mobile ? "3em" : "4em",
           backgroundImage: `linear-gradient(to top, ${colorTwo}, ${colorOne})`,
         }}
       >

@@ -29,7 +29,7 @@
 @keyframes inFromRight {
   from {
     opacity: 0;
-    transform: translateX(100vw);
+    transform: translateX(80vw);
   }
   to {
     opacity: 1;
@@ -44,7 +44,7 @@
   }
   to {
     opacity: 0;
-    transform: translateX(100vw);
+    transform: translateX(80vw);
   }
 }
 
@@ -55,14 +55,14 @@
   }
   to {
     opacity: 0;
-    transform: translateX(-100vw);
+    transform: translateX(-80vw);
   }
 }
 
 @keyframes inFromLeft {
   from {
     opacity: 0;
-    transform: translateX(-100vw);
+    transform: translateX(-80vw);
   }
   to {
     opacity: 1;

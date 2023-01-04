@@ -25,7 +25,7 @@ const AboutMe = () => {
         elements[index].current?.classList.add("Flow-In");
         staggerEffects(elements, index + 1);
       },
-      mobile ? 1000 : 500
+      500
     );
   };
 
@@ -57,8 +57,8 @@ const AboutMe = () => {
         zIndex: 1,
         position: "relative",
         background: "linear-gradient(to top, #0b0e11, #1d2229)",
-        paddingTop: "8em",
-        paddingBottom: "8em",
+        paddingTop: "6em",
+        paddingBottom: "6em",
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
@@ -70,16 +70,16 @@ const AboutMe = () => {
         style={{
           overflow: "hidden",
           display: "flex",
-          alignItems: mobile ? "center" : "flex-start",
+          alignItems: "center",
           flexDirection: mobile ? "column" : "row",
           gap: "4rem",
           padding: "2rem",
-          paddingTop: "1rem",
-          paddingBottom: "1rem",
         }}
       >
         <img
-          height={`${mobile ? `${clientWidth * 0.65}px` : clientWidth * 0.25}px`}
+          height={`${
+            mobile ? `${clientWidth * 0.65}px` : clientWidth * 0.25
+          }px`}
           width={`${mobile ? `${clientWidth * 0.65}px` : clientWidth * 0.25}px`}
           style={{
             borderRadius: "0.5rem",
@@ -89,47 +89,53 @@ const AboutMe = () => {
           src={Headshot}
           alt="CarGoLogo"
         />
-        <div ref={topRowRef} className="No-Show">
-          <p>
-            I have experience as
-            <br />
-            a full-stack software <br />
+        <div ref={topRowRef} className="About-Me-Text No-Show">
+          <p style={{fontSize: mobile? '1rem' : '1.6em'}}>
+            I have experience as a full-stack software{" "}
             <b
               className="Invisible"
               ref={wordOneRef}
-              style={{ fontFamily: "ChillaxBold", position: "relative", borderRadius:'100px' }}
+              style={{
+                fontFamily: "ChillaxBold",
+                position: "relative",
+                borderRadius: "100px",
+              }}
             >
               engineer
             </b>
-            {mobile ? <br /> : null}
-            <br />a startup <br />
+            , a startup{" "}
             <b
               className="Invisible"
               ref={wordTwoRef}
-              style={{ fontFamily: "ChillaxBold", position: "relative", borderRadius:'100px' }}
+              style={{
+                fontFamily: "ChillaxBold",
+                position: "relative",
+                borderRadius: "100px",
+              }}
             >
               founder
             </b>
-            {mobile ? <br /> : null}
-            <br />
-            and now a UX/UI
-            <br />
+            , and now a UX/UI{" "}
             <b
               className="Invisible"
               ref={wordThreeRef}
-              style={{ fontFamily: "ChillaxBold", position: "relative", borderRadius:'100px' }}
+              style={{
+                fontFamily: "ChillaxBold",
+                position: "relative",
+                borderRadius: "100px",
+              }}
             >
               designer
             </b>
-            {mobile ? <br /> : null}
+            .
             <br />
-            <br /> This multidisciplinary experience helps me understand the
-            needs of the users in a unique way, and deliver on all aspects of a
-            project.
+            <br />
+            This multidisciplinary experience allows me understand the needs of
+            the users in a unique way, and deliver on all aspects of a project.
           </p>
+          <AboutMenu />
         </div>
       </div>
-      <AboutMenu />
       <div></div>
     </div>
   );
