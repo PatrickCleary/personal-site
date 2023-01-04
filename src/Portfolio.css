@@ -4,18 +4,8 @@
   z-index: 100;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
-}
-
-.Header {
-  border-radius: 100px;
-  margin-right: 1em;
-  margin-left: 1em;
-  background-color: #32373e;
-  border-style: solid;
-  border-color: #000;
-  overflow: hidden;
-  isolation: isolate;
 }
 
 h2 {
@@ -26,27 +16,12 @@ h2 {
   user-select: none;
 }
 
-.Title {
-  text-align: center;
-  color: transparent;
-  background-clip: text;
-  user-select: none;
-  background-image: linear-gradient(to top, rgb(81, 166, 245) 40%, #dab9ff 60%);
-
-  font-family: "Chillax";
-  margin: 0;
-  /* animation: opaque 0.25s linear infinite alternate; */
-  /* animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s); */
-}
 @keyframes opaque {
   from {
     background-image: linear-gradient(90deg, #ffffffff 10%, #ffffff00);
-
   }
   to {
     background-image: linear-gradient(90deg, #ffffff, #ffffffff);
-
   }
 }
 
@@ -62,6 +37,7 @@ h2 {
 .Portfolio-Box-Container {
   overflow: auto;
   height: 100%;
+  width: 80vw;
   white-space: nowrap;
   padding-top: 6em;
   padding-bottom: 6em;
@@ -90,7 +66,7 @@ h2 {
 }
 
 .Portfolio-Box {
-  width: 80vw;
+  width: 80%;
   height: 24vw;
   margin-right: 3em;
   margin-left: 6em;
@@ -127,6 +103,37 @@ h2 {
   z-index: 1;
 }
 
-.Icon {
-  position: absolute;
+
+.Portfolio-Container {
+  width: 100vw;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  display: flex;
+  flex-direction: row;
+}
+
+.Portfolio-Item {
+    background-color:#000000;
+    border-radius: 0.5em;
+    padding: 2em;
+    margin-left:2em;
+    margin-right:2em;
+    grid-column: 1;
+    grid-row: 1;  
+}
+.Current-Portfolio-Item {
+    width: 88vw;
+    display:grid;
+}
+
+.Arrows {
+    width: 6vw;
+}
+
+
+.Portfolio-Item-Selected {
+  visibility: visible;
+}
+.Portfolio-Item-Unselected {
+  visibility: hidden;
 }

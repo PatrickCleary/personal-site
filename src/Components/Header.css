@@ -1,0 +1,44 @@
+.Invisible {
+    opacity:0;
+}
+
+.Slide-Up {
+    animation: slideUp .4s forwards linear;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(10px);
+    opacity: .9;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity:1;
+  }
+}
+
+.Header {
+  border-radius: 4rem;
+  background-color: #32373e;
+  border-style: solid;
+  border-color: #000;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.Title {
+  text-align: center;
+  color: transparent;
+  background-clip: text;
+  user-select: none;
+
+  font-family: "Chillax";
+  margin: 0;
+  /* animation: opaque 0.25s linear infinite alternate; */
+  /* animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s); */
+}

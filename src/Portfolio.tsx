@@ -5,6 +5,8 @@ import { ReactComponent as TM } from "./Images/TM.svg";
 import { ReactComponent as AE } from "./Images/Burger.svg";
 import { ReactComponent as CarGo } from "./Images/CarGo.svg";
 import PortfolioBox from "./Components/PortfolioBox";
+import Header from "./Components/Header";
+import PortfolioSlider from "./Components/PortfolioSlider";
 
 export const Portfolio = () => {
   const { mobile } = useContext(WindowContext);
@@ -20,11 +22,8 @@ export const Portfolio = () => {
   );
   return (
     <div className="Portfolio">
-      <div className="Header" style={{ width: mobile ? "95%" : "40%", alignSelf:'center' }}>
-        <h1 className="Title" style={{ fontSize: mobile ? "2em" : "4em" }}>
-          Portfolio
-        </h1>
-      </div>
+        <Header title="Portfolio" colorOne="#ffffff" colorTwo="#ffffff20"/>
+        <PortfolioSlider />
       <div className="Portfolio-Box-Container">
         <div className="Fade-Out-Box Left"></div>
         <div className="Fade-Out-Box Right"></div>

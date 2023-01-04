@@ -8,11 +8,13 @@ interface PortfolioBoxProps {
 
 const PortfolioBox: React.FC<PortfolioBoxProps> = ({ name, bg, children }) => {
   const [hovered, setHovered] = useState(false);
+  const [selected, setSelected] = useState(false);
 
   return (
     <div
       style={{
         backgroundColor: `${hovered ? "#" + bg + "40" : "#" + bg}`,
+        visibility: selected ? 'hidden' : 'visible',
       }}
       className="Portfolio-Box"
     >
@@ -21,7 +23,7 @@ const PortfolioBox: React.FC<PortfolioBoxProps> = ({ name, bg, children }) => {
         onMouseOver={() => setHovered(true)}
         onMouseLeave={() => {
           setHovered(false);
-        }}
+        }}  
       >
         {React.cloneElement(children, { opacity: hovered ? 0.1 : 1 })}
         {hovered && (

@@ -3,6 +3,7 @@ import Headshot from "./Images/IMG_3836.jpg";
 import "./AboutMe.css";
 import { WindowContext } from "./WindowContext";
 import { AboutMenu } from "./Components/AboutMenu";
+import Header from "./Components/Header";
 
 const AboutMe = () => {
   const { clientHeight, clientWidth, mobile } = useContext(WindowContext);
@@ -65,6 +66,7 @@ const AboutMe = () => {
         justifyContent: "flex-start",
       }}
     >
+      <Header title={"About Me"} colorOne={"#ffffff"} colorTwo={"#ffffff20"} />
       <div
         style={{
           overflow: "hidden",
@@ -79,7 +81,7 @@ const AboutMe = () => {
           height={`${mobile ? clientWidth * 0.65 : clientWidth * 0.25}px`}
           width={`${mobile ? clientWidth * 0.65 : clientWidth * 0.25}px`}
           style={{
-            borderRadius: 12,
+            borderRadius: '0.5rem',
             alignItems: mobile ? "center" : "flex-start",
           }}
           className="Headshot"
@@ -99,7 +101,7 @@ const AboutMe = () => {
               engineer
             </b>
             {mobile ? <br /> : null}
-            <br />a (failed) startup <br />
+            <br />a startup <br />
             <b
               className="No-Show"
               ref={wordTwoRef}
@@ -125,7 +127,6 @@ const AboutMe = () => {
             project.
           </p>
         </div>
-        <div className="More-Menu"></div>
       </div>
       <AboutMenu />
       <div></div>

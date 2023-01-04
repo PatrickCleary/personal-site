@@ -18,10 +18,11 @@ export const AboutMenu = () => {
         style={{
           display: "flex",
           flexDirection: mobile ? "column" : "row",
-          padding: "2px",
+          padding: "0.5em",
+          borderRadius: "1em",
           backgroundColor: "#ffffff30",
-          columnGap: "2px",
-          rowGap: "2px",
+          columnGap: "0.5rem",
+          rowGap: "0.5rem",
         }}
       >
         <AboutMenuItems

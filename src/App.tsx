@@ -23,7 +23,7 @@ function App() {
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("Grow-Slide");
+            entry.target.classList.add("Fade-Out");
           }
         });
       },
@@ -70,7 +70,7 @@ function App() {
         style={{
           backgroundAttachment: "fixed",
           display: "flex",
-          height: `${clientHeight}px`,
+          height: `100vh`,
           alignItems: "center",
           justifyContent: "center",
         }}

@@ -8,7 +8,7 @@
 }
 
 .Words-Slide-In-Mobile {
-    animation: slideIn 0.5s ease-in forwards;
+    animation: slideInMobile 1s ease-in forwards;
   }
 
 @keyframes slideIn {
@@ -20,6 +20,19 @@
   }
   80% {left: -2vw;}
   90% {left: 1vw;}
+  100% {left: 0vw;}
+}
+
+
+@keyframes slideInMobile {
+  0% {
+    left: 80vw;
+  }
+  75% {
+    left: 0vw;
+  }
+  80% {left: -6vw;}
+  90% {left: 3vw;}
   100% {left: 0vw;}
 }
 
@@ -45,7 +58,8 @@ h3 {
 }
 
 .About-Menu-Item {
-  padding:1em;
+  padding:1rem;
+  border-radius: 0.5rem;
   border-color: #ffffff30;
   background-color: #0b0e11;
 }

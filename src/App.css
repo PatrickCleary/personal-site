@@ -99,18 +99,16 @@ body {
   visibility: hidden;
 }
 
-.Grow-Slide {
+.Fade-Out {
   animation: textGrow 1s ease-in-out forwards;
 }
 
 @keyframes textGrow {
   from {
-    font-size: 1.2em;
-    transform: translateY(0px);
+    opacity: 1;
   }
   to {
-    font-size: 4em;
-    transform: translateY(1.4em);
+    opacity: 0;
   }
 }
 
