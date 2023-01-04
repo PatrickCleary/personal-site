@@ -1,27 +1,53 @@
 import React from "react";
+import "./PortfolioItem.css";
 import { ReactComponent as TM } from "../Images/TM.svg";
 
 interface PortfolioItemProps {
   index: number;
-  selected: number;
+  selected: { current: number; previous: number };
   name: string;
 }
 
 const PortfolioItem: React.FC<PortfolioItemProps> = ({
-  selected,
   index,
+  selected,
   name,
 }) => {
-  const current = selected === index;
+  let animationSelection = "";
+  if (selected.current === index) {
+    if (selected.previous < selected.current) {
+      console.log(index.toString(), "SIFR");
+      animationSelection = "Slide-In-From-Right";
+    } else {
+      console.log(index.toString(), "SIFL");
+
+      animationSelection = "Slide-In-From-Left";
+    }
+  } else if (selected.previous === index) {
+    if (selected.previous < selected.current) {
+      console.log(index.toString(), "SOTL");
+
+      animationSelection = "Slide-Out-To-Left";
+    } else {
+      console.log(index.toString(), "SOTR");
+
+      animationSelection = "Slide-Out-To-Right";
+    }
+  }
 
   return (
     <div
-      className={`Portfolio-Item ${
-        current ? "Portfolio-Item-Selected" : "Portfolio-Item-Unselected"
-      }`}
+      key={name}
+      className={`Portfolio-Item ${animationSelection} Invisible`}
     >
-      <TM width={"8rem"} height={"8rem"} className="TransitMattersLogo Icon" />
-      
+      <div className="" >
+        <TM
+          width={"8rem"}
+          height={"8rem"}
+          className="TransitMattersLogo Icon"
+        />
+        <p>{name}</p>
+      </div>
     </div>
   );
 };

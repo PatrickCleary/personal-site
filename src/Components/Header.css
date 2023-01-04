@@ -1,15 +1,14 @@
 .Header {
   border-radius: 4rem;
-  background-color: #000;
-  border-style: solid;
-  border-color: #fff;
   overflow: hidden;
   isolation: isolate;
+  background: linear-gradient(to top, #c7c7c7 10%, #fff 35%, #fff 65%, #c7c7c7 90% );
+  box-shadow: .2rem .2rem 1rem .1rem #000  
 }
 
 .Title {
   text-align: center;
-  color: transparent;
+  color: black;
   background-clip: text;
   user-select: none;
 

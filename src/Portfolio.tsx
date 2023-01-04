@@ -22,7 +22,7 @@ export const Portfolio = () => {
   );
   return (
     <div className="Portfolio">
-        <Header title="Portfolio" colorOne="#ffffff" colorTwo="#ffffff20"/>
+        <Header title="PORTFOLIO" colorOne="#ffffff" colorTwo="#ffffff20"/>
         <PortfolioSlider />
       <div className="Portfolio-Box-Container">
         <div className="Fade-Out-Box Left"></div>

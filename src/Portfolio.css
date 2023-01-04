@@ -111,29 +111,15 @@ h2 {
   display: flex;
   flex-direction: row;
 }
-
-.Portfolio-Item {
-    background-color:#000000;
-    border-radius: 0.5em;
-    padding: 2em;
-    margin-left:2em;
-    margin-right:2em;
-    grid-column: 1;
-    grid-row: 1;  
-}
 .Current-Portfolio-Item {
     width: 88vw;
     display:grid;
+    overflow:hidden;
 }
 
 .Arrows {
+    display:flex;
+    justify-content: center;
     width: 6vw;
-}
-
-
-.Portfolio-Item-Selected {
-  visibility: visible;
-}
-.Portfolio-Item-Unselected {
-  visibility: hidden;
+    cursor: pointer;
 }

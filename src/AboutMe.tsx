@@ -65,7 +65,7 @@ const AboutMe = () => {
         justifyContent: "flex-start",
       }}
     >
-      <Header title={"About Me"} colorOne={"#ffffff"} colorTwo={"#ffffff20"} />
+      <Header title={"ABOUT ME"} colorOne={"#ffffff"} colorTwo={"#ffffff20"} />
       <div
         style={{
           overflow: "hidden",

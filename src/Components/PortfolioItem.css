@@ -1,0 +1,71 @@
+.Portfolio-Item {
+  background-color: #000000;
+  border-radius: 0.5em;
+  padding: 2em;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.Portfolio-Item-Selected {
+  visibility: visible;
+}
+.Portfolio-Item-Unselected {
+  visibility: hidden;
+}
+
+.Slide-In-From-Right {
+  animation: inFromRight 1s ease-out forwards;
+}
+.Slide-In-From-Left {
+  animation: inFromLeft 1s ease-out forwards;
+}
+.Slide-Out-To-Right {
+  animation: outToRight 1s ease-out forwards;
+}
+.Slide-Out-To-Left {
+  animation: outToLeft 1s ease-out forwards;
+}
+
+@keyframes inFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0vw);
+  }
+}
+
+@keyframes outToRight {
+  from {
+    opacity: 1;
+    transform: translateX(0vw);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes outToLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0vw);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes inFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0vw);
+  }
+}
