@@ -9,19 +9,18 @@ interface AboutMenuItemsProps {
   setSelected: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const AboutMenuItems: React.FC<AboutMenuItemsProps> = ({
-  name,
-  index,
-  selected,
-  setSelected,
-}) => {
+export const AboutMenuItems = React.forwardRef<
+  HTMLDivElement,
+  AboutMenuItemsProps
+>(({ name, index, selected, setSelected }, ref) => {
   const isSelected = selected === index;
   return (
     <div
-      className="About-Menu-Item"
+      ref={ref}
+      className="About-Menu-Item Invisible"
       onClick={() => setSelected(index)}
     >
       <p>{name}</p>
     </div>
   );
-};
+});

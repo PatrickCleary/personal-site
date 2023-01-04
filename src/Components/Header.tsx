@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
 import "./Header.css";
+import "../animations.css";
 import { WindowContext } from "../WindowContext";
 
 interface HeaderProps {
@@ -18,13 +19,13 @@ const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             entry.target.classList.remove("Invisible");
-            entry.target.classList.add("Slide-Up");
+            entry.target.classList.add("Flow-In");
           }
         });
       },
       {
         root: null,
-        rootMargin: mobile ? '-25px' : '-25%',
+        rootMargin: mobile ? '-25px' : '-15%',
         threshold: .90,
       }
     );

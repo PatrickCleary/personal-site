@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useContext } from "react";
 import Headshot from "./Images/IMG_3836.jpg";
+import "./animations.css";
 import "./AboutMe.css";
 import { WindowContext } from "./WindowContext";
 import { AboutMenu } from "./Components/AboutMenu";
@@ -20,10 +21,8 @@ const AboutMe = () => {
     if (index >= elements.length) return;
     setTimeout(
       () => {
-        elements[index].current?.classList.remove("No-Show");
-        elements[index].current?.classList.add(
-          mobile ? "Words-Slide-In-Mobile" : "Words-Slide-In"
-        );
+        elements[index].current?.classList.remove("Invisible");
+        elements[index].current?.classList.add("Flow-In");
         staggerEffects(elements, index + 1);
       },
       mobile ? 1000 : 500
@@ -58,8 +57,8 @@ const AboutMe = () => {
         zIndex: 1,
         position: "relative",
         background: "linear-gradient(to top, #0b0e11, #1d2229)",
-        paddingTop: "5em",
-        paddingBottom: "5em",
+        paddingTop: "8em",
+        paddingBottom: "8em",
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
@@ -73,15 +72,17 @@ const AboutMe = () => {
           display: "flex",
           alignItems: mobile ? "center" : "flex-start",
           flexDirection: mobile ? "column" : "row",
-          gap: "4em",
-          padding: "2em",
+          gap: "4rem",
+          padding: "2rem",
+          paddingTop: "1rem",
+          paddingBottom: "1rem",
         }}
       >
         <img
-          height={`${mobile ? clientWidth * 0.65 : clientWidth * 0.25}px`}
-          width={`${mobile ? clientWidth * 0.65 : clientWidth * 0.25}px`}
+          height={`${mobile ? `${clientWidth * 0.65}px` : clientWidth * 0.25}px`}
+          width={`${mobile ? `${clientWidth * 0.65}px` : clientWidth * 0.25}px`}
           style={{
-            borderRadius: '0.5rem',
+            borderRadius: "0.5rem",
             alignItems: mobile ? "center" : "flex-start",
           }}
           className="Headshot"
@@ -94,18 +95,18 @@ const AboutMe = () => {
             <br />
             a full-stack software <br />
             <b
-              className="No-Show"
+              className="Invisible"
               ref={wordOneRef}
-              style={{ fontFamily: "ChillaxBold", position: "relative" }}
+              style={{ fontFamily: "ChillaxBold", position: "relative", borderRadius:'100px' }}
             >
               engineer
             </b>
             {mobile ? <br /> : null}
             <br />a startup <br />
             <b
-              className="No-Show"
+              className="Invisible"
               ref={wordTwoRef}
-              style={{ fontFamily: "ChillaxBold", position: "relative" }}
+              style={{ fontFamily: "ChillaxBold", position: "relative", borderRadius:'100px' }}
             >
               founder
             </b>
@@ -114,9 +115,9 @@ const AboutMe = () => {
             and now a UX/UI
             <br />
             <b
-              className="No-Show"
+              className="Invisible"
               ref={wordThreeRef}
-              style={{ fontFamily: "ChillaxBold", position: "relative" }}
+              style={{ fontFamily: "ChillaxBold", position: "relative", borderRadius:'100px' }}
             >
               designer
             </b>
