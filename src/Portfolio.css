@@ -2,8 +2,8 @@
   background: linear-gradient(#32373e, #0a0d11);
   width: 100%;
   z-index: 100;
-  padding-top: 6em;
-  padding-bottom: 6em;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,58 +36,14 @@ h2 {
   }
 }
 
-.Portfolio-Box-Container {
-  overflow: auto;
-  height: 100%;
-  width: 80vw;
-  white-space: nowrap;
-  padding-top: 6em;
-  padding-bottom: 6em;
-}
-
-.Portfolio-Box-Inner {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.Portfolio-Box:hover {
-  animation: pulsing 2s ease-in-out infinite alternate;
-}
-
-@keyframes pulsing {
-  from {
-    box-shadow: 0px 0px 6px #ffffff00;
-  }
-  to {
-    box-shadow: 0px 0px 6px #fff;
-  }
-}
-
-.Portfolio-Box {
-  width: 80%;
-  height: 24vw;
-  margin-right: 3em;
-  margin-left: 6em;
-  border-radius: 2%;
-  display: inline-block;
-  background-color: white;
-  cursor: pointer;
-}
-
 .Portfolio-Item-Description-Div {
   display: flex;
   flex-direction: column;
-  top: 1em;
+  top: 1rem;
   align-items: center;
 }
-.Portfolio-Item-Text {
-  width: 90%;
-  word-break: normal;
-  white-space: normal;
+.Portfolio-Item-Text-DT {
+  justify-content: space-between;
 }
 .Right {
   right: 0px;
@@ -101,24 +57,34 @@ h2 {
 .Fade-Out-Box {
   position: absolute;
   height: 24vw;
-  width: 6em;
+  width: 6rem;
   z-index: 1;
 }
 
 .Portfolio-Container {
+  width: 80vw;
+  padding: 2rem;
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 .Current-Portfolio-Item {
+  width: 74vw;
   display: grid;
-  
   overflow: visible;
 }
-
+.Left-Arrow-Mobile {
+  position: fixed;
+  left: 1em;
+}
+.Right-Arrow-Mobile {
+  position: fixed;
+  right: 1em;
+}
 .Arrows {
   display: flex;
-  justify-content: center;
-  width: 6vw;
+  width: 3vw;
+  align-items: center;
   z-index: 10;
 }

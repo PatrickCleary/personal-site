@@ -57,7 +57,7 @@ export const AboutMenu = () => {
         padding: mobile ? "1rem" : "0px",
         display: "flex",
         flexDirection: mobile ? "column" : "row",
-        paddingTop: "2em",
+        paddingTop: "2rem",
         alignSelf: "center",
       }}
     >
@@ -67,8 +67,8 @@ export const AboutMenu = () => {
         style={{
           display: "flex",
           flexDirection: mobile ? "column" : "row",
-          padding: "0.25em",
-          borderRadius: ".75em",
+          padding: "0.25rem",
+          borderRadius: ".75rem",
           backgroundColor: "#ffffff30",
           columnGap: "0.25rem",
           rowGap: "0.25rem",

@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
       <h1
         className="Title"
         style={{
-          fontSize: mobile ? "3em" : "4em",
+          fontSize: mobile ? "3rem" : "4rem",
           backgroundImage: `linear-gradient(to top, ${colorTwo}, ${colorOne})`,
         }}
       >

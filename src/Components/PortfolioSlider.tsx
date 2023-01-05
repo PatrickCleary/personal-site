@@ -33,9 +33,12 @@ const PortfolioSlider = () => {
 
   return (
     <div>
-      <div className="Portfolio-Container Invisible" ref={portfolioRef}>
+      <div
+        className="Portfolio-Container Invisible"
+        ref={portfolioRef}
+      >
         <div
-          className="Arrows Left-Arrow"
+          className={`Arrows ${mobile && "Left-Arrow-Mobile"}`}
           style={{
             cursor: selected.current > 0 ? "pointer" : "auto",
           }}
@@ -47,13 +50,16 @@ const PortfolioSlider = () => {
               });
           }}
         >
-          {selected.current > 0 && (
-            <Arrow width={"50%"} style={{ transform: "rotateY(180deg)" }} />
-          )}
+          <Arrow
+            style={{
+              transform: "rotateY(180deg)",
+              opacity: selected.current > 0 ? 1 : 0,
+              width: "4rem",
+            }}
+          />
         </div>
         <div
           className="Current-Portfolio-Item"
-          style={{ overflow: mobile ? "hidden" : "visible" }}
         >
           {portfolioItems.map((name, index) => {
             return (
@@ -62,7 +68,7 @@ const PortfolioSlider = () => {
           })}
         </div>
         <div
-          className="Arrows Right-Arrow"
+          className={`Arrows ${mobile && "Right-Arrow-Mobile"}`}
           style={{
             cursor:
               selected.current < portfolioItems.length - 1 ? "pointer" : "auto",
@@ -75,9 +81,12 @@ const PortfolioSlider = () => {
               });
           }}
         >
-          {selected.current + 1 < portfolioItems.length && (
-            <Arrow width={"50%"} />
-          )}
+          <Arrow
+            width={"4rem"}
+            style={{
+              opacity: selected.current + 1 < portfolioItems.length ? 1 : 0,
+            }}
+          />
         </div>
       </div>
       <p style={{ alignSelf: "center", textAlign: "center" }}>

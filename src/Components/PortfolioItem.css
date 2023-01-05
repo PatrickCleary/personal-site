@@ -1,10 +1,21 @@
 .Portfolio-Item {
-  border-radius: 0.5em;
-  margin:1em;
-  padding:2em;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 1px 2px #000;
   display: flex;
   grid-column: 1;
   grid-row: 1;
+}
+
+.Portfolio-Item-Mobile {
+  border-radius: 2rem;
+  box-shadow: 0px 0px 2px 1px #000;
+  align-items:center;
+}
+
+.Portfolio-Item-DT {
+  height: 30vw;
+  margin: 2vw;
+  padding: 2vw;
 }
 
 .Portfolio-Item-Selected {
@@ -15,16 +26,16 @@
 }
 
 .Slide-In-From-Right {
-  animation: inFromRight .75s ease-in-out forwards;
+  animation: inFromRight 0.75s ease-in-out forwards;
 }
 .Slide-In-From-Left {
-  animation: inFromLeft .75s ease-in-out forwards;
+  animation: inFromLeft 0.75s ease-in-out forwards;
 }
 .Slide-Out-To-Right {
-  animation: outToRight .75s ease-in-out forwards;
+  animation: outToRight 0.75s ease-in-out forwards;
 }
 .Slide-Out-To-Left {
-  animation: outToLeft .75s ease-in-out forwards;
+  animation: outToLeft 0.75s ease-in-out forwards;
 }
 
 @keyframes inFromRight {
@@ -76,18 +87,16 @@
 }
 
 .Screenshots-DT {
-  width: 30vw;
-  right: -2em;
-
+  width: 27vw;
+  right: -2rem;
 }
 
 .TM-App-Screenshots {
   position: absolute;
-  top: 0; 
-  bottom: 0; 
-  margin-top: auto; 
-  margin-bottom: auto; 
-
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .Icon {
   position: absolute;
@@ -103,10 +112,12 @@
   text-align: center;
 }
 
-.Portfolio-Item-Title {
-}
-
-.Portfolio-Item-Mobile {
-  border-radius: 2rem;
-  box-shadow: 0px 0px 5px 1px #000;
+.Portfolio-Item-Text {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* margin-right: 4rem; */
+  display: flex;
+  width: 39vw;
+  flex-direction: column;
+  row-gap: 1rem;
 }

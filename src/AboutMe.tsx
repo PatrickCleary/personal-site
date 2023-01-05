@@ -57,8 +57,8 @@ const AboutMe = () => {
         zIndex: 1,
         position: "relative",
         background: "linear-gradient(to top, #0b0e11, #1d2229)",
-        paddingTop: "6em",
-        paddingBottom: "6em",
+        paddingTop: "6rem",
+        paddingBottom: "6rem",
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
@@ -130,7 +130,7 @@ const AboutMe = () => {
             .
             <br />
             <br />
-            This multidisciplinary experience allows me understand the needs of
+            This multidisciplinary experience allows me to understand the needs of
             the users in a unique way, and deliver on all aspects of a project.
           </p>
           <AboutMenu />

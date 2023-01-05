@@ -8,6 +8,7 @@ interface Props {
     children: React.ReactNode;
   }
 
+  const MOBILE_SCREEN_CUTOFF = 1024;
 export const WindowContext = React.createContext<WindowContextProps>({ clientHeight: 0, clientWidth: 0, mobile: false, });
 export const WindowContextProvider: React.FC<Props> = ({ children }) => {
 const getVh = useCallback(() => {
@@ -24,12 +25,12 @@ const getVw = useCallback(() => {
 }, []);
 const [clientHeight, setVh] = useState<number>(getVh());
 const [clientWidth, setVw] = useState<number>(getVw());
-const [mobile, setMobile] = useState<boolean>(getVw() <= 768);
+const [mobile, setMobile] = useState<boolean>(getVw() <= MOBILE_SCREEN_CUTOFF);
 useEffect(() => {
    const handleResize = () => {
      setVh(getVh());
      setVw(getVw());
-     setMobile(getVw() <= 768);
+     setMobile(getVw() <= MOBILE_SCREEN_CUTOFF);
    }
    window.addEventListener('resize', handleResize);
    return () => {

@@ -3,6 +3,7 @@ import "./PortfolioItem.css";
 import { ReactComponent as TM } from "../Images/TM.svg";
 import TMAppScreenshots from "../Images/TM_App_ScreenShots.png";
 import { WindowContext } from "../WindowContext";
+import LearnMoreButton from "./LearnMoreButton";
 
 interface PortfolioItemProps {
   index: number;
@@ -41,7 +42,9 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   return (
     <div
       key={name}
-      className={`Portfolio-Item ${animationSelection} Invisible  ${mobile && 'Portfolio-Item-Mobile'}`}
+      className={`Portfolio-Item ${animationSelection} Invisible  ${
+        mobile ? "Portfolio-Item-Mobile" : "Portfolio-Item-DT"
+      }`}
       style={{
         width: mobile ? "auto" : " 75w",
         flexDirection: mobile ? "column" : "row",
@@ -50,40 +53,49 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
     >
       {!mobile && (
         <TM
-          width={"24rem"}
-          height={"24rem"}
+          width={"24vw"}
+          height={"24vw"}
           className="TransitMattersLogo Icon"
         />
       )}
+      {mobile && (
+        <div className="Portfolio-Item-Text">
+          <h3
+            className="Portfolio-Item-Title"
+            style={{
+              textAlign: "center",
+              fontSize: "2rem",
+            }}
+          >
+            TransitMatters
+          </h3>
+        </div>
+      )}
 
-      <div
-        className="Portfolio-Item-Text"
-        style={{
-          justifyContent: "center",
-          display: "flex",
-          width: "100%",
-          flexDirection: "column",
-          rowGap: "1rem",
-        }}
-      >
-        <h3
-          className="Portfolio-Item-Title"
-          style={{
-            textAlign: mobile ? "center" : "left",
-            fontSize: mobile ? "2em" : "3em",
-          }}
-        >
-          TransitMatters
-        </h3>
-        {!mobile && (
-          <p>
-            TransitMatters is a non-profit organization in Boston formed to
-            advocate for better public transportation. I am working on a new
-            version of their data dashboards.
-          </p>
-        )}
-        {!mobile && <p style={{ paddingTop: "12rem" }}>learn more</p>}
-      </div>
+      {!mobile && (
+        <div className="Portfolio-Item-Text Portfolio-Item-Text-DT">
+            <div>
+            <h3
+              className="Portfolio-Item-Title"
+              style={{
+                textAlign: "left",
+                fontSize: "3rem",
+              }}
+            >
+              TransitMatters
+            </h3>
+            {!mobile && (
+              <p>
+                TransitMatters is a non-profit organization in Boston formed to
+                advocate for better public transportation. I am working on a new
+                version of their data dashboards.
+              </p>
+            )}
+            </div>
+          <LearnMoreButton />
+        </div>
+      )}
+      {!mobile && <div style={{ width: "27vw", display: "flex" }} />}
       <img
         style={{
           position: mobile ? "relative" : "absolute",
@@ -94,8 +106,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         src={TMAppScreenshots}
         alt="Screenshots of TransitMatters Site"
       />
-      {!mobile && <div style={{ width: "50vw"}} />}
-      {mobile && <p style={{ paddingTop: "12rem" }}>learn more</p>}
+      {mobile && <LearnMoreButton />}
     </div>
   );
 };
