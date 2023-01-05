@@ -1,5 +1,5 @@
 .Portfolio {
-  background: linear-gradient(#32373e, #0a0d11 );
+  background: linear-gradient(#32373e, #0a0d11);
   width: 100%;
   z-index: 100;
   padding-top: 6em;
@@ -105,21 +105,20 @@ h2 {
   z-index: 1;
 }
 
-
 .Portfolio-Container {
-  width: 80vw;
   display: flex;
   flex-direction: row;
 }
+
 .Current-Portfolio-Item {
-    width: 88vw;
-    display:grid;
-    overflow:hidden;
+  display: grid;
+  
+  overflow: visible;
 }
 
 .Arrows {
-    display:flex;
-    justify-content: center;
-    width: 6vw;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 6vw;
+  z-index: 10;
 }

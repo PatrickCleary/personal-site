@@ -15,7 +15,7 @@ const PortfolioSlider = () => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             entry.target.classList.remove("Invisible");
-            entry.target.classList.add("Fade-In");
+            entry.target.classList.add("Slide-In-From-Right");
           }
         });
       },
@@ -36,6 +36,9 @@ const PortfolioSlider = () => {
       <div className="Portfolio-Container Invisible" ref={portfolioRef}>
         <div
           className="Arrows Left-Arrow"
+          style={{
+            cursor: selected.current > 0 ? "pointer" : "auto",
+          }}
           onClick={() => {
             selected.current > 0 &&
               setSelected({
@@ -48,7 +51,10 @@ const PortfolioSlider = () => {
             <Arrow width={"50%"} style={{ transform: "rotateY(180deg)" }} />
           )}
         </div>
-        <div className="Current-Portfolio-Item">
+        <div
+          className="Current-Portfolio-Item"
+          style={{ overflow: mobile ? "hidden" : "visible" }}
+        >
           {portfolioItems.map((name, index) => {
             return (
               <PortfolioItem selected={selected} index={index} name={name} />
@@ -57,6 +63,10 @@ const PortfolioSlider = () => {
         </div>
         <div
           className="Arrows Right-Arrow"
+          style={{
+            cursor:
+              selected.current < portfolioItems.length - 1 ? "pointer" : "auto",
+          }}
           onClick={() => {
             selected.current < portfolioItems.length - 1 &&
               setSelected({
