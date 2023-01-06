@@ -1,5 +1,5 @@
 .Portfolio {
-  background: linear-gradient(#32373e, #0a0d11);
+  background: linear-gradient(#1d2024, #0a0d11);
   width: 100%;
   z-index: 100;
   padding-top: 6rem;
@@ -87,4 +87,73 @@ h2 {
   width: 3vw;
   align-items: center;
   z-index: 10;
+}
+
+.Arrow-Right:hover .Arrow-SVG {
+  animation: bounceRight 3s linear infinite;
+}
+
+
+.Arrow-Left:hover .Arrow-SVG {
+    animation: bounceLeft 3s linear infinite;
+  }
+
+@keyframes bounceRight {
+  0% {
+    transform: translateX(0vw) scaleY(1);
+  }
+  8% {
+    transform: translateX(1vw) scaleY(0.9);
+  }
+  10% {
+    transform: translateX(1.5vw) scaleY(0.8);
+  }
+  12% {
+    transform: translateX(1vw) scaleY(0.9);
+  }
+  20% {
+    transform: translateX(0vw) scaleY(1);
+  }
+  28% {
+    transform: translateX(1vw) scaleY(0.9);
+  }
+  30% {
+    transform: translateX(1.5vw) scaleY(0.8);
+  }
+  32% {
+    transform: translateX(1vw) scaleY(0.9);
+  }
+  40% {
+    transform: translateX(0vw) scaleY(1);
+  }
+}
+
+@keyframes bounceLeft {
+  0% {
+    transform: rotateY(180deg) translateX(0vw) scaleY(1);
+  }
+  8% {
+    transform: rotateY(180deg) translateX(1vw) scaleY(0.9);
+  }
+  10% {
+    transform: rotateY(180deg) translateX(1.5vw) scaleY(0.8);
+  }
+  12% {
+    transform: rotateY(180deg) translateX(1vw) scaleY(0.9);
+  }
+  20% {
+    transform: rotateY(180deg) translateX(0vw) scaleY(1);
+  }
+  28% {
+    transform: rotateY(180deg) translateX(1vw) scaleY(0.9);
+  }
+  30% {
+    transform: rotateY(180deg) translateX(1.5vw) scaleY(0.8);
+  }
+  32% {
+    transform: rotateY(180deg) translateX(1vw) scaleY(0.9);
+  }
+  40% {
+    transform: rotateY(180deg) translateX(0vw) scaleY(1);
+  }
 }

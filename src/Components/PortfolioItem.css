@@ -42,37 +42,37 @@
   from {
     visibility: visible;
     opacity: 0;
-    transform: translateX(90vw);
+    transform: translateX(90vw) scaleY(0.33);
   }
   to {
     opacity: 1;
-    transform: translateX(0vw);
+    transform: translateX(0vw) scaleY(1);
   }
 }
 
 @keyframes outToRight {
   from {
     opacity: 1;
-    transform: translateX(0vw);
+    transform: translateX(0vw) scaleY(1);
   }
   to {
     visibility: hidden;
 
     opacity: 0;
-    transform: translateX(90vw);
+    transform: translateX(90vw) scaleY(0.33);
   }
 }
 
 @keyframes outToLeft {
   from {
     opacity: 1;
-    transform: translateX(0vw);
+    transform: translateX(0vw) scaleY(1);
   }
   to {
     visibility: hidden;
 
     opacity: 0;
-    transform: translateX(-90vw);
+    transform: translateX(-90vw) scaleY(0.33);
   }
 }
 
@@ -80,11 +80,11 @@
   from {
     visibility: visible;
     opacity: 0;
-    transform: translateX(-90vw);
+    transform: translateX(-90vw) scaleY(0.33);
   }
   to {
     opacity: 1;
-    transform: translateX(0vw);
+    transform: translateX(0vw) scaleY(1);
   }
 }
 

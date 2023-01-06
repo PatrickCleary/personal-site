@@ -39,7 +39,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
     <div>
       <div className="Portfolio-Container Invisible" ref={portfolioRef}>
         <div
-          className={`Arrows ${mobile && "Left-Arrow-Mobile"}`}
+          className={`Arrows ${mobile && "Left-Arrow-Mobile"} Arrow-Left`}
           style={{
             cursor: selected.current > 0 ? "pointer" : "auto",
           }}
@@ -52,6 +52,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
           }}
         >
           <Arrow
+            className="Arrow-SVG"
             style={{
               transform: "rotateY(180deg)",
               opacity: selected.current > 0 ? 1 : 0,
@@ -72,7 +73,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
           })}
         </div>
         <div
-          className={`Arrows ${mobile && "Right-Arrow-Mobile"}`}
+          className={`Arrows ${mobile && "Right-Arrow-Mobile"} Arrow-Right`}
           style={{
             cursor:
               selected.current < portfolioItems.length - 1 ? "pointer" : "auto",
@@ -86,6 +87,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
           }}
         >
           <Arrow
+            className="Arrow-SVG"
             width={"4rem"}
             style={{
               opacity: selected.current + 1 < portfolioItems.length ? 1 : 0,

@@ -16,6 +16,7 @@ const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({ setPage }) => {
       style={{ marginBottom: mobile ? "1rem" : "0px" }}
       onClick={() => {
         setPage();
+        document.body.style.overflow = "hidden";
       }}
     >
       <p>Learn More</p>

@@ -20,31 +20,60 @@
   left: 0px;
   top: 0px;
   overflow-y: scroll;
+  background: #2e2d2c;
   display: flex;
+  flex-direction: column;
 }
 
 .Main-Div {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 200vh;
+}
+
+.Top-Bar {
+  width: 100vw;
+  position: sticky;
+  top: 0px;
   background: #2e2d2c;
+  box-shadow: 0px 0px 5px 1px #000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .Exit {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  position: fixed;
+  width: 8vw;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
   left: 0px;
-  top:0px;
-
+  position: absolute;
+  top: 0px;
 }
+.TMHeader {
+  padding: 1vw;
+}
+
 .Main-Content {
-  width: 80vw;
-  padding:8vw;
+  width: 64vw;
+  padding: 4vw 8vw 8vw 4vw;
 }
 
 .Text {
   font-size: 1.6rem;
+}
+
+.PageTitle {
+  font-size: 3rem;
+}
+
+.CS-Paragraph {
+  padding-top: 1rem;
+}
+.CS-Header {
+  padding-top: 2rem;
+  font-size: 3em;
 }
