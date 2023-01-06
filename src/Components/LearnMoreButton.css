@@ -16,5 +16,12 @@
 }
 
 .Learn-More-Div:hover {
-  background-color: "#fff";
+  background-color: white;
+  background: linear-gradient(-45deg, transparent, #ffffffa0);
+  transform: skewX(-5deg);
+  box-shadow: 3px 3px 2px 2px #000;
+}
+
+.Learn-More-Div:hover p {
+  font-weight: bold;
 }

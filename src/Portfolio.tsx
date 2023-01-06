@@ -6,9 +6,11 @@ import { ReactComponent as AE } from "./Images/Burger.svg";
 import { ReactComponent as CarGo } from "./Images/CarGo.svg";
 import Header from "./Components/Header";
 import PortfolioSlider from "./Components/PortfolioSlider";
+import TransitMattersPage from "./TransitMattersPage";
 
 export const Portfolio = () => {
   const { mobile } = useContext(WindowContext);
+  const [page, setPage] = useState("None");
   window.addEventListener(
     "scroll",
     () => {
@@ -22,7 +24,8 @@ export const Portfolio = () => {
   return (
     <div className="Portfolio">
       <Header title="PORTFOLIO" colorOne="#ffffff" colorTwo="#ffffff20" />
-      <PortfolioSlider />
+      <PortfolioSlider setPage={setPage} />
+      {page === "TM" && <TransitMattersPage setPage={setPage} />}
     </div>
   );
 };

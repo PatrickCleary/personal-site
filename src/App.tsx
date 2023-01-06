@@ -118,6 +118,7 @@ function App() {
       </div>
       <AboutMe />
       <Portfolio />
+{/*       
       <div className="CarGo" style={{ zIndex: 3, position: "relative" }}>
         <img
           ref={logoRef}
@@ -133,7 +134,7 @@ function App() {
           small business owner. Our goal was to improve the reliability of his
           delivery driver workforce.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }

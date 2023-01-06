@@ -17,15 +17,11 @@ export const AboutMenu = () => {
     index: number
   ) => {
     if (index >= elements.length) return;
-    setTimeout(
-      () => {
-        console.log(elements[index], index);
-        elements[index].current?.classList.remove("Invisible");
-        elements[index].current?.classList.add("Flow-In");
-        staggerEffects(elements, index + 1);
-      },
-      250
-    );
+    setTimeout(() => {
+      elements[index].current?.classList.remove("Invisible");
+      elements[index].current?.classList.add("Flow-In");
+      staggerEffects(elements, index + 1);
+    }, 250);
   };
 
   useEffect(() => {
@@ -41,7 +37,7 @@ export const AboutMenu = () => {
       },
       {
         root: null,
-        rootMargin: mobile ? "-10px" : "-15%",
+        rootMargin: mobile ? "-45px" : "-15%",
         threshold: 0.5,
       }
     );
@@ -53,11 +49,11 @@ export const AboutMenu = () => {
 
   return (
     <div
+      className="About-Menu-Div"
       style={{
-        padding: mobile ? "1rem" : "0px",
         display: "flex",
         flexDirection: mobile ? "column" : "row",
-        paddingTop: "2rem",
+        padding: mobile ? "1rem" : "2rem 0px 0px",
         alignSelf: "center",
       }}
     >

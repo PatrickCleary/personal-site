@@ -9,7 +9,7 @@
 .Portfolio-Item-Mobile {
   border-radius: 2rem;
   box-shadow: 0px 0px 2px 1px #000;
-  align-items:center;
+  align-items: center;
 }
 
 .Portfolio-Item-DT {
@@ -40,6 +40,7 @@
 
 @keyframes inFromRight {
   from {
+    visibility: visible;
     opacity: 0;
     transform: translateX(90vw);
   }
@@ -55,6 +56,8 @@
     transform: translateX(0vw);
   }
   to {
+    visibility: hidden;
+
     opacity: 0;
     transform: translateX(90vw);
   }
@@ -66,6 +69,8 @@
     transform: translateX(0vw);
   }
   to {
+    visibility: hidden;
+
     opacity: 0;
     transform: translateX(-90vw);
   }
@@ -73,6 +78,7 @@
 
 @keyframes inFromLeft {
   from {
+    visibility: visible;
     opacity: 0;
     transform: translateX(-90vw);
   }
@@ -89,6 +95,19 @@
 .Screenshots-DT {
   width: 27vw;
   right: -2rem;
+}
+
+.TM-App-Screenshots:hover {
+  animation: rock 1s ease-in-out infinite alternate;
+}
+
+@keyframes rock {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
 }
 
 .TM-App-Screenshots {

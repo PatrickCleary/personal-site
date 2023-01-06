@@ -1,0 +1,50 @@
+.Slide-Up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.Container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  overflow-y: scroll;
+  display: flex;
+}
+
+.Main-Div {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 200vh;
+  background: #2e2d2c;
+}
+
+.Exit {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  position: fixed;
+  left: 0px;
+  top:0px;
+
+}
+.Main-Content {
+  width: 80vw;
+  padding:8vw;
+}
+
+.Text {
+  font-size: 1.6rem;
+}

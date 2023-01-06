@@ -4,37 +4,33 @@ import { ReactComponent as TM } from "../Images/TM.svg";
 import TMAppScreenshots from "../Images/TM_App_ScreenShots.png";
 import { WindowContext } from "../WindowContext";
 import LearnMoreButton from "./LearnMoreButton";
+import TransitMattersPage from "../TransitMattersPage";
 
 interface PortfolioItemProps {
   index: number;
   selected: { current: number; previous: number };
   name: string;
+  setPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const PortfolioItem: React.FC<PortfolioItemProps> = ({
   index,
   selected,
   name,
+  setPage,
 }) => {
   const { mobile } = useContext(WindowContext);
   let animationSelection = "";
   if (selected.current === index) {
     if (selected.previous < selected.current) {
-      console.log(index.toString(), "SIFR");
       animationSelection = "Slide-In-From-Right";
     } else {
-      console.log(index.toString(), "SIFL");
-
       animationSelection = "Slide-In-From-Left";
     }
   } else if (selected.previous === index) {
     if (selected.previous < selected.current) {
-      console.log(index.toString(), "SOTL");
-
       animationSelection = "Slide-Out-To-Left";
     } else {
-      console.log(index.toString(), "SOTR");
-
       animationSelection = "Slide-Out-To-Right";
     }
   }
@@ -42,7 +38,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   return (
     <div
       key={name}
-      className={`Portfolio-Item ${animationSelection} Invisible  ${
+      className={`Portfolio-Item ${animationSelection} Invisible Gone ${
         mobile ? "Portfolio-Item-Mobile" : "Portfolio-Item-DT"
       }`}
       style={{
@@ -74,7 +70,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
 
       {!mobile && (
         <div className="Portfolio-Item-Text Portfolio-Item-Text-DT">
-            <div>
+          <div>
             <h3
               className="Portfolio-Item-Title"
               style={{
@@ -91,8 +87,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
                 version of their data dashboards.
               </p>
             )}
-            </div>
-          <LearnMoreButton />
+          </div>
+          <LearnMoreButton setPage={setPage} />
         </div>
       )}
       {!mobile && <div style={{ width: "27vw", display: "flex" }} />}
@@ -106,7 +102,13 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         src={TMAppScreenshots}
         alt="Screenshots of TransitMatters Site"
       />
-      {mobile && <LearnMoreButton />}
+      {mobile && (
+        <LearnMoreButton
+          setPage={() => {
+            setPage(name);
+          }}
+        />
+      )}
     </div>
   );
 };

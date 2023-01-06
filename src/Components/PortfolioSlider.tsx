@@ -3,7 +3,11 @@ import PortfolioItem from "./PortfolioItem";
 import { ReactComponent as Arrow } from "../Images/Arrow.svg";
 import { WindowContext } from "../WindowContext";
 
-const PortfolioSlider = () => {
+interface PortfolioSliderProps {
+  setPage: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
   const [selected, setSelected] = useState({ current: 0, previous: -1 });
   const { mobile } = useContext(WindowContext);
   const portfolioItems = ["TM", "CG", "AE"];
@@ -33,10 +37,7 @@ const PortfolioSlider = () => {
 
   return (
     <div>
-      <div
-        className="Portfolio-Container Invisible"
-        ref={portfolioRef}
-      >
+      <div className="Portfolio-Container Invisible" ref={portfolioRef}>
         <div
           className={`Arrows ${mobile && "Left-Arrow-Mobile"}`}
           style={{
@@ -58,12 +59,15 @@ const PortfolioSlider = () => {
             }}
           />
         </div>
-        <div
-          className="Current-Portfolio-Item"
-        >
+        <div className="Current-Portfolio-Item">
           {portfolioItems.map((name, index) => {
             return (
-              <PortfolioItem selected={selected} index={index} name={name} />
+              <PortfolioItem
+                selected={selected}
+                index={index}
+                name={name}
+                setPage={() => setPage(name)}
+              />
             );
           })}
         </div>
