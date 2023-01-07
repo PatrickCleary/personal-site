@@ -53,13 +53,26 @@
   position: absolute;
   top: 0px;
 }
+
+.Exit:hover {
+    background-color: #ffffff40;
+}
+
 .TMHeader {
   padding: 1vw;
 }
 
+.Main-Content-Mobile {
+  width: 90vw;
+}
+.Main-Content-DT {
+  width: 70vw;
+}
+
 .Main-Content {
-  width: 64vw;
-  padding: 4vw 8vw 8vw 4vw;
+  width: 70vw;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
 }
 
 .Text {
@@ -67,13 +80,29 @@
 }
 
 .PageTitle {
-  font-size: 3rem;
+  font-size: 2.4rem;
+}
+
+.PageTitle-Mobile {
+  font-size: 2rem;
 }
 
 .CS-Paragraph {
   padding-top: 1rem;
 }
+
+.CS-Paragraph-Mobile {
+  font-size: 1rem;
+}
+
+.CS-Header-Mobile {
+  font-size: 1.6rem;
+}
+
 .CS-Header {
-  padding-top: 2rem;
-  font-size: 3em;
+  padding-top: 4rem;
+}
+
+.CS-Header-DT {
+  font-size: 2.4rem;
 }

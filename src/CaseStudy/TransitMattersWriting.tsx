@@ -1,75 +1,59 @@
+import TM_Header from "../Images/TM_Case_Study_Header_Photo.png";
+import MobileAccess from "../Images/MobileAccessScreenshot.png";
+
 export const content = [
   { type: "h", text: "TransitMatters Data Dashboards" },
   {
     type: "p",
-    text: `I joined TransitMatters - a public transit advocacy group in October, after hearing about their work through the Boston Globe. They were receiving publicity for their dashboards used to provide the public with data about the conditions of the MBTA.`,
+    text: `I joined TransitMatters - a public transit advocacy group in October, after hearing about their work through the Boston Globe. They were receiving publicity for their data dashboards, a tool that provides data about the conditions of the Massachusetts Bay Transportation Authority (MBTA) system.`,
   },
   {
     type: "p",
-    text: `I started out by doing some development with them, odd bug fixes and feature requests. I learned they were working on a new version of their dashboards. They had goals of improving usability, making it more mobile friendly, and supplying better information.`,
-  },
-  {
-    type: "p",
-    text: `At one of the first meetings I attended, they mentioned they needed a design of the site/app to work off. I had some app design experience from a couple of previous projects, so I figured I'd give it a try. I ended up overhauling the entire design with a new focus, and sharing that with the group. It was just what they needed, and now we are in the process of building my designs.`,
+    text: `I started out by doing software development for them, and I learned that they were working on a new version of their data dashboards. They had goals of improving usability, making it more mobile friendly, and supplying better information. They had lots of ideas, but needed someone to get it started with a design. I had some experience with that, so I decided to give it a shot. It turned out to be just what they needed, and now we are working on the development.`,
   },
   { type: "p", text: `Here's a few pictures:` },
-  { type: "img", location: "../Images/TBD" },
+  { type: "img", location: TM_Header },
   {
     type: "p",
-    text: `The group had mentioned some of their big picture plans and ideas. From all of those ideas, it became clear there was a central idea/theme.`,
+    text: `Working with the group, I realized there was a central theme to the hopes for the new data dashboard: Make it appeal to the everyday commuter (without losing functionality).`,
   },
   {
     type: "p",
-    text: "We wanted to make it appeal to the everyday commuter.",
+    text: "Working on the design, I came to three main issues to solve for that goal.",
   },
-  { type: "p", text: "There were three issues to solve related to that." },
   {
     type: "list",
     text: [
-      "Make it easier to share",
+      "Mobile Access",
       "Require less background knowledge",
       "Provide useful daily information upfront",
     ],
   },
-  { type: "h", text: "Shareability" },
+  { type: "h", text: "Mobile Access" },
   {
     type: "p",
-    text: "Let's start with the first one. Making it easier to share. I had seen plenty of screenshots from the app. They were useful, but not attractive, and not easy to interpret. Here's an example:",
+    text: "The group had discussed improving the mobile experience for a while, but I was curious. How many of our users were accessing the site on mobile? I looked at the statistics, and it turns out it's more than 50%. The site hadn't been designed originally with a mobile-first mentality, and the experience was less than stellar.",
+  },
+  {
+    type: "p",
+    text: "One of the major use cases for the dashboards, and a big source of new users is sharing. There are often screenshots posted on Twitter which receive attention and draw new users, and these screenshots are often from a mobile device. With the new design, I wanted to make screenshots as aesthetically pleasing, and easy to understand as possible.",
+  },
+  {
+    type: "p",
+    text: `Here's a comparison of a screenshot from before and after the redesign.`,
   },
   {
     type: "img",
-    location: "../Images/TBD",
-    caption: `To provide some context, this was shared in our Slack group, and the person sharing it was pointing out that the median headway was about 15 minutes (that's bad by the way).`,
+    location: MobileAccess,
+    caption: ``,
   },
   {
     type: "p",
-    text: "I saw a few problems with this. The most glaring in my eyes was that the median headway is not given as a statistic. To figure that out, the user has no option other than estimating from the graphs. This was not very inviting to the average commuter, and I realized we needed to provide the most valuable analyses for our users upfront.",
+    text: `The purpose of this screenshot was to share the median headway for the day, a frequently shared metric. In the old design, the user would need to interpret that from the graphs. Understanding the graphs might be quite confusing to someone who has not seen this before. In my design, I wanted to prioritze the aggregated statistics we most often use, and add widgets right at the top of the page with that information. That way the user doesn't have to search for the information they likely want.`,
   },
   {
     type: "p",
-    text: "What I decided to do was come up with the statistics which are most valuable to our users and provide them as widgets right at the top of the page. I also made them modular, so as we learn more about our users and what they want, we can update the selection.",
-  },
-
-  {
-    type: "img",
-    location: "../Images/TBD",
-    caption:
-      "This is what a similar screenshot would look like after my design.",
-  },
-  {
-    type: "p",
-    text: `The next issue is it's hard to know what information is important. The graph grabs your attention, but it requires a lot of the other information on the page to fully interpret it, and that information is not in order of importance.
-    `,
-  },
-  {
-    type: "img",
-    location: "../Images/TBD",
-    caption:
-      "Here is a comparison of the location for what you need to interpret the page.",
-  },
-  {
-    type: "p",
-    text: `I consolidated all of the relevant information into one place, so from a quick glance the user knows what they are looking at. I also made some minor changes like adding “today” when the current date is selected and the day of the week.`,
+    text: `Another change I made was to consolidate the variables into the header and organize them by relevance. The type of data takes priority - Headways. That's the most important aspect. Then we have the line and date - most users will already know this since the color of the screenshot conveys the line (red) and the screenshots are typically shared with context of the date range (today). Also I made sure to add the description of the range "today" so the user doesn't have to read the date and compare to today's date.`,
   },
   { type: "h", text: `Require Less Background Knowledge` },
   {
