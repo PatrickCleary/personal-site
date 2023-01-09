@@ -45,7 +45,11 @@ const TransitMattersPage: React.FC<TransitMattersPageProps> = ({ setPage }) => {
       return (
         <ol>
           {contentItem.text.map((listItem: any, index: number) => {
-            return <p>{`${index + 1}. ${listItem}`}</p>;
+            return (
+              <p
+                className={mobile ? "CS-Paragraph-Mobile" : "CS-Paragraph-DT"}
+              >{`${index + 1}. ${listItem}`}</p>
+            );
           })}
         </ol>
       );

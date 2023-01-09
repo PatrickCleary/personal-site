@@ -27,7 +27,7 @@ export const portfolioItems: PortfolioItems[] = [
     title: "CarGo",
     logo: CG,
     cardImage: CargoAppScreenshots,
-    text: "CarGo is an app.",
+    text: "CarGo is an app that I designed and developed in collaboration with a small business owner. Our goal was to automate scheduling of delivery drivers and provide incentives for dependability.",
     color: "#606060",
   },
 ];

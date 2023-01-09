@@ -1,11 +1,5 @@
 import React, { useEffect, useRef, useContext } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Lottie from "lottie-react";
-import NamePlate from "./Images/NamePlateEmpty.png";
-import NamePlateFill from "./Images/NamePlateFill.png";
-import NamePlateMobile from "./Images/NamePlateEmptyMobile.png";
-import NamePlateMobileFill from "./Images/NamePlateFillMobile.png";
 import CarGoLogo from "./Animations/CarGoBWCropped.png";
 import { ReactComponent as NamePlateSVG } from "./Images/NamePlate.svg";
 import { ReactComponent as NamePlateSVGMobile } from "./Images/NamePlateMobile.svg";
