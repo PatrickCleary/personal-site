@@ -80,14 +80,21 @@ export const content = [
     type: "p",
     text: `This last challenge was my favorite part of the design, because it's my least favorite part of the current site. This is the current landing page. I've numbered each place you need to click and input information before the site will show you any information.`,
   },
-  { type: "img", location: "../Images/TBD", caption: "" },
+  { type: "img", location: LandingComparison, caption: " " },
   {
     type: "p",
     text: `That was my main focus when I started working on the design. I wanted the very first page the user sees to show them something they find interesting. That’s how I came up with the concept for a widget-based landing page. When the user opens the site now, this is the first thing they will see:`,
   },
-  { type: "img", location: LandingComparison, caption: " " },
   {
     type: "p",
-    text: `This page will start up by giving the user a whole bunch of cool things to look at, and will help guide them where they want to go. Many people want to know the travel time of their commute, so I put that at the very top. We will have some default values for each widget. This allows the user to visually see how the app works rather than trying to figure it out. Each widget clearly contains some information, and some controls. If they scroll through and see something they find interesting, they just need to adjust the settings to what they're interested in. As they become more curious, and explore the other widgets, they will have the opportunity to find things they otherwise may not have thought to look for.`,
+    text: `This page will start up by giving the user a whole bunch of cool things to look at, and will help guide them where they want to go. Many people want to know the travel time of their commute, so I put that at the very top. We will have some default values for each widget. This allows the user to visually see how the app works rather than trying to figure it out. As they become more curious and explore the other widgets, they will have the opportunity to find things they otherwise may not have thought to look for.`,
   },
+  {
+    type:'p',
+    text:"You can find the old dashboards at: https://dashboard.transitmatters.org/"
+  },
+  {
+    type:'p',
+    text:"The new dashboards are a work in progress."
+  }
 ];

@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import "./TransitMattersPage.css";
 import { content } from "./CaseStudy/TransitMattersWriting";
 import { ReactComponent as Close } from "./Images/Close.svg";
-import TMCaseStudyHeader from "../Images/TM_Case_Study_Header_Photo.png";
+import Figma from "./Images/Figma.png";
+import Github from "./Images/Github.png";
 import { WindowContext } from "./WindowContext";
 
 interface TransitMattersPageProps {
@@ -82,6 +83,20 @@ const TransitMattersPage: React.FC<TransitMattersPageProps> = ({ setPage }) => {
           {content.map((contentItem) => {
             return renderContent(contentItem);
           })}
+          <div className={`Links ${mobile ? "Links-Mobile" : "Links-DT"}`}>
+            <div className={`Figma Link ${mobile && "Link-Mobile"}`}>
+              <a
+                href={`https://www.figma.com/file/bLBzzBX3r6tG2CoS6vWglD/Dashboard---V4?node-id=1%3A55&t=ci7douClyjtiNNaG-1`}
+              >
+                <img src={Figma} className="Link-Icon" alt={"Figma Link"} />
+              </a>
+            </div>
+            <div className={`Github Link ${mobile && "Link-Mobile"}`}>
+              <a href="https://github.com/transitmatters/t-performance-dash/tree/dashboard-v4">
+                <img src={Github} className="Link-Icon" alt={"Github Link"} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

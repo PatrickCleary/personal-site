@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import PortfolioItem from "./PortfolioItem";
+import { portfolioItems } from "../CaseStudy/PortfolioItemObjects";
 import { ReactComponent as Arrow } from "../Images/Arrow.svg";
 import { WindowContext } from "../WindowContext";
 
@@ -10,7 +11,6 @@ interface PortfolioSliderProps {
 const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
   const [selected, setSelected] = useState({ current: 0, previous: -1 });
   const { mobile } = useContext(WindowContext);
-  const portfolioItems = ["TM", "CG", "AE"];
   const portfolioRef = useRef(null);
 
   useEffect(() => {
@@ -61,13 +61,13 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
           />
         </div>
         <div className="Current-Portfolio-Item">
-          {portfolioItems.map((name, index) => {
+          {portfolioItems.map((portfolioItem, index) => {
             return (
               <PortfolioItem
                 selected={selected}
                 index={index}
-                name={name}
-                setPage={() => setPage(name)}
+                item={portfolioItem}
+                setPage={() => setPage(portfolioItem.name)}
               />
             );
           })}

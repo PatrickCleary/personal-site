@@ -1,22 +1,22 @@
 import React, { useContext } from "react";
 import "./PortfolioItem.css";
-import { ReactComponent as TM } from "../Images/TM.svg";
-import TMAppScreenshots from "../Images/Cargo_App_Screenshots.png";
+import TMAppScreenshots from "../Images/TM_App_ScreenShots.png";
 import { WindowContext } from "../WindowContext";
 import LearnMoreButton from "./LearnMoreButton";
 import TransitMattersPage from "../TransitMattersPage";
+import { portfolioItems } from "../CaseStudy/PortfolioItemObjects";
 
 interface PortfolioItemProps {
   index: number;
   selected: { current: number; previous: number };
-  name: string;
+  item: any;
   setPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const PortfolioItem: React.FC<PortfolioItemProps> = ({
   index,
   selected,
-  name,
+  item,
   setPage,
 }) => {
   const { mobile } = useContext(WindowContext);
@@ -37,25 +37,25 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
 
   return (
     <div
-      key={name}
+      key={item.name}
       className={`Portfolio-Item ${animationSelection} Invisible Gone ${
         mobile ? "Portfolio-Item-Mobile" : "Portfolio-Item-DT"
       }`}
       style={{
         width: mobile ? "auto" : " 75w",
         flexDirection: mobile ? "column" : "row",
-        backgroundColor: mobile ? "transparent" : "#3f3f3f",
+        backgroundColor: mobile ? "transparent" : item.color,
       }}
     >
       {!mobile && (
-        <TM
+        <item.logo
           width={"24vw"}
           height={"24vw"}
           className="TransitMattersLogo Icon"
         />
       )}
       {mobile && (
-        <div className="Portfolio-Item-Text">
+        <div className="Portfolio-Item-Text Portfolio-Item-Text-Mobile">
           <h3
             className="Portfolio-Item-Title"
             style={{
@@ -63,7 +63,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
               fontSize: "2rem",
             }}
           >
-            TransitMatters
+            {item.title}
           </h3>
         </div>
       )}
@@ -78,14 +78,10 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
                 fontSize: "3rem",
               }}
             >
-              TransitMatters
+              {item.title}
             </h3>
             {!mobile && (
-              <p>
-                TransitMatters is a non-profit organization in Boston formed to
-                advocate for better public transportation. I am working on a new
-                version of their data dashboards.
-              </p>
+              <p style={{ color: item.secondaryColor }}>{item.text}</p>
             )}
           </div>
           <LearnMoreButton setPage={setPage} />
@@ -99,13 +95,13 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         className={`TM-App-Screenshots ${
           mobile ? "Screenshots-Mobile" : "Screenshots-DT"
         }`}
-        src={TMAppScreenshots}
+        src={item.cardImage}
         alt="Screenshots of TransitMatters Site"
       />
       {mobile && (
         <LearnMoreButton
           setPage={() => {
-            setPage(name);
+            setPage(item.name);
           }}
         />
       )}

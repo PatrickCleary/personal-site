@@ -44,6 +44,7 @@ h2 {
 }
 .Portfolio-Item-Text-DT {
   justify-content: space-between;
+  width:39vw;
 }
 .Right {
   right: 0px;

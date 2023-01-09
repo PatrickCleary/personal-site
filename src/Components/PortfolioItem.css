@@ -136,7 +136,6 @@
   margin-bottom: 1rem;
   /* margin-right: 4rem; */
   display: flex;
-  width: 39vw;
   flex-direction: column;
   row-gap: 1rem;
 }
