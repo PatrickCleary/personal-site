@@ -1,5 +1,7 @@
 import TM_Header from "../Images/TM_Case_Study_Header_Photo.png";
 import MobileAccess from "../Images/MobileAccessScreenshot.png";
+import TMControls from "../Images/TMControlsScreenshots.png";
+import LandingComparison from '../Images/LandingComparison.png'
 
 export const content = [
   { type: "h", text: "TransitMatters Data Dashboards" },
@@ -36,7 +38,7 @@ export const content = [
   },
   {
     type: "p",
-    text: "One of the major use cases for the dashboards, and a big source of new users is sharing. There are often screenshots posted on Twitter which receive attention and draw new users, and these screenshots are often from a mobile device. With the new design, I wanted to make screenshots as aesthetically pleasing, and easy to understand as possible.",
+    text: "One of the major use cases for the dashboards, and a big source of new users is sharing. There are often screenshots posted on Twitter which receive attention and draw new users, and these screenshots are often from a mobile device. With the new design, I wanted to make screenshots aesthetically pleasing and easy to understand on mobile.",
   },
   {
     type: "p",
@@ -58,17 +60,17 @@ export const content = [
   { type: "h", text: `Require Less Background Knowledge` },
   {
     type: "p",
-    text: `Another issue I saw with our dashboards is the amount of information a user needs to have to interpret the graphs. This is where the pre-packaged analyses come in handy as well. Instead of simply being a source for data, I wanted it to be a source for information.`,
+    text: `Another issue I saw with our dashboards is the amount of information a user needs to have to interpret the graphs. This is where the pre-packaged analyses come in handy as well. Instead of simply being a source for data, I wanted it to be a guide to information.`,
   },
   {
     type: "p",
-    text: `When thinking about this, I realized the important question is how did the user end up looking at the page they're currently on. The dashboards are often shared in news articles linking back to the page the journalist got the data from. They are also often shared on social media, like twitter. This means the first experience someone has with the dashboard is often not by entering through the landing page. They often are thrown into a dashboard which is pre-configured. I realized this could be a great opportunity for encouraging the user’s natural curiosity. If they clicked on a link about a dashboard, there’s a good chance they will want to see another, similar dashboard.`,
+    text: `When thinking about this, I realized the important question is how did the user end up looking at the page they're currently on. The dashboards are often shared in news articles linking back to a page the journalist got the data from. Links to specific dashboards are also often shared on Twitter. This means the first experience someone has with the dashboard isn't typically began from the landing page. I realized this could be a great opportunity for encouraging the user's natural curiosity. If they clicked on a link about a dashboard, there's a good chance they will want to see another, similar dashboard. To aid and encourage this natural curiosity, I wanted to provide simple adjustments and filters to guide the user.` ,
   },
   {
     type: "p",
     text: `One such case I imagined would be when someone clicks on a link to the dashboard showing that travel times are up along their commute today. For me, the next immediate thought would be “How does it compare to the past month?” In that case, the user will quickly see there are some filters at the bottom of the page to check out other analyses. In the previous version to see another date range, they would need to go into the start date and end date and make a decision about when to set those to get a good comparison.`,
   },
-  { type: "img", location: "../Images/TBD", caption: "" },
+  { type: "img", location: TMControls, caption: "" },
   {
     type: "p",
     text: `In the new design, the user is presented with a few interesting options right away in this filter bar. We've given them the tools they need to find what they are interested in without having to dig.`,
@@ -83,7 +85,7 @@ export const content = [
     type: "p",
     text: `That was my main focus when I started working on the design. I wanted the very first page the user sees to show them something they find interesting. That’s how I came up with the concept for a widget-based landing page. When the user opens the site now, this is the first thing they will see:`,
   },
-  { type: "img", location: "../Images/TBD", caption: " " },
+  { type: "img", location: LandingComparison, caption: " " },
   {
     type: "p",
     text: `This page will start up by giving the user a whole bunch of cool things to look at, and will help guide them where they want to go. Many people want to know the travel time of their commute, so I put that at the very top. We will have some default values for each widget. This allows the user to visually see how the app works rather than trying to figure it out. Each widget clearly contains some information, and some controls. If they scroll through and see something they find interesting, they just need to adjust the settings to what they're interested in. As they become more curious, and explore the other widgets, they will have the opportunity to find things they otherwise may not have thought to look for.`,
