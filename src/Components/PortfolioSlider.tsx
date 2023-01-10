@@ -37,9 +37,16 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
 
   return (
     <div>
-      <div className="Portfolio-Container Invisible" ref={portfolioRef}>
+      <div
+        className={`Portfolio-Container Invisible ${
+          mobile ? "Portfolio-Container-Mobile" : "Portfolio-Container-DT"
+        }`}
+        ref={portfolioRef}
+      >
         <div
-          className={`Arrows ${mobile && "Left-Arrow-Mobile"} Arrow-Left`}
+          className={`Arrows ${mobile && "Left-Arrow-Mobile"} ${
+            !mobile && "Arrows-DT"
+          } Arrow-Left`}
           style={{
             cursor: selected.current > 0 ? "pointer" : "auto",
           }}
@@ -54,13 +61,14 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
           <Arrow
             className="Arrow-SVG"
             style={{
-              transform: "rotateY(180deg)",
               opacity: selected.current > 0 ? 1 : 0,
               width: "4rem",
             }}
           />
         </div>
-        <div className="Current-Portfolio-Item">
+        <div
+          className="Current-Portfolio-Item"
+        >
           {portfolioItems.map((portfolioItem, index) => {
             return (
               <PortfolioItem
@@ -73,7 +81,9 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
           })}
         </div>
         <div
-          className={`Arrows ${mobile && "Right-Arrow-Mobile"} Arrow-Right`}
+          className={`Arrows ${mobile && "Right-Arrow-Mobile"} ${
+            !mobile && "Arrows-DT"
+          } Arrow-Right`}
           style={{
             cursor:
               selected.current < portfolioItems.length - 1 ? "pointer" : "auto",
@@ -96,7 +106,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
         </div>
       </div>
       <p style={{ alignSelf: "center", textAlign: "center" }}>
-        {selected.current + 1}/3
+        {selected.current + 1}/{portfolioItems.length}
       </p>
     </div>
   );

@@ -44,7 +44,7 @@ h2 {
 }
 .Portfolio-Item-Text-DT {
   justify-content: space-between;
-  width:39vw;
+  width: 39vw;
 }
 .Right {
   right: 0px;
@@ -64,6 +64,7 @@ h2 {
 
 .Portfolio-Container {
   width: 80vw;
+  justify-content: center;
   padding: 2rem;
   display: flex;
   flex-direction: row;
@@ -75,17 +76,25 @@ h2 {
   display: grid;
   overflow: visible;
 }
+
 .Left-Arrow-Mobile {
-  position: fixed;
-  left: 1em;
+  position: absolute;
+  animation: bounceLeft 3s linear infinite;
+  left: 0.25rem;
+  width: 8vw;
 }
 .Right-Arrow-Mobile {
-  position: fixed;
-  right: 1em;
+  position: absolute;
+  right: 0.25rem;
+  animation: bounceRight 3s linear infinite;
+
+  width: 8vw;
+}
+.Arrows-DT {
+  width: 3vw;
 }
 .Arrows {
   display: flex;
-  width: 3vw;
   align-items: center;
   z-index: 10;
 }
@@ -94,10 +103,9 @@ h2 {
   animation: bounceRight 3s linear infinite;
 }
 
-
 .Arrow-Left:hover .Arrow-SVG {
-    animation: bounceLeft 3s linear infinite;
-  }
+  animation: bounceLeft 3s linear infinite;
+}
 
 @keyframes bounceRight {
   0% {
@@ -155,6 +163,9 @@ h2 {
     transform: rotateY(180deg) translateX(1vw) scaleY(0.9);
   }
   40% {
+    transform: rotateY(180deg) translateX(0vw) scaleY(1);
+  }
+  100% {
     transform: rotateY(180deg) translateX(0vw) scaleY(1);
   }
 }

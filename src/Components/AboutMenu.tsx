@@ -4,7 +4,7 @@ import { WindowContext } from "../WindowContext";
 import { AboutMenuItems } from "./AboutMenuItems";
 
 export const AboutMenu = () => {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(-1);
   const { mobile } = useContext(WindowContext);
   const menuRef = useRef(null);
   const menuItemOne = useRef(null);

@@ -11,16 +11,7 @@ import TransitMattersPage from "./TransitMattersPage";
 export const Portfolio = () => {
   const { mobile } = useContext(WindowContext);
   const [page, setPage] = useState("None");
-  window.addEventListener(
-    "scroll",
-    () => {
-      document.body.style.setProperty(
-        "--scroll",
-        `${window.scrollY / (document.body.offsetHeight - window.innerHeight)}`
-      );
-    },
-    false
-  );
+  
   return (
     <div className="Portfolio">
       <Header title="PORTFOLIO" colorOne="#ffffff" colorTwo="#ffffff20" />

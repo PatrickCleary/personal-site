@@ -21,21 +21,9 @@ const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({ setPage }) => {
           document.body.style.overflow = "hidden";
         }}
       >
-        {/* <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          columnGap: "1rem",
-          alignItems: "center",
-          padding:'1rem',
-          borderStyle:'solid',
-          borderWidth:1,
-          borderRadius:'16px',
-        }}
-      > */}
+        
         <p>Learn More</p>
         <ArrowTail width={mobile ? "1.2rem" : "2rem"} />
-        {/* </div> */}
       </div>
     </div>
   );

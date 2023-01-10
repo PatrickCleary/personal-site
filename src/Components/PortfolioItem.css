@@ -88,16 +88,12 @@
   }
 }
 
-.Screenshots-Mobile {
-  width: 50vw;
-}
-
-.Screenshots-DT {
+.App-Screenshots-DT {
   width: 27vw;
   right: -2rem;
 }
 
-.TM-App-Screenshots:hover {
+.App-Screenshots:hover {
   animation: rock 1s ease-in-out infinite alternate;
 }
 
@@ -110,7 +106,7 @@
   }
 }
 
-.TM-App-Screenshots {
+.App-Screenshots {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -132,10 +128,15 @@
 }
 
 .Portfolio-Item-Text {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  /* margin-right: 4rem; */
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+}
+
+.Portfolio-Item-Text-Mobile {
+  margin-top: 1rem;
+}
+
+.App-Screenshots-Mobile {
+  width: 60vw;
 }

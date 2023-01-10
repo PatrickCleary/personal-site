@@ -49,6 +49,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
     >
       {!mobile && (
         <item.logo
+          fill="#FDC500"
           width={"24vw"}
           height={"24vw"}
           className="TransitMattersLogo Icon"
@@ -92,8 +93,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         style={{
           position: mobile ? "relative" : "absolute",
         }}
-        className={`TM-App-Screenshots ${
-          mobile ? "Screenshots-Mobile" : "Screenshots-DT"
+        className={`App-Screenshots ${
+          mobile ? "App-Screenshots-Mobile" : "App-Screenshots-DT"
         }`}
         src={item.cardImage}
         alt="Screenshots of TransitMatters Site"
