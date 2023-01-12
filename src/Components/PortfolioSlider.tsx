@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import PortfolioItem from "./PortfolioItem";
 import { portfolioItems } from "../CaseStudy/PortfolioItemObjects";
 import { ReactComponent as Arrow } from "../Images/Arrow.svg";
+import { ReactComponent as ArrowLeft } from "../Images/ArrowLeft.svg";
 import { WindowContext } from "../WindowContext";
 
 interface PortfolioSliderProps {
@@ -58,7 +59,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
               });
           }}
         >
-          <Arrow
+          <ArrowLeft
             className="Arrow-SVG"
             style={{
               opacity: selected.current > 0 ? 1 : 0,
