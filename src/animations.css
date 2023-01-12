@@ -25,28 +25,31 @@
 }
 
 .Flow-In > .Title {
-  animation: flowInText .65s forwards ease-out;
+  animation: flowInText 1s forwards ease-in-out;
 }
 
 .Flow-In > p {
-  animation: flowInText .65s forwards ease-out;
+  animation: flowInText 1s forwards linear;
 }
 
 @keyframes flowInText {
   0% {
     opacity: 0;
   }
-  99% {
+  50% {
     opacity: 0;
+  }
+  100% {
+    opacity:1;
   }
 }
 
 .Flow-In {
-  animation: flowIn .65s forwards ease-out;
+  animation: flowIn 1s forwards linear;
 }
 
 .Fade-In {
-  animation: fadeIn .65s forwards ease-out;
+  animation: fadeIn 1s forwards linear;
 }
 @keyframes fadeIn {
   to {
@@ -58,92 +61,141 @@
   0% {
     opacity: 0;
   }
-  7% {
+  3.5% {
     opacity: 1;
     background: radial-gradient(ellipse at center, #fff, transparent 10%);
-
+    box-shadow: 0px 0px 0rem 0rem #fff;
+  }
+  7% {
+    opacity: 1;
+    background: radial-gradient(ellipse at center, #fff, transparent 20%);
+    box-shadow: 0px 0px 0rem 0rem #fff;
+  }
+  10.5% {
+    opacity: 1;
+    background: radial-gradient(ellipse at center, #fff, transparent 30%);
     box-shadow: 0px 0px 0rem 0rem #fff;
   }
   14% {
     opacity: 1;
-    background: radial-gradient(ellipse at center, #fff, transparent 20%);
-
+    background: radial-gradient(ellipse at center, #fff, transparent 40%);
     box-shadow: 0px 0px 0rem 0rem #fff;
   }
+  17.5% {
+    opacity: 1;
+    background: radial-gradient(ellipse at center, #fff, transparent 50%);
+    box-shadow: 0px 0px 0rem 0rem #fff;
+  }
+
   21% {
     opacity: 1;
-    background: radial-gradient(ellipse at center, #fff, transparent 30%);
-
+    background: radial-gradient(ellipse at center, #fff, transparent 60%);
+    box-shadow: 0px 0px 0rem 0rem #fff;
+  }
+  24.5% {
+    opacity: 1;
+    background: radial-gradient(ellipse at center, #fff, transparent 70%);
     box-shadow: 0px 0px 0rem 0rem #fff;
   }
   28% {
     opacity: 1;
-    background: radial-gradient(ellipse at center, #fff, transparent 40%);
-
+    background: radial-gradient(ellipse at center, #fff, transparent 80%);
+    box-shadow: 0px 0px 0rem 0rem #fff;
+  }
+  31.5% {
+    opacity: 1;
+    background: radial-gradient(ellipse at center, #fff, transparent 90%);
     box-shadow: 0px 0px 0rem 0rem #fff;
   }
   35% {
     opacity: 1;
-    background: radial-gradient(ellipse at center, #fff, transparent 50%);
-
+    background: radial-gradient(ellipse at center, #fff, transparent 100%);
     box-shadow: 0px 0px 0rem 0rem #fff;
   }
 
+  38.5% {
+    opacity: 1;
+
+    background: radial-gradient(ellipse at center, #fff, #fff);
+    box-shadow: 0px 0px 0rem 0rem #fff;
+  }
   42% {
     opacity: 1;
-    background: radial-gradient(ellipse at center, #fff, transparent 60%);
 
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at center, #fff, #fff);
+    box-shadow: 0px 0px 0rem 1rem #fff;
+  }
+  45.5% {
+    opacity: 1;
+
+    background: radial-gradient(ellipse at center, #fff, #fff);
+    box-shadow: 0px 0px 1rem 1rem #fff;
   }
   49% {
     opacity: 1;
-    background: radial-gradient(ellipse at center, #fff, transparent 70%);
 
+    background: radial-gradient(ellipse at center, #fff, #fff);
+    box-shadow: 0px 0px 0rem 1rem #fff;
+  }
+  52.5%{
+    opacity: 1;
+
+    background: radial-gradient(ellipse at center, #fff, #fff);
     box-shadow: 0px 0px 0rem 0rem #fff;
   }
   56% {
     opacity: 1;
-    background: radial-gradient(ellipse at center, #fff, transparent 80%);
-
+    background: radial-gradient(ellipse at center, #fff, transparent 100%);
+    box-shadow: 0px 0px 0rem 0rem #fff;
+  }
+  59.5% {
+    opacity: 1;
+    background: radial-gradient(ellipse at center, #fff, transparent 90%);
     box-shadow: 0px 0px 0rem 0rem #fff;
   }
   63% {
     opacity: 1;
-    background: radial-gradient(ellipse at center, #fff, transparent 90%);
-
+    background: radial-gradient(ellipse at center, #fff, transparent 80%);
+    box-shadow: 0px 0px 0rem 0rem #fff;
+  } 
+  66.5%{
+    opacity: 1;
+    background: radial-gradient(ellipse at center, #fff, transparent 70%);
     box-shadow: 0px 0px 0rem 0rem #fff;
   }
-  70% {
+  70%{
     opacity: 1;
-    background: radial-gradient(ellipse at center, #fff, transparent 100%);
-
+    background: radial-gradient(ellipse at center, #fff, transparent 60%);
     box-shadow: 0px 0px 0rem 0rem #fff;
   }
+  73.5%{
 
-  77% {
     opacity: 1;
-
-    background: radial-gradient(ellipse at center, #fff, #fff);
-
+    background: radial-gradient(ellipse at center, #fff, transparent 50%);
+    box-shadow: 0px 0px 0rem 0rem #fff;
+  }
+  77%{
+    opacity: 1;
+    background: radial-gradient(ellipse at center, #fff, transparent 40%);
+    box-shadow: 0px 0px 0rem 0rem #fff;
+  }
+  80.5%{
+    opacity: 1;
+    background: radial-gradient(ellipse at center, #fff, transparent 30%);
     box-shadow: 0px 0px 0rem 0rem #fff;
   }
   84% {
     opacity: 1;
-
-    background: radial-gradient(ellipse at center, #fff, #fff);
-
-    box-shadow: 0px 0px 0rem 1rem #fff;
+    background: radial-gradient(ellipse at center, #fff, transparent 20%);
+    box-shadow: 0px 0px 0rem 0rem #fff;
   }
-  91% {
+  87.5% {
     opacity: 1;
-
-    background: radial-gradient(ellipse at center, #fff, #fff);
-
-    box-shadow: 0px 0px 1rem 1rem #fff;
+    background: radial-gradient(ellipse at center, #fff, transparent 10%);
+    box-shadow: 0px 0px 0rem 0rem #fff;
   }
-  100% {
+  91%{  
     opacity: 1;
-
-    box-shadow: none;
+    box-shadow: 0px 0px 0rem 0rem #fff;
   }
 }
