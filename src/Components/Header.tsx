@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
     <div
       ref={headerRef}
       className="Header Invisible"
-      style={{ width: mobile ? "85%" : "40%", alignSelf: "center", marginBottom: mobile ? '2rem' : '6rem' }}
+      style={{ width: mobile ? "85%" : "40%", alignSelf: "center", marginBottom: mobile ? '2rem' : '6rem',   background: `radial-gradient(ellipse at top, #000, transparent), radial-gradient(ellipse at bottom, #303030, transparent)` }}
     >
       <h1
         className="Title"

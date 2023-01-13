@@ -14,7 +14,7 @@ export const Portfolio = () => {
   
   return (
     <div className="Portfolio">
-      <Header title="PORTFOLIO" colorOne="#ffffff" colorTwo="#ffffff20" />
+      <Header title="PORTFOLIO" colorOne="#e8820e80" colorTwo="#cf0e0e80" />
       <PortfolioSlider setPage={setPage} />
       {page === "TM" && <TransitMattersPage setPage={setPage} />}
     </div>

@@ -47,7 +47,7 @@
 }
 
 .AboutMe-Top-Row-Fade-In {
-  animation: fadeIn 2s ease-in forwards;
+  animation: slideUpAboutMe .5s cubic-bezier(.68,.22,.43,1.49) forwards;
 }
 @keyframes fadeIn {
   from {
@@ -56,6 +56,15 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slideUpAboutMe {
+  from {
+   transform: translateY(12rem);
+  }
+  to {
+    transform: translateY(0rem);
   }
 }
 

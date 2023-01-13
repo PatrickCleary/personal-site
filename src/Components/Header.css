@@ -4,8 +4,8 @@
   overflow: hidden;
   isolation: isolate;
   /* background: linear-gradient(to top, #c7c7c7 10%, #fff 35%, #fff 65%, #c7c7c7 90% ); */
-  background: radial-gradient(ellipse at top, rgb(0, 0, 0), transparent),
-    radial-gradient(ellipse at bottom, #303030, transparent);
+  /* background: radial-gradient(ellipse at top, rgb(0, 0, 0), transparent),
+    radial-gradient(ellipse at bottom, #303030, transparent); */
   /* box-shadow: .2rem .2rem 1rem .1rem #000   */
 }
 

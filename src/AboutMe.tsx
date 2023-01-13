@@ -22,7 +22,7 @@ const AboutMe = () => {
     setTimeout(
       () => {
         elements[index].current?.classList.remove("Invisible");
-        elements[index].current?.classList.add("Flow-In");
+        elements[index].current?.classList.add("Flow-In-No-Text");
         staggerEffects(elements, index + 1);
       },
       500
@@ -36,7 +36,7 @@ const AboutMe = () => {
           if (entry.isIntersecting) {
             entry.target.classList.remove("No-Show");
             entry.target.classList.add("AboutMe-Top-Row-Fade-In");
-            staggerEffects(wordRefs, 0);
+            // staggerEffects(wordRefs, 0);
           }
         });
       },
@@ -65,7 +65,7 @@ const AboutMe = () => {
         justifyContent: "flex-start",
       }}
     >
-      <Header title={"ABOUT ME"} colorOne={"#ffffff"} colorTwo={"#ffffff20"} />
+      <Header title={"ABOUT ME"} colorOne={"#8366cc"} colorTwo={"#4a15cf"} />
       <div
         style={{
           overflow: "hidden",
@@ -93,8 +93,6 @@ const AboutMe = () => {
           <p style={{fontSize: mobile? '1rem' : '1.6em'}}>
             I have experience as a full-stack software{" "}
             <b
-              className="Invisible"
-              ref={wordOneRef}
               style={{
                 fontFamily: "ChillaxBold",
                 position: "relative",
@@ -105,8 +103,6 @@ const AboutMe = () => {
             </b>
             , a startup{" "}
             <b
-              className="Invisible"
-              ref={wordTwoRef}
               style={{
                 fontFamily: "ChillaxBold",
                 position: "relative",
@@ -117,8 +113,6 @@ const AboutMe = () => {
             </b>
             , and now a UX/UI{" "}
             <b
-              className="Invisible"
-              ref={wordThreeRef}
               style={{
                 fontFamily: "ChillaxBold",
                 position: "relative",

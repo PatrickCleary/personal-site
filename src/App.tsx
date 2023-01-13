@@ -6,11 +6,13 @@ import { ReactComponent as NamePlateSVGMobile } from "./Images/NamePlateMobile.s
 import AboutMe from "./AboutMe";
 import { WindowContext } from "./WindowContext";
 import { Portfolio } from "./Portfolio";
+import { Contact } from "./Contact";
 
 function App() {
   const logoRef = useRef<HTMLImageElement>(null);
   const aboutMeRef = useRef<HTMLParagraphElement>(null);
   const { clientHeight, clientWidth, mobile } = useContext(WindowContext);
+  const height = React.useMemo( () => clientHeight, [] );
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,7 +32,7 @@ function App() {
     if (aboutMeRef.current) {
       observer.observe(aboutMeRef.current);
     }
-  }, [aboutMeRef, clientHeight]);
+  }, [aboutMeRef]);
 
   // TODO: move this to CarGo Page.
   useEffect(() => {
@@ -64,7 +66,7 @@ function App() {
         style={{
           backgroundAttachment: "fixed",
           display: "flex",
-          height: `100vh`,
+          height: height,
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -112,6 +114,7 @@ function App() {
       </div>
       <AboutMe />
       <Portfolio />
+      <Contact />
 {/*       
       <div className="CarGo" style={{ zIndex: 3, position: "relative" }}>
         <img
