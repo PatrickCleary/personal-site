@@ -49,7 +49,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
     >
       {!mobile && (
         <item.logo
-          fill="#FDC500"
+          fill="#F4C743"
           width={"24vw"}
           height={"24vw"}
           className="TransitMattersLogo Icon"

@@ -29,6 +29,8 @@
   display: flex;
   justify-content: center;
   width: 100vw;
+  margin-bottom:2rem;
+
 }
 
 .Top-Bar {
@@ -147,7 +149,6 @@
 }
 .Links-DT {
   flex-direction: row;
-  padding: 8rem;
 }
 
 p {

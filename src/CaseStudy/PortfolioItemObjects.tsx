@@ -1,5 +1,5 @@
 import TMAppScreenshots from "../Images/TM_App_ScreenShots.png";
-import CargoAppScreenshots from "../Images/Cargo_App_Screenshots.png";
+import CarGoAppScreenshots from "../Images/CarGoAppScreenshots.png";
 import { ReactComponent as TM } from "../Images/TM.svg";
 import { ReactComponent as CG } from "../Images/CarGo.svg";
 import React from "react";
@@ -26,7 +26,7 @@ export const portfolioItems: PortfolioItems[] = [
     name: "CG",
     title: "CarGo",
     logo: CG,
-    cardImage: CargoAppScreenshots,
+    cardImage: CarGoAppScreenshots,
     text: "CarGo is an app that I designed and developed in collaboration with a small business owner. Our goal was to automate scheduling of delivery drivers and provide incentives for dependability.",
     color: "#606060",
   },
