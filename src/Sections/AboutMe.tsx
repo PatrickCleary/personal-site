@@ -1,42 +1,22 @@
 import React, { useRef, useEffect, useContext } from "react";
-import Headshot from "./Images/IMG_3836.jpg";
-import "./animations.css";
+import Headshot from "../Images/IMG_3836.jpg";
+import "../animations.css";
 import "./AboutMe.css";
-import { WindowContext } from "./WindowContext";
-import { AboutMenu } from "./Components/AboutMenu";
-import Header from "./Components/Header";
+import { WindowContext } from "../WindowContext";
+import { AboutMenu } from "../Components/AboutMenu";
+import Header from "../Components/Header";
 
 const AboutMe = () => {
-  const { clientHeight, clientWidth, mobile } = useContext(WindowContext);
+  const { clientWidth, mobile } = useContext(WindowContext);
   const topRowRef = useRef<HTMLImageElement>(null);
-  const wordOneRef = useRef<HTMLParagraphElement>(null);
-  const wordTwoRef = useRef<HTMLParagraphElement>(null);
-  const wordThreeRef = useRef<HTMLParagraphElement>(null);
-  const wordRefs = [wordOneRef, wordTwoRef, wordThreeRef];
-
-  const staggerEffects = (
-    elements: React.RefObject<HTMLParagraphElement>[],
-    index: number
-  ) => {
-    if (index >= elements.length) return;
-    setTimeout(
-      () => {
-        elements[index].current?.classList.remove("Invisible");
-        elements[index].current?.classList.add("Flow-In-No-Text");
-        staggerEffects(elements, index + 1);
-      },
-      500
-    );
-  };
-
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.remove("No-Show");
             entry.target.classList.add("AboutMe-Top-Row-Fade-In");
-            // staggerEffects(wordRefs, 0);
           }
         });
       },
@@ -49,7 +29,7 @@ const AboutMe = () => {
     if (topRowRef.current) {
       observer.observe(topRowRef.current);
     }
-  }, [topRowRef]);
+  }, [topRowRef, mobile]);
 
   return (
     <div

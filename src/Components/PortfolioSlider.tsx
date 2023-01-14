@@ -73,6 +73,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
           {portfolioItems.map((portfolioItem, index) => {
             return (
               <PortfolioItem
+                key={index}
                 selected={selected}
                 index={index}
                 item={portfolioItem}

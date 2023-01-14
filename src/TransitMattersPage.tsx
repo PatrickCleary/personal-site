@@ -1,7 +1,5 @@
 import React, {
   useContext,
-  useEffect,
-  useLayoutEffect,
   useRef,
   useState,
 } from "react";

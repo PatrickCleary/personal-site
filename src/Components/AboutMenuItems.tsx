@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "../AboutMe.css";
 import { WindowContext } from "../WindowContext";
 
 interface AboutMenuItemsProps {

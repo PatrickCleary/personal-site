@@ -1,11 +1,11 @@
 import React, { useContext, useRef, useState } from "react";
 import "./Contact.css";
-import Header from "./Components/Header";
-import Github from "./Images/GitHubStyled.png";
-import LinkedIn from "./Images/LinkedInStyled.png";
-import Twitter from "./Images/TwitterStyled.png";
-import { WindowContext } from "./WindowContext";
-import { Footer } from "./Components/Footer";
+import Header from "../Components/Header";
+import Github from "../Images/GitHubStyled.png";
+import LinkedIn from "../Images/LinkedInStyled.png";
+import Twitter from "../Images/TwitterStyled.png";
+import { WindowContext } from "../WindowContext";
+import { Footer } from "../Components/Footer";
 
 const sites = [
   {
@@ -88,7 +88,7 @@ export const Contact = () => {
       >
         Copied to clipboard!
       </p>
-      <p style={{ marginTop: "3rem", marginBottom: "1rem" }}>My accounts:</p>
+      <p style={{ marginTop: "2rem", marginBottom: "1rem" }}>My Accounts:</p>
       <div className="Contact-Me-Main-Content">
         {sites.map((site) => {
           return (
