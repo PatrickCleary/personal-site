@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -65,6 +65,7 @@ h2 {
 
 .Portfolio-Container {
   width: 80vw;
+  position:relative;
   justify-content: center;
   padding: 2rem;
   display: flex;
@@ -75,6 +76,7 @@ h2 {
 .Current-Portfolio-Item {
   width: 74vw;
   display: grid;
+  justify-content: center;
   overflow: visible;
 }
 
@@ -96,6 +98,7 @@ h2 {
 }
 .Arrows {
   display: flex;
+  height:75%;
   align-items: center;
   z-index: 10;
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { WindowContext } from "../WindowContext";
 
 interface AboutMenuItemsProps {
@@ -13,14 +13,20 @@ export const AboutMenuItems = React.forwardRef<
   AboutMenuItemsProps
 >(({ name, index, selected, setSelected }, ref) => {
   const { mobile } = useContext(WindowContext);
+  const [unfinished, setUnfinished] = useState(false);
   const isSelected = selected === index;
   return (
     <div
       ref={ref}
       className="About-Menu-Item Invisible"
-      onClick={() => setSelected(index)}
+      onClick={() => {
+        setSelected(index);
+        setUnfinished(true);
+      }}
     >
-      <p style={{ fontSize: mobile ? ".8rem" : "1.6rem", textAlign:'center' }}>{name}</p>
+      <p style={{ fontSize: mobile ? ".8rem" : "1.6rem", textAlign: "center" }}>
+        {unfinished ? 'Work In Progress :(' : name}
+      </p>
     </div>
   );
 });

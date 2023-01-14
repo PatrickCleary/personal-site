@@ -138,7 +138,7 @@ export const Contact = () => {
         <div className="Contact-Me-Main-Content">
           {sites.map((site) => {
             return (
-              <ContactBox icon={site.icon} link={site.link} name={site.name} />
+              <ContactBox key={site.name} icon={site.icon} link={site.link} name={site.name} />
             );
           })}
         </div>

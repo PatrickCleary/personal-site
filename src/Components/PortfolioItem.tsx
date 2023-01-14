@@ -39,9 +39,9 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         mobile ? "Portfolio-Item-Mobile" : "Portfolio-Item-DT"
       }`}
       style={{
-        width: mobile ? "50vw" : "auto",
+        width: mobile ? "60vw" : "auto",
         flexDirection: mobile ? "column" : "row",
-        backgroundColor: mobile ? "transparent" : item.color,
+        backgroundColor: mobile ? item.color : item.color,
       }}
     >
       {!mobile && (
@@ -82,7 +82,10 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
               <p style={{ color: item.secondaryColor }}>{item.text}</p>
             )}
           </div>
-          <LearnMoreButton setPage={setPage} />
+          {item.name === "TM" && <LearnMoreButton setPage={setPage} />}
+          {item.name === "CG" && 
+            (<p>Work In Progress</p>)
+          }
         </div>
       )}
       {!mobile && <div style={{ width: "27vw", display: "flex" }} />}
@@ -96,13 +99,17 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         src={item.cardImage}
         alt="Screenshots of TransitMatters Site"
       />
-      {mobile && (
+      {mobile && item.name === "TM" && (
         <LearnMoreButton
           setPage={() => {
             setPage(item.name);
           }}
+         
         />
       )}
+       {mobile && item.name === "CG" && 
+            (<p>Work In Progress</p>)
+          }
     </div>
   );
 };
