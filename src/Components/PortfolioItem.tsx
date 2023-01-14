@@ -39,7 +39,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         mobile ? "Portfolio-Item-Mobile" : "Portfolio-Item-DT"
       }`}
       style={{
-        width: mobile ? "auto" : " 75vw",
+        width: mobile ? "50vw" : "auto",
         flexDirection: mobile ? "column" : "row",
         backgroundColor: mobile ? "transparent" : item.color,
       }}
