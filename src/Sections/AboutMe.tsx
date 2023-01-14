@@ -8,8 +8,8 @@ import Header from "../Components/Header";
 
 const AboutMe = () => {
   const { clientWidth, mobile } = useContext(WindowContext);
-  const topRowRef = useRef<HTMLImageElement>(null);
-  
+  const topRowRef = useRef<HTMLDivElement>(null);
+  const headshotRef = useRef<HTMLImageElement>(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -22,14 +22,18 @@ const AboutMe = () => {
       },
       {
         root: null,
-        threshold: .75,
+        threshold: 0.75,
       }
     );
 
     if (topRowRef.current) {
       observer.observe(topRowRef.current);
     }
-  }, [topRowRef, mobile]);
+
+    if (headshotRef.current) {
+      observer.observe(headshotRef.current);
+    }
+  }, [topRowRef, headshotRef, mobile]);
 
   return (
     <div
@@ -57,20 +61,27 @@ const AboutMe = () => {
         }}
       >
         <img
+          className="No-Show Headshot"
+          ref={headshotRef}
           height={`${
-            mobile ? `${clientWidth * 0.65}px` : clientWidth * 0.25
+            mobile
+              ? `${Math.min(clientWidth * 0.65, 240)}px`
+              : clientWidth * 0.25
           }px`}
-          width={`${mobile ? `${clientWidth * 0.65}px` : clientWidth * 0.25}px`}
+          width={`${
+            mobile
+              ? `${Math.min(clientWidth * 0.65, 240)}px`
+              : clientWidth * 0.25
+          }px`}
           style={{
             borderRadius: "0.5rem",
             alignItems: mobile ? "center" : "flex-start",
           }}
-          className="Headshot"
           src={Headshot}
           alt="CarGoLogo"
         />
         <div ref={topRowRef} className="About-Me-Text No-Show">
-          <p style={{fontSize: mobile? '1rem' : '1.6em'}}>
+          <p style={{ fontSize: mobile ? "1rem" : "1.6em" }}>
             I have experience as a full-stack software{" "}
             <b
               style={{
@@ -104,8 +115,9 @@ const AboutMe = () => {
             .
             <br />
             <br />
-            This multidisciplinary experience allows me to understand the needs of
-            the users in a unique way, and deliver on all aspects of a project.
+            This multidisciplinary experience allows me to understand the needs
+            of the users in a unique way, and deliver on all aspects of a
+            project.
           </p>
           <AboutMenu />
         </div>

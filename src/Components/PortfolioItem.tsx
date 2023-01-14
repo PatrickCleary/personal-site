@@ -1,10 +1,7 @@
 import React, { useContext } from "react";
 import "./PortfolioItem.css";
-import TMAppScreenshots from "../Images/TM_App_ScreenShots.png";
 import { WindowContext } from "../WindowContext";
 import LearnMoreButton from "./LearnMoreButton";
-import TransitMattersPage from "../TransitMattersPage";
-import { portfolioItems } from "../CaseStudy/PortfolioItemObjects";
 
 interface PortfolioItemProps {
   index: number;
@@ -42,7 +39,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         mobile ? "Portfolio-Item-Mobile" : "Portfolio-Item-DT"
       }`}
       style={{
-        width: mobile ? "auto" : " 75w",
+        width: mobile ? "auto" : " 75vw",
         flexDirection: mobile ? "column" : "row",
         backgroundColor: mobile ? "transparent" : item.color,
       }}
