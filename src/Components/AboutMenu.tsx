@@ -38,7 +38,7 @@ export const AboutMenu = () => {
       {
         root: null,
         rootMargin: mobile ? "-45px" : "-15%",
-        threshold: 0.5,
+        threshold: .75,
       }
     );
 

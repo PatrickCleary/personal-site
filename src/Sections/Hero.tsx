@@ -7,7 +7,7 @@ export const Hero = () => {
   const aboutMeRef = useRef<HTMLParagraphElement>(null);
   const { clientHeight, clientWidth, mobile } = useContext(WindowContext);
   // Save height to prevent height from changing on mobile when the bottom nav bar disappears.
-  const height = React.useMemo( () => clientHeight, undefined );
+  const height = React.useMemo( () => clientHeight, [] );
 
   useEffect(() => {
     const observer = new IntersectionObserver(

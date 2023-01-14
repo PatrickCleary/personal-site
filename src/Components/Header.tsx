@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
       {
         root: null,
         rootMargin: mobile ? '-25px' : '-15%',
-        threshold: .90,
+        threshold: 1,
       }
     );
 

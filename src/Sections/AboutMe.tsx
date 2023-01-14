@@ -22,7 +22,7 @@ const AboutMe = () => {
       },
       {
         root: null,
-        threshold: mobile ? 0.2 : 0.5,
+        threshold: .75,
       }
     );
 

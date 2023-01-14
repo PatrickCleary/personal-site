@@ -27,7 +27,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
       {
         root: null,
         rootMargin: mobile ? "-10px" : "-15%",
-        threshold: 0.25,
+        threshold: 0.35,
       }
     );
 
