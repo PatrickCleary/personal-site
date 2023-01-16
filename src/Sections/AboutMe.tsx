@@ -37,22 +37,11 @@ const AboutMe = () => {
 
   return (
     <div
-      style={{
-        zIndex: 1,
-        position: "relative",
-        background: "linear-gradient(to top, #0b0e11, #1d2229)",
-        paddingTop: "6rem",
-        paddingBottom: "6rem",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
-        justifyContent: "flex-start",
-      }}
+    className="About-Me"
     >
       <Header title={"ABOUT ME"} colorOne={"#8366cc"} colorTwo={"#4a15cf"} />
       <div
         style={{
-          overflow: "hidden",
           display: "flex",
           alignItems: "center",
           flexDirection: mobile ? "column" : "row",

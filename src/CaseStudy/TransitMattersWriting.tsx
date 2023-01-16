@@ -93,6 +93,11 @@ export const content = [
     type:'p',
     text:"You can find the old dashboards at: https://dashboard.transitmatters.org/"
   },
+  // TODO: Add new dashboards once they are up.
+  // {
+  //   type:'p',
+  //   text:"You can find the new dashboards at: https://v4-beta.labs.dashboard.transitmatters.org/"
+  // },
   {
     type:'p',
     text:"The new dashboards are a work in progress."

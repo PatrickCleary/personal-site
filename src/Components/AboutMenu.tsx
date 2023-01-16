@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
+import { Interests } from "../AboutMenu/Interests";
 import "../animations.css";
 import { WindowContext } from "../WindowContext";
 import { AboutMenuItems } from "./AboutMenuItems";
@@ -38,7 +39,7 @@ export const AboutMenu = () => {
       {
         root: null,
         rootMargin: mobile ? "-45px" : "-15%",
-        threshold: .75,
+        threshold: 0.75,
       }
     );
 
@@ -49,9 +50,9 @@ export const AboutMenu = () => {
 
   return (
     <div
-      className="About-Menu-Div"
       style={{
         display: "flex",
+        width: "75%",
         flexDirection: mobile ? "column" : "row",
         padding: mobile ? "1rem" : "2rem 0px 0px",
         alignSelf: "center",
@@ -62,6 +63,8 @@ export const AboutMenu = () => {
         className="Invisible"
         style={{
           display: "flex",
+          width: "100%",
+          opacity: 1,
           flexDirection: mobile ? "column" : "row",
           padding: "0.25rem",
           borderRadius: ".75rem",
@@ -80,10 +83,12 @@ export const AboutMenu = () => {
         <AboutMenuItems
           index={1}
           ref={menuItemTwo}
-          name="Other Interests"
+          name="Stuff I Like"
           selected={selected}
           setSelected={setSelected}
-        />
+        >
+          <Interests />
+        </AboutMenuItems>
         <AboutMenuItems
           index={2}
           ref={menuItemThree}

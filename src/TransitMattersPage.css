@@ -114,8 +114,8 @@
   border-radius: 2rem;
   display: flex;
   padding: 2rem;
-  width: 25vw;
-  height: 25vw;
+  width: 5vw;
+  height: 5vw;
   cursor: pointer;
 }
 
@@ -141,7 +141,10 @@
 
 .Links {
   display: flex;
-  justify-content: space-between;
+  padding-top:2rem;
+  justify-content: center;
+  column-gap: 2rem;
+  row-gap: 2rem;
 }
 
 .Links-Mobile {

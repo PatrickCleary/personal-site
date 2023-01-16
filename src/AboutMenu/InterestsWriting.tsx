@@ -1,0 +1,1 @@
+export const InterestsList = ['Urban Planning', 'Snowboarding', 'Running', 'Skiing', 'Bicycle Infrastructure', 'Psychology','Technology', 'Nutrition', 'Cinematography', 'Boston Sports', 'Photography', 'Hiking', 'Fitness', 'and more...']

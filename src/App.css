@@ -3,6 +3,10 @@ body {
   overflow-x:hidden;
 }
 
+:root {
+  --grey: #505050;
+}
+
 .CarGo {
   background-color: #F4C743;
   /* min-height: 100vh; */
