@@ -1,33 +1,28 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, {
+  SetStateAction,
+  useContext,
+  useRef,
+  useState,
+} from "react";
+import { PageNames } from "../AboutMenu/Pages";
 import { WindowContext } from "../WindowContext";
 
 interface AboutMenuItemsProps {
-  name: string;
-  index: number;
-  selected: number;
-  setSelected: React.Dispatch<React.SetStateAction<number>>;
+  name: PageNames;
+  title: string;
+  page: PageNames;
+  setPage: React.Dispatch<SetStateAction<PageNames>>;
   children?: React.ReactNode;
 }
 
 export const AboutMenuItems = React.forwardRef<
   HTMLDivElement,
   AboutMenuItemsProps
->(({ name, index, selected, setSelected, children }, ref) => {
-  const { mobile, clientWidth, clientHeight } = useContext(WindowContext);
-
+>(({ name, title, page, setPage, children }, ref) => {
+  const { mobile } = useContext(WindowContext);
   const [location, setLocation] = useState<DOMRect | null>(null);
   const refTwo = useRef<HTMLDivElement | null>(null);
-  const isSelected = selected === index;
-
-  const headerWidth = () => {
-    if (mobile) return "100%";
-    return 0.2 * clientWidth;
-  };
-
-  const headerHeight = () => {
-    if (mobile) return 0.1 * clientHeight;
-    return "100%";
-  };
+  const isSelected = name === page;
 
   return (
     <div
@@ -39,11 +34,10 @@ export const AboutMenuItems = React.forwardRef<
           ref.current = element;
         }
       }}
-      style={{ zIndex: isSelected ? 1 : 0 }}
       className={`About-Menu-Item Invisible`}
       onClick={() => {
         if (!isSelected) {
-          setSelected(index);
+          setPage(name);
           document.body.style.overflow = "hidden";
           if (refTwo.current) {
             setLocation(refTwo.current.getBoundingClientRect());
@@ -52,9 +46,7 @@ export const AboutMenuItems = React.forwardRef<
       }}
     >
       <div
-        className={`Inner-About-Menu-Item ${
-          isSelected ? "Expanded-Div" : "Not-Expanded-Div"
-        }`}
+        className={`Inner-About-Menu-Item Not-Expanded-Div`}
         style={{
           flexDirection: mobile ? "column" : "row",
           alignItems: "center",
@@ -65,52 +57,14 @@ export const AboutMenuItems = React.forwardRef<
           height: "100%",
         }}
       >
-        <div
-          className={`${isSelected ? "Title-Expanded" : "Title-Not-Expanded"} ${
-            mobile ? "Menu-Item-Title-Mobile" : "Menu-Item-Title-DT"
-          }`}
-          style={{
-            display: 'flex',
-            flexDirection: mobile ? 'row-reverse' : 'column',
-
-            width: !isSelected ? "" : headerWidth(),
-            height: !isSelected ? "" : headerHeight(),
-          }}
-        >
           <p
             style={{
               fontSize: mobile ? ".8rem" : "1.6rem",
               textAlign: "center",
-              paddingLeft: isSelected ? "2rem" : "",
             }}
           >
-            {name}
+            {title}
           </p>
-          {isSelected && (
-            <div
-            className={"Fade-In"}
-              onClick={() => {
-                document.body.style.overflow = "auto";
-                setSelected(-1);
-              }}
-              style={{ display: "flex", alignItems: "center" }}
-            >
-              <p
-                style={{
-                  fontSize: mobile ? ".6rem" : "1.4rem",
-
-                  position: "absolute",
-                  marginTop: "2rem",
-                  textDecoration: "underline",
-                  paddingLeft: "2rem",
-                }}
-              >
-                back
-              </p>
-            </div>
-          )}
-        </div>
-        {isSelected && children}
       </div>
     </div>
   );

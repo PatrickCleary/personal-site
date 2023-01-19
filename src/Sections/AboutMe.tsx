@@ -1,15 +1,27 @@
-import React, { useRef, useEffect, useContext } from "react";
-import Headshot from "../Images/IMG_3836.jpg";
+import React, {
+  useRef,
+  useEffect,
+  useContext,
+  SetStateAction,
+} from "react";
+import Headshot from "../Images/Headshot.png";
 import "../animations.css";
 import "./AboutMe.css";
 import { WindowContext } from "../WindowContext";
 import { AboutMenu } from "../Components/AboutMenu";
 import Header from "../Components/Header";
+import { PageNames } from "../AboutMenu/Pages";
 
-const AboutMe = () => {
+interface AboutMeProps {
+  page: PageNames;
+  setPage: React.Dispatch<SetStateAction<PageNames>>;
+}
+
+const AboutMe: React.FC<AboutMeProps> = ({page, setPage}) => {
   const { clientWidth, mobile } = useContext(WindowContext);
   const topRowRef = useRef<HTMLDivElement>(null);
   const headshotRef = useRef<HTMLImageElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,10 +48,8 @@ const AboutMe = () => {
   }, [topRowRef, headshotRef, mobile]);
 
   return (
-    <div
-    className="About-Me"
-    >
-      <Header title={"ABOUT ME"} colorOne={"#8366cc"} colorTwo={"#4a15cf"} />
+    <div className="About-Me">
+      <Header title={"ABOUT ME"} colorOne={"#081b38"} colorTwo={"#040a12"} />
       <div
         style={{
           display: "flex",
@@ -108,7 +118,7 @@ const AboutMe = () => {
             of the users in a unique way, and deliver on all aspects of a
             project.
           </p>
-          <AboutMenu />
+          <AboutMenu page={page} setPage={setPage} />
         </div>
       </div>
       <div></div>

@@ -7,18 +7,6 @@ body {
   --grey: #505050;
 }
 
-.CarGo {
-  background-color: #F4C743;
-  /* min-height: 100vh; */
-  border-top-right-radius: 35%;
-  border-top-left-radius: 35%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
 @property --p {
   syntax: "<color>";
   inherits: false;

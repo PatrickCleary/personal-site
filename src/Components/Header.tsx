@@ -11,7 +11,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
   const headerRef = useRef(null);
-  const { mobile, clientHeight } = useContext(WindowContext);
+  const { mobile } = useContext(WindowContext);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

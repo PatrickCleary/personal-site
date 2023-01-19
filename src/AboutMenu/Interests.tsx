@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { WindowContext } from "../WindowContext";
-import { InterestsList } from "./InterestsWriting";
 
+
+// I didn't end up using this, but I like it so will keep for now.
 export const Interests = () => {
   const listRef = useRef<HTMLDivElement>(null);
   const { mobile } = useContext(WindowContext);
@@ -52,7 +53,7 @@ export const Interests = () => {
         overflow: "hidden",
       }}
     >
-      {InterestsList.map((interest) => {
+      {/* {InterestsList.map((interest) => {
         return (
           <p
             className="Interests"
@@ -69,7 +70,7 @@ export const Interests = () => {
             {interest}
           </p>
         );
-      })}
+      })} */}
     </div>
   );
 };

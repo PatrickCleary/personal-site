@@ -5,7 +5,7 @@ import { ReactComponent as CG } from "../Images/CarGo.svg";
 import React from "react";
 
 interface PortfolioItems {
-  name: string;
+  name: "transit" | "cargo";
   title: string;
   cardImage: string;
   logo: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
@@ -15,19 +15,19 @@ interface PortfolioItems {
 
 export const portfolioItems: PortfolioItems[] = [
   {
-    name: "TM",
+    name: "transit",
     title: "TransitMatters",
     cardImage: TMAppScreenshots,
     logo: TM,
     text: "TransitMatters is a non-profit organization in Boston formed to advocate for better public transportation. I am working on a new version of their data dashboards.",
-    color: "#3f3f3f",
+    color: "#2d2d2c",
   },
   {
-    name: "CG",
+    name: "cargo",
     title: "CarGo",
     logo: CG,
     cardImage: CarGoAppScreenshots,
     text: "CarGo is an app that I designed and developed in collaboration with a small business owner. Our goal was to automate scheduling of delivery drivers and provide incentives for dependability.",
-    color: "#606060",
+    color: "#2d2d2c",
   },
 ];

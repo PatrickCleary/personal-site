@@ -39,11 +39,11 @@
 @keyframes flowInText {
   0% {
     opacity: 0;
-    transform: scaleX(0) scaleY(0);
+    transform: scaleX(.5) scaleY(.5);
   }
   50% {
     opacity: 0;
-    transform: scaleX(0) scaleY(0);
+    transform: scaleX(.5) scaleY(.5);
 
   }
   100% {
