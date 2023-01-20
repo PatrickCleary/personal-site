@@ -32,14 +32,18 @@
   animation: flowInText 1s forwards linear;
 }
 
+.Flow-In > .Inner-About-Menu-Item > p {
+  animation: flowInText 1s forwards linear;
+}
+
 @keyframes flowInText {
   0% {
     opacity: 0;
-    transform: scaleX(0) scaleY(0);
+    transform: scaleX(.5) scaleY(.5);
   }
   50% {
     opacity: 0;
-    transform: scaleX(0) scaleY(0);
+    transform: scaleX(.5) scaleY(.5);
 
   }
   100% {
@@ -51,6 +55,18 @@
 
 .Flow-In {
   animation: flowIn 1s forwards linear;
+}
+
+.Fade-Out {
+  animation: fadeOut 1s forwards linear;
+}
+@keyframes fadeOut {
+  from {
+    opacity:1
+  }
+  to {
+    opacity:0;
+  }
 }
 
 .Fade-In {

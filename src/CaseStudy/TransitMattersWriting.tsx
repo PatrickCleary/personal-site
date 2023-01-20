@@ -1,9 +1,9 @@
 import TM_Header from "../Images/TM_Case_Study_Header_Photo.png";
 import MobileAccess from "../Images/MobileAccessScreenshot.png";
 import TMControls from "../Images/TMControlsScreenshots.png";
-import LandingComparison from '../Images/LandingComparison.png'
+import LandingComparison from "../Images/LandingComparison.png";
 
-export const content = [
+export const transit = [
   { type: "h", text: "TransitMatters Data Dashboards" },
   {
     type: "p",
@@ -64,7 +64,7 @@ export const content = [
   },
   {
     type: "p",
-    text: `When thinking about this, I realized the important question is how did the user end up looking at the page they're currently on. The dashboards are often shared in news articles linking back to a page the journalist got the data from. Links to specific dashboards are also often shared on Twitter. This means the first experience someone has with the dashboard isn't typically began from the landing page. I realized this could be a great opportunity for encouraging the user's natural curiosity. If they clicked on a link about a dashboard, there's a good chance they will want to see another, similar dashboard. To aid and encourage this natural curiosity, I wanted to provide simple adjustments and filters to guide the user.` ,
+    text: `When thinking about this, I realized the important question is how did the user end up looking at the page they're currently on. The dashboards are often shared in news articles linking back to a page the journalist got the data from. Links to specific dashboards are also often shared on Twitter. This means the first experience someone has with the dashboard isn't typically began from the landing page. I realized this could be a great opportunity for encouraging the user's natural curiosity. If they clicked on a link about a dashboard, there's a good chance they will want to see another, similar dashboard. To aid and encourage this natural curiosity, I wanted to provide simple adjustments and filters to guide the user.`,
   },
   {
     type: "p",
@@ -90,11 +90,22 @@ export const content = [
     text: `This page will start up by giving the user a whole bunch of cool things to look at, and will help guide them where they want to go. Many people want to know the travel time of their commute, so I put that at the very top. We will have some default values for each widget. This allows the user to visually see how the app works rather than trying to figure it out. As they become more curious and explore the other widgets, they will have the opportunity to find things they otherwise may not have thought to look for.`,
   },
   {
-    type:'p',
-    text:"You can find the old dashboards at: https://dashboard.transitmatters.org/"
+    type: "p",
+    text: "You can find the old dashboards at: https://dashboard.transitmatters.org/",
   },
   {
-    type:'p',
-    text:"The new dashboards are a work in progress."
-  }
+    type: "p",
+    text: "The new dashboards are being worked on at: https://dashboard-v4-beta.labs.transitmatters.org/",
+  },
+  {
+    type: "p",
+    text: "The new dashboards are a work in progress.",
+  },
+  {
+    type: "links",
+    githubLink:
+      "https://github.com/transitmatters/t-performance-dash/tree/dashboard-v4",
+    figmaLink:
+      "https://www.figma.com/file/bLBzzBX3r6tG2CoS6vWglD/Dashboard---V4?node-id=1%3A55&t=ci7douClyjtiNNaG-1",
+  },
 ];

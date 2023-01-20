@@ -58,7 +58,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
             className="Portfolio-Item-Title"
             style={{
               textAlign: "center",
-              fontSize: "2rem",
+              fontSize: "1.6rem",
             }}
           >
             {item.title}
@@ -82,9 +82,9 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
               <p style={{ color: item.secondaryColor }}>{item.text}</p>
             )}
           </div>
-          {item.name === "TM" && <LearnMoreButton setPage={setPage} />}
-          {item.name === "CG" && 
-            (<p>Work In Progress</p>)
+          {item.name === "transit" && <LearnMoreButton setPage={setPage} />}
+          {item.name === "cargo" && 
+            (<p>Case Study is a WIP</p>)
           }
         </div>
       )}
@@ -99,7 +99,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         src={item.cardImage}
         alt="Screenshots of TransitMatters Site"
       />
-      {mobile && item.name === "TM" && (
+      {mobile && item.name === "transit" && (
         <LearnMoreButton
           setPage={() => {
             setPage(item.name);
@@ -107,8 +107,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
          
         />
       )}
-       {mobile && item.name === "CG" && 
-            (<p>Work In Progress</p>)
+       {mobile && item.name === "cargo" && 
+            (<p>Case Study WIP</p>)
           }
     </div>
   );

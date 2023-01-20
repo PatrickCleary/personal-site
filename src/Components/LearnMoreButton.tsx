@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./LearnMoreButton.css";
 import { ReactComponent as ArrowTail } from "../Images/ArrowTail.svg";
 import { WindowContext } from "../WindowContext";

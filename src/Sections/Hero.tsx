@@ -66,7 +66,7 @@ export const Hero = () => {
           alignSelf: "flex-end",
           width: "100%",
           height: "10%",
-          background: "linear-gradient(#1d222900, #1d2229ff)",
+          background: "linear-gradient(#040a1200, #040a12ff)",
           cursor: "pointer",
         }}
       >

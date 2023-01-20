@@ -4,9 +4,10 @@ import { portfolioItems } from "../CaseStudy/PortfolioItemObjects";
 import { ReactComponent as Arrow } from "../Images/Arrow.svg";
 import { ReactComponent as ArrowLeft } from "../Images/ArrowLeft.svg";
 import { WindowContext } from "../WindowContext";
+import { PageNames } from "../AboutMenu/Pages";
 
 interface PortfolioSliderProps {
-  setPage: React.Dispatch<React.SetStateAction<string>>;
+  setPage: React.Dispatch<React.SetStateAction<PageNames>>;
 }
 
 const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {

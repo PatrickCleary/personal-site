@@ -1,10 +1,16 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { SetStateAction, useContext, useEffect, useRef} from "react";
+import { Interests } from "../AboutMenu/Interests";
+import { PageNames} from "../AboutMenu/Pages";
 import "../animations.css";
 import { WindowContext } from "../WindowContext";
 import { AboutMenuItems } from "./AboutMenuItems";
 
-export const AboutMenu = () => {
-  const [selected, setSelected] = useState(-1);
+interface AboutMenuProps {
+  page: PageNames;
+  setPage: React.Dispatch<SetStateAction<PageNames>>;
+}
+
+export const AboutMenu: React.FC<AboutMenuProps> = ({page, setPage}) => {
   const { mobile } = useContext(WindowContext);
   const menuRef = useRef(null);
   const menuItemOne = useRef(null);
@@ -38,7 +44,7 @@ export const AboutMenu = () => {
       {
         root: null,
         rootMargin: mobile ? "-45px" : "-15%",
-        threshold: .75,
+        threshold: 0.75,
       }
     );
 
@@ -48,10 +54,11 @@ export const AboutMenu = () => {
   }, [menuRef, menuItemRefs, mobile]);
 
   return (
+    <>
     <div
-      className="About-Menu-Div"
       style={{
         display: "flex",
+        width: "75%",
         flexDirection: mobile ? "column" : "row",
         padding: mobile ? "1rem" : "2rem 0px 0px",
         alignSelf: "center",
@@ -62,36 +69,41 @@ export const AboutMenu = () => {
         className="Invisible"
         style={{
           display: "flex",
+          width: "100%",
+          opacity: 1,
           flexDirection: mobile ? "column" : "row",
           padding: "0.25rem",
           borderRadius: ".75rem",
-          backgroundColor: "#ffffff30",
+          backgroundColor: "#000",
           columnGap: "0.25rem",
           rowGap: "0.25rem",
         }}
       >
         <AboutMenuItems
-          index={0}
           ref={menuItemOne}
-          name="Why UX Design?"
-          selected={selected}
-          setSelected={setSelected}
+          name="uxdesign"
+          title="Why UX Design?"
+          page={page}
+          setPage={setPage}
         />
         <AboutMenuItems
-          index={1}
           ref={menuItemTwo}
-          name="Other Interests"
-          selected={selected}
-          setSelected={setSelected}
-        />
+          name="interests"
+          title="Interests"
+          page={page}
+          setPage={setPage}
+        >
+          <Interests />
+        </AboutMenuItems>
         <AboutMenuItems
-          index={2}
           ref={menuItemThree}
-          name="Software Experience"
-          selected={selected}
-          setSelected={setSelected}
+          name="software"
+          title="Software Experience"
+          page={page}
+          setPage={setPage}
         />
       </div>
     </div>
+    </>
   );
 };

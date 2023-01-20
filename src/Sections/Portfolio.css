@@ -1,7 +1,7 @@
 .Portfolio {
-  background: linear-gradient(#0b0e11, #1d2024);
+  background: linear-gradient( #041024, #0b0e11);
   width: 100%;
-  z-index: 100;
+  z-index: 20;
   padding-top: 6rem;
   padding-bottom: 6rem;
   display: flex;
@@ -67,6 +67,7 @@ h2 {
   width: 80vw;
   position:relative;
   justify-content: center;
+  align-items:center;
   padding: 2rem;
   display: flex;
   flex-direction: row;
