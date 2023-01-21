@@ -3,6 +3,10 @@ body {
   overflow-x:hidden;
 }
 
+html {
+   font-family: "Chillax", sans-serif
+}
+
 :root {
   --grey: #505050;
 }

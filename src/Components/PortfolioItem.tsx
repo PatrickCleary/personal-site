@@ -82,10 +82,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
               <p style={{ color: item.secondaryColor }}>{item.text}</p>
             )}
           </div>
-          {item.name === "transit" && <LearnMoreButton setPage={setPage} />}
-          {item.name === "cargo" && 
-            (<p>Case Study is a WIP</p>)
-          }
+          <LearnMoreButton setPage={setPage} />
         </div>
       )}
       {!mobile && <div style={{ width: "27vw", display: "flex" }} />}
@@ -99,7 +96,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         src={item.cardImage}
         alt="Screenshots of TransitMatters Site"
       />
-      {mobile && item.name === "transit" && (
+      {mobile && (
         <LearnMoreButton
           setPage={() => {
             setPage(item.name);
@@ -107,9 +104,6 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
          
         />
       )}
-       {mobile && item.name === "cargo" && 
-            (<p>Case Study WIP</p>)
-          }
     </div>
   );
 };
