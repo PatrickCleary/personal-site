@@ -5,6 +5,7 @@ import { ReactComponent as Arrow } from "../Images/Arrow.svg";
 import { ReactComponent as ArrowLeft } from "../Images/ArrowLeft.svg";
 import { WindowContext } from "../WindowContext";
 import { PageNames } from "../AboutMenu/Pages";
+import { useSwipeable } from "react-swipeable";
 
 interface PortfolioSliderProps {
   setPage: React.Dispatch<React.SetStateAction<PageNames>>;
@@ -14,6 +15,26 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
   const [selected, setSelected] = useState({ current: 0, previous: -1 });
   const { mobile } = useContext(WindowContext);
   const portfolioRef = useRef(null);
+
+  const goLeft = () => {
+    selected.current > 0 &&
+      setSelected({
+        current: selected.current - 1,
+        previous: selected.current,
+      });
+  };
+  const goRight = () => {
+    selected.current < portfolioItems.length - 1 &&
+      setSelected({
+        current: selected.current + 1,
+        previous: selected.current,
+      });
+  };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: goRight,
+    onSwipedRight: goLeft,
+  });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,13 +73,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
           style={{
             cursor: selected.current > 0 ? "pointer" : "auto",
           }}
-          onClick={() => {
-            selected.current > 0 &&
-              setSelected({
-                current: selected.current - 1,
-                previous: selected.current,
-              });
-          }}
+          onClick={goLeft}
         >
           <ArrowLeft
             className="Arrow-SVG"
@@ -68,9 +83,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
             }}
           />
         </div>
-        <div
-          className="Current-Portfolio-Item"
-        >
+        <div className="Current-Portfolio-Item" {...handlers}>
           {portfolioItems.map((portfolioItem, index) => {
             return (
               <PortfolioItem
@@ -91,13 +104,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
             cursor:
               selected.current < portfolioItems.length - 1 ? "pointer" : "auto",
           }}
-          onClick={() => {
-            selected.current < portfolioItems.length - 1 &&
-              setSelected({
-                current: selected.current + 1,
-                previous: selected.current,
-              });
-          }}
+          onClick={goRight}
         >
           <Arrow
             className="Arrow-SVG"

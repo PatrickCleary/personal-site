@@ -21,7 +21,6 @@ export const Interests = () => {
     const interestItems =
       listRef.current?.getElementsByClassName("Interests") || [];
     for (let i = 0; i < interestItems.length; i++) {
-      console.log(interestItems[i], interestItems[i].classList);
       interestItems[i].classList.remove("Fade-Out");
       interestItems[i].classList.add("Fade-In");
       await sleep(1000);

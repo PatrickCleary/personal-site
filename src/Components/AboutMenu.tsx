@@ -74,7 +74,7 @@ export const AboutMenu: React.FC<AboutMenuProps> = ({page, setPage}) => {
           flexDirection: mobile ? "column" : "row",
           padding: "0.25rem",
           borderRadius: ".75rem",
-          backgroundColor: "#000",
+          backgroundColor: "#303030",
           columnGap: "0.25rem",
           rowGap: "0.25rem",
         }}

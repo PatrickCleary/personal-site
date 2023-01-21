@@ -17,7 +17,7 @@ export const interests = [
   },
   {
     type: "p",
-    text: `I have no formal education, but my favorite books tend to be about psychology. This lends itself to my UX design work, I enjoy thinking about the human aspect of tech and how people will interact with what I create.`,
+    text: `Many of my favorite books are about psychology. This lends itself to my UX design work, I enjoy thinking about the human aspect of tech and how people will interact with what I create.`,
   },
   {
     type: "p",

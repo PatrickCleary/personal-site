@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.remove("Invisible");
             entry.target.classList.add("Flow-In");
@@ -39,13 +39,12 @@ const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
     <div
       ref={headerRef}
       className="Header Invisible"
-      style={{ width: mobile ? "85%" : "40%", alignSelf: "center", marginBottom: mobile ? '2rem' : '6rem',   background: `radial-gradient(ellipse at top, #000, transparent), radial-gradient(ellipse at bottom, #303030, transparent)` }}
+      style={{ width: mobile ? "85%" : "40%", alignSelf: "center", marginBottom: mobile ? '2rem' : '6rem',   background: `radial-gradient(ellipse at bottom, #fff , transparent 50%)`}}
     >
       <h1
         className="Title"
         style={{
           fontSize: mobile ? "3rem" : "4rem",
-          backgroundImage: `linear-gradient(to top, ${colorTwo}, ${colorOne})`,
         }}
       >
         {title}

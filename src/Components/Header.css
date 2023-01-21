@@ -1,12 +1,9 @@
 .Header {
-  border-radius: 4rem;
+  border-radius: .5rem;
   margin-bottom: 6rem;
+  width:85vw;
   overflow: hidden;
   isolation: isolate;
-  /* background: linear-gradient(to top, #c7c7c7 10%, #fff 35%, #fff 65%, #c7c7c7 90% ); */
-  /* background: radial-gradient(ellipse at top, rgb(0, 0, 0), transparent),
-    radial-gradient(ellipse at bottom, #303030, transparent); */
-  /* box-shadow: .2rem .2rem 1rem .1rem #000   */
 }
 
 
@@ -18,7 +15,4 @@
 
   font-family: "Chillax";
   margin: 0;
-  /* animation: opaque 0.25s linear infinite alternate; */
-  /* animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -1s); */
 }
