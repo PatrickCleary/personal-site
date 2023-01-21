@@ -98,10 +98,6 @@ export const transit = [
     text: "The new dashboards are being worked on at: https://dashboard-v4-beta.labs.transitmatters.org/",
   },
   {
-    type: "p",
-    text: "The new dashboards are a work in progress.",
-  },
-  {
     type: "links",
     githubLink:
       "https://github.com/transitmatters/t-performance-dash/tree/dashboard-v4",

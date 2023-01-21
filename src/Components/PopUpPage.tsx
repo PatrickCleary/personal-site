@@ -135,14 +135,16 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
         ref={pageRef}
       >
         <div className="Top-Bar">
-          <div
-            className="Exit"
-            onClick={() => {
-              setPage(null);
-              document.body.style.overflow = "auto";
-            }}
-          >
-            <Close width="50%" height="50%" />
+          <div style={{ position: "absolute", left: "1rem" }}>
+            <div
+              className="Exit"
+              onClick={() => {
+                setPage(null);
+                document.body.style.overflow = "auto";
+              }}
+            >
+              <Close width="50%" height="50%" />
+            </div>
           </div>
           <div className="TMHeader">
             <h3

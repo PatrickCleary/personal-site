@@ -36,8 +36,8 @@ const ContactBox: React.FC<ContactBoxProps> = ({ name, icon, link }) => {
   return (
     <div
       style={{
-        width: mobile ? 0.2 * clientWidth : 0.1 * clientWidth,
-        height: mobile ? 0.2 * clientWidth : 0.1 * clientWidth,
+        width: mobile ? 0.1 * clientWidth : 0.05 * clientWidth,
+        height: mobile ? 0.1 * clientWidth : 0.05 * clientWidth,
 
         display: "flex",
         alignItems: "center",
@@ -48,7 +48,7 @@ const ContactBox: React.FC<ContactBoxProps> = ({ name, icon, link }) => {
         <img
           src={icon}
           alt={`Link to ${name}`}
-          width={mobile ? 0.2 * clientWidth : 0.1 * clientWidth}
+          width={mobile ? 0.1 * clientWidth : 0.05 * clientWidth}
         />
       </a>
     </div>
@@ -99,7 +99,7 @@ export const Contact = () => {
           alignItems: "center",
         }}
       >
-        <p style={{ marginBottom: "1rem" }}>Email:</p>
+        <p style={{ marginBottom: "1rem", userSelect:"none" }}>Email:</p>
         <p
           className="Email"
           style={{ cursor: "pointer", fontSize: "1rem" }}
@@ -134,7 +134,7 @@ export const Contact = () => {
           alignItems: "center",
         }}
       >
-        <p style={{ marginTop: "1rem", marginBottom: "1rem" }}>Accounts:</p>
+        <p style={{ marginTop: "1rem", marginBottom: "1rem", userSelect:"none" }}>Accounts:</p>
         <div className="Contact-Me-Main-Content">
           {sites.map((site) => {
             return (
