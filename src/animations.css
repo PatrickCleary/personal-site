@@ -25,31 +25,29 @@
 }
 
 .Flow-In > .Title {
-  animation: flowInText 1s forwards cubic-bezier(.67,-0.01,.43,1.44);
+  animation: flowInText 1s forwards cubic-bezier(0.67, -0.01, 0.43, 1.44);
 }
 
 .Flow-In > p {
-  animation: flowInText 1s forwards cubic-bezier(.67,-0.01,.43,1.44);
+  animation: flowInText 1s forwards cubic-bezier(0.67, -0.01, 0.43, 1.44);
 }
 
 .Flow-In > .Inner-About-Menu-Item > p {
-  animation: flowInText 1s forwards cubic-bezier(.67,-0.01,.43,1.44);
+  animation: flowInText 1s forwards cubic-bezier(0.67, -0.01, 0.43, 1.44);
 }
 
 @keyframes flowInText {
   0% {
     opacity: 0;
-    transform: scaleX(.5) scaleY(.5);
+    transform: scaleX(0.5) scaleY(0.5);
   }
   50% {
     opacity: 0;
-    transform: scaleX(.5) scaleY(.5);
-
+    transform: scaleX(0.5) scaleY(0.5);
   }
   100% {
-    opacity:1;
+    opacity: 1;
     transform: scaleX(1) scaleY(1);
-
   }
 }
 
@@ -62,10 +60,10 @@
 }
 @keyframes fadeOut {
   from {
-    opacity:1
+    opacity: 1;
   }
   to {
-    opacity:0;
+    opacity: 0;
   }
 }
 
@@ -84,140 +82,83 @@
   }
   3.5% {
     opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 10%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 5%);
   }
   7% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 20%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 10%);
   }
   10.5% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 30%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 15%);
   }
   14% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 40%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 20%);
   }
   17.5% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 50%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 25%);
   }
 
   21% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 60%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 30%);
   }
   24.5% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 70%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 35%);
   }
   28% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 80%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 40%);
   }
   31.5% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 90%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 45%);
   }
   35% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 100%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 50%);
   }
 
   38.5% {
-    opacity: 1;
-
-    background: radial-gradient(ellipse at bottom, #fff, transparent 110%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 55%);
   }
   42% {
-    opacity: 1;
-
-    background: radial-gradient(ellipse at bottom, #fff, transparent 120%);
-    /* box-shadow: 0px 0px 0rem 1rem #fff; */
+    background: radial-gradient(ellipse at bottom, #fff, transparent 60%);
   }
   45.5% {
-    opacity: 1;
-
-    background: radial-gradient(ellipse at bottom, #fff, transparent 125%);
-    /* box-shadow: 0px 0px 1rem 1rem #fff; */
+    background: radial-gradient(ellipse at bottom, #fff, transparent 62.5%);
   }
   49% {
-    opacity: 1;
-
-    background: radial-gradient(ellipse at bottom, #fff, transparent 120%);
-    /* box-shadow: 0px 0px 0rem 1rem #fff; */
+    background: radial-gradient(ellipse at bottom, #fff, transparent 60%);
   }
-  52.5%{
-    opacity: 1;
-
-    background: radial-gradient(ellipse at bottom, #fff, transparent 110%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+  52.5% {
+    background: radial-gradient(ellipse at bottom, #fff, transparent 55%);
   }
   56% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 100%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 50%);
   }
   59.5% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 90%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 45%);
   }
   63% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 80%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
-  } 
-  66.5%{
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 70%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 40%);
   }
-  70%{
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 60%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+  66.5% {
+    background: radial-gradient(ellipse at bottom, #fff, transparent 35%);
   }
-  73.5%{
-
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 50%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+  70% {
+    background: radial-gradient(ellipse at bottom, #fff, transparent 30%);
   }
-  77%{
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 50%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+  73.5% {
+    background: radial-gradient(ellipse at bottom, #fff, transparent 25%);
   }
-  80.5%{
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 50%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+  77% {
+    background: radial-gradient(ellipse at bottom, #fff, transparent 25%);
+  }
+  80.5% {
+    background: radial-gradient(ellipse at bottom, #fff, transparent 25%);
   }
   84% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 50%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 25%);
   }
   87.5% {
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 50%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 25%);
   }
-  91%{  
-    opacity: 1;
-    background: radial-gradient(ellipse at bottom, #fff, transparent 50%);
-    box-shadow: 0px 0px 0rem 0rem #fff;
+  91% {
+    background: radial-gradient(ellipse at bottom, #fff, transparent 25%);
   }
 }

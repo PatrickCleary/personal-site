@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
       },
       {
         root: null,
-        rootMargin: mobile ? '-25px' : '-15%',
+        rootMargin: mobile ? "-25px" : "-15%",
         threshold: 1,
       }
     );
@@ -39,7 +39,12 @@ const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
     <div
       ref={headerRef}
       className="Header Invisible"
-      style={{ width: mobile ? "85%" : "40%", alignSelf: "center", marginBottom: mobile ? '2rem' : '6rem',   background: `radial-gradient(ellipse at bottom, #fff , transparent 50%)`}}
+      style={{
+        width: mobile ? "85%" : "40%",
+        alignSelf: "center",
+        marginBottom: mobile ? "2rem" : "6rem",
+        background: `radial-gradient(ellipse at bottom, #fff , transparent 25%)`,
+      }}
     >
       <h1
         className="Title"

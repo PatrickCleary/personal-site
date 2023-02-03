@@ -6,9 +6,9 @@ export const software = [
 
   {
     type: "p",
-    text: "I've made a couple apps, and a bunch of smaller projects over the years. I still enjoy writing software, especially apps and websites for everyday people. My professional experience is backend focused but I really enjoy doing all aspects. I am not a “technology” person in that I don't enjoy technology for its own sake, but rather as a medium for sharing my ideas with the world.",
+    text: "I've made two full apps, and some smaller projects over the past few years. I still enjoy writing software, especially apps and websites. My professional experience is backend focused but I really enjoy doing all aspects. I am not a “technology” person - I don't enjoy technology for its own sake, but rather as a medium for sharing my ideas.",
   },
 
-  { type: "p", text: `Check out my GitHub:` },
-  { type: "a", href: "https://github.com/PatrickCleary" },
+  { type: "button", label: "GitHub", href: "https://github.com/PatrickCleary" },
+  { type: "button", label: "Resume", href: "/resume.pdf" },
 ];

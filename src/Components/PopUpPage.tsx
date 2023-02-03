@@ -52,6 +52,24 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
           {contentItem.text}
         </h3>
       );
+    if (contentItem.type === "button")
+      return (
+        <a href={contentItem.href} style={{ textDecoration: "none" }}>
+          <div
+            style={{
+              backgroundColor: "#fff",
+
+              alignItems: "center",
+              boxShadow: "2px 2px 2px #dfdfdf",
+              display: "flex",
+              justifyContent: "center",
+              margin: "1rem",
+            }}
+          >
+            <p style={{ color: "#000" }}>{contentItem.label}</p>
+          </div>
+        </a>
+      );
     if (contentItem.type === "img")
       return (
         <img

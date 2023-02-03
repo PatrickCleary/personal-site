@@ -15,7 +15,7 @@
 
 .Pop-Up-Container {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   left: 0px;
   top: 0px;
@@ -26,16 +26,25 @@
   flex-direction: column;
 }
 
+.Pop-Up-Container::-webkit-scrollbar {
+  width: 0.2em;
+  background-color: transparent;
+}
+
+.Pop-Up-Container::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
 .Main-Div {
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   margin-bottom: 2rem;
   padding-bottom: 4rem;
 }
 
 .Top-Bar {
-  width: 100vw;
+  width: 100%;
   position: sticky;
   top: 0px;
   background: #2e2d2c;
@@ -72,7 +81,6 @@
 }
 
 .Main-Content {
-  width: 70vw;
   padding-top: 4vw;
   padding-bottom: 4vw;
 }

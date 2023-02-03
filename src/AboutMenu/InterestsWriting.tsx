@@ -1,31 +1,15 @@
 export const interests = [
   {
-    type: "p",
-    text: `I ran my first marathon in October 2022 and I'm planning to do another in 2023.`,
-  },
-  {
-    type: "p",
-    text: `I had always been a fan of public transit, but when I went to Europe in the spring of 2022 I realized how much improvement was needed in the US. Since then, I have joined the non-profit TransitMatters to assist them in their public transit advocacy in the boston area.`,
-  },
-  {
-    type: "p",
-    text: `I am an avid bike rider and love using my bike to get around, I'm not actively involved but I support any and all new bicycle infrastructure.`,
-  },
-  {
-    type: "p",
-    text: `I snowboard and ski and like to go on one trip per year. Last year I landed my first backflip.`,
-  },
-  {
-    type: "p",
-    text: `Many of my favorite books are about psychology. This lends itself to my UX design work, I enjoy thinking about the human aspect of tech and how people will interact with what I create.`,
-  },
-  {
-    type: "p",
-    text: `I'm a fan of all Boston sports.`,
-  },
-  {
-    type: "p",
-    text: `I enjoy hiking. I've backpacked the entirety of the Vermont-NH section of the Appalachian trail, and done backpacking in the mountains of Peru.`,
+    type: "ulist",
+    text: [
+      `I ran my first marathon in October 2022 and I'm planning to do another in 2023.`,
+      "I am an avid bike rider and love using my bike to get around.",
+      `I snowboard and ski. Last year I landed my first backflip.`,
+      `I had always been a fan of public transit, but when I went to Europe in the spring of 2022 I realized how much improvement was needed in the US. Since then, I have joined the non-profit TransitMatters to assist them in their public transit advocacy in the boston area.`,
+      `Many of my favorite books are about psychology. This lends itself to my design work, I enjoy thinking about the human aspect of tech and how people will interact with what I create.`,
+      `I'm a fan of all Boston sports.`,
+      `I enjoy hiking. I've backpacked the entirety of the Vermont-NH section of the Appalachian trail. I also went solo backpacking in the mountains of Peru.`,
+    ],
   },
 
   {
