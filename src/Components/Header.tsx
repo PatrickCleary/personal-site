@@ -5,13 +5,17 @@ import { WindowContext } from "../WindowContext";
 
 interface HeaderProps {
   title: string;
-  colorOne: string;
-  colorTwo: string;
+  clicked?: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ title, colorOne, colorTwo }) => {
-  const headerRef = useRef(null);
+const Header: React.FC<HeaderProps> = ({ title, clicked }) => {
+  const headerRef = useRef<HTMLDivElement>(null);
   const { mobile } = useContext(WindowContext);
+
+  if (clicked && headerRef.current) {
+    headerRef.current.classList.remove("Invisible");
+    headerRef.current.classList.add("Flow-In");
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(

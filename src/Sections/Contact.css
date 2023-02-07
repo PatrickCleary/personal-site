@@ -1,5 +1,5 @@
 .Contact {
-  background: linear-gradient(#0a0d11, #090412);
+  background: linear-gradient(#0b0e11, #090412);
   width: 100%;
   z-index: 25;
   padding-top: 6rem;
@@ -13,29 +13,30 @@
 .Contact-Me-Main-Content {
   display: grid;
   grid-template-columns: auto auto auto;
-  column-gap:2rem;
+  column-gap: 2rem;
 }
 
 .Fade-Out-Clipboard {
-animation: fadeOutMessage 2s ease-in-out forwards;
+  animation: fadeOutMessage 2s ease-in-out forwards;
 }
-@keyframes  fadeOutMessage{
-    from{
-        opacity:1;
-    } to {
-        opacity:0;
-    }
+@keyframes fadeOutMessage {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .Slide-Up {
-  animation: slideUpContact .5s cubic-bezier(.68,.22,.43,1.49) forwards;
+  animation: slideUpContact 0.5s cubic-bezier(0.68, 0.22, 0.43, 1.49) forwards;
 }
 
 @keyframes slideUpContact {
   from {
     transform: translateY(12rem);
   }
-   to {
-     transform:translateY(0rem);
-   }
+  to {
+    transform: translateY(0rem);
+  }
 }

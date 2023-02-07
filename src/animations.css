@@ -32,8 +32,9 @@
   animation: flowInText 1s forwards cubic-bezier(0.67, -0.01, 0.43, 1.44);
 }
 
-.Flow-In > .Inner-About-Menu-Item > p {
-  animation: flowInText 1s forwards cubic-bezier(0.67, -0.01, 0.43, 1.44);
+.Inner-About-Menu-Item:hover {
+  background: radial-gradient(ellipse at bottom, #c8d4e6, transparent 45%);
+  border-style: solid;
 }
 
 @keyframes flowInText {

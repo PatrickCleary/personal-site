@@ -55,95 +55,114 @@ const ContactBox: React.FC<ContactBoxProps> = ({ name, icon, link }) => {
   );
 };
 
-export const Contact = () => {
-  const [clicked, setClicked] = useState(false);
-  const [clickable, setClickable] = useState(true);
-  const { mobile } = useContext(WindowContext);
-  const contactInfoRefOne = useRef(null);
-  const contactInfoRefTwo = useRef(null);
+interface ContactProps {
+  clickedLink: boolean;
+}
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove("No-Show");
-            entry.target.classList.add("Slide-Up");
-          }
-        });
-      },
-      {
-        root: null,
-        threshold: mobile ? 1 : 1,
-      }
-    );
+export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
+  ({ clickedLink }, ref) => {
+    const [clicked, setClicked] = useState(false);
+    const [clickable, setClickable] = useState(true);
+    const { mobile } = useContext(WindowContext);
+    const contactInfoRefOne = useRef(null);
+    const contactInfoRefTwo = useRef(null);
 
-    if (contactInfoRefOne.current) {
-      observer.observe(contactInfoRefOne.current);
-    }
-    if (contactInfoRefTwo.current) {
-      observer.observe(contactInfoRefTwo.current);
-    }
-  }, [contactInfoRefOne, contactInfoRefTwo, mobile]);
-
-  return (
-    <div className="Contact">
-      {" "}
-      <Header title="CONNECT" colorOne="#2d9132" colorTwo="#0e95cf" />
-      <div
-        className="No-Show"
-        ref={contactInfoRefOne}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <p style={{ marginBottom: "1rem", userSelect:"none" }}>Email:</p>
-        <p
-          className="Email"
-          style={{ cursor: "pointer", fontSize: "1rem" }}
-          onClick={() => {
-            if (clickable) {
-              setClicked(true);
-              setClickable(false);
-              setTimeout(() => {
-                setClickable(true);
-                setClicked(false);
-              }, 2000);
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove("No-Show");
+              entry.target.classList.add("Slide-Up");
             }
-            navigator.clipboard.writeText("PatrickDavisCleary@gmail.com");
+          });
+        },
+        {
+          root: null,
+          threshold: mobile ? 1 : 1,
+        }
+      );
+
+      if (contactInfoRefOne.current) {
+        observer.observe(contactInfoRefOne.current);
+      }
+      if (contactInfoRefTwo.current) {
+        observer.observe(contactInfoRefTwo.current);
+      }
+    }, [contactInfoRefOne, contactInfoRefTwo, mobile]);
+
+    return (
+      <div className="Contact" ref={ref} style={{ height: "100vh" }}>
+        {" "}
+        <Header title="CONTACT" clicked={clickedLink} />
+        <div
+          className="No-Show"
+          ref={contactInfoRefOne}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          PatrickDavisCleary@gmail.com
-        </p>
+          <p style={{ marginBottom: "1rem", userSelect: "none" }}>Email:</p>
+          <p
+            className="Email"
+            style={{ cursor: "pointer", fontSize: "1rem" }}
+            onClick={() => {
+              if (clickable) {
+                setClicked(true);
+                setClickable(false);
+                setTimeout(() => {
+                  setClickable(true);
+                  setClicked(false);
+                }, 2000);
+              }
+              navigator.clipboard.writeText("PatrickDavisCleary@gmail.com");
+            }}
+          >
+            PatrickDavisCleary@gmail.com
+          </p>
 
-        <p
-          className={clicked ? "Fade-Out-Clipboard" : "Invisible"}
-          style={{ fontSize: ".8rem", opacity: 0 }}
-        >
-          Copied to clipboard!
-        </p>
-      </div>
-      <div
-        className="No-Show"
-        ref={contactInfoRefTwo}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <p style={{ marginTop: "1rem", marginBottom: "1rem", userSelect:"none" }}>Accounts:</p>
-        <div className="Contact-Me-Main-Content">
-          {sites.map((site) => {
-            return (
-              <ContactBox key={site.name} icon={site.icon} link={site.link} name={site.name} />
-            );
-          })}
+          <p
+            className={clicked ? "Fade-Out-Clipboard" : "Invisible"}
+            style={{ fontSize: ".8rem", opacity: 0 }}
+          >
+            Copied to clipboard!
+          </p>
         </div>
+        <div
+          className="No-Show"
+          ref={contactInfoRefTwo}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <p
+            style={{
+              marginTop: "1rem",
+              marginBottom: "1rem",
+              userSelect: "none",
+            }}
+          >
+            Accounts:
+          </p>
+          <div className="Contact-Me-Main-Content">
+            {sites.map((site) => {
+              return (
+                <ContactBox
+                  key={site.name}
+                  icon={site.icon}
+                  link={site.link}
+                  name={site.name}
+                />
+              );
+            })}
+          </div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
-};
+    );
+  }
+);

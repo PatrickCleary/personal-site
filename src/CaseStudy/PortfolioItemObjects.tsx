@@ -20,7 +20,7 @@ export const portfolioItems: PortfolioItems[] = [
     cardImage: TMAppScreenshots,
     logo: TM,
     text: "TransitMatters is a non-profit organization in Boston formed to advocate for better public transportation. I am working on a new version of their data dashboards.",
-    color: "#2d2d2c",
+    color: "#141313",
   },
   {
     name: "cargo",
@@ -28,6 +28,6 @@ export const portfolioItems: PortfolioItems[] = [
     logo: CG,
     cardImage: CarGoAppScreenshots,
     text: "CarGo is an app that I designed and developed in collaboration with a small business owner. Our goal was to automate scheduling of delivery drivers and provide incentives for dependability.",
-    color: "#2d2d2c",
+    color: "#1A1918",
   },
 ];

@@ -5,15 +5,17 @@ import PortfolioSlider from "../Components/PortfolioSlider";
 import { PageNames } from "../AboutMenu/Pages";
 
 interface PortfolioProps {
-  setPage: React.Dispatch<SetStateAction<PageNames>>
+  setPage: React.Dispatch<SetStateAction<PageNames>>;
+  clicked: boolean;
 }
 
-export const Portfolio: React.FC<PortfolioProps> = ({setPage}) => {
-  
-  return (
-    <div className="Portfolio">
-      <Header title="PORTFOLIO" colorOne="#e8820e80" colorTwo="#cf0e0e80" />
-      <PortfolioSlider setPage={setPage} />
-    </div>
-  );
-};
+export const Portfolio = React.forwardRef<HTMLDivElement, PortfolioProps>(
+  ({ setPage, clicked }, ref) => {
+    return (
+      <div className="Portfolio" ref={ref}>
+        <Header title="PORTFOLIO" clicked={clicked} />
+        <PortfolioSlider setPage={setPage} />
+      </div>
+    );
+  }
+);

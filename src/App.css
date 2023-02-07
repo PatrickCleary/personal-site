@@ -146,9 +146,9 @@ html {
 
 p {
   user-select: none;
-  color: #fff;
-  font-size: 1.6rem;
-  font-family: "Chillax";
+  color: #f2f5fa;
+  font-size: 1rem;
+  font-family: "Gill Sans";
   margin: 0px;
 }
 
@@ -161,4 +161,21 @@ p {
   font-family: "Chillax";
   src: url(./Fonts/Chillax-Regular.ttf) format("truetype"),
     url(./Fonts/Chillax-Regular.otf) format("opentype");
+}
+
+.Nav-Bar-Item {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c8d4e6;
+  background-color: #0a0d11;
+  box-sizing: border-box;
+}
+
+.Nav-Bar-Item:hover {
+  background: radial-gradient(ellipse at bottom, #c8d4e6, #0a0d11 45%);
 }

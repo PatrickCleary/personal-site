@@ -41,7 +41,7 @@ export const AboutMenu: React.FC<AboutMenuProps> = ({ page, setPage }) => {
       <div
         style={{
           display: "flex",
-          width: "75%",
+          width: "100%",
           flexDirection: mobile ? "column" : "row",
           padding: mobile ? "1rem" : "2rem 0px 0px",
           alignSelf: "center",
@@ -53,13 +53,9 @@ export const AboutMenu: React.FC<AboutMenuProps> = ({ page, setPage }) => {
           style={{
             display: "flex",
             width: "100%",
-            opacity: 1,
             flexDirection: mobile ? "column" : "row",
-            padding: "0.25rem",
-            borderRadius: ".75rem",
-            backgroundColor: "#303030",
-            columnGap: "0.25rem",
-            rowGap: "0.25rem",
+            rowGap: "1rem",
+            columnGap: "1rem",
           }}
         >
           <AboutMenuItems
