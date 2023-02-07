@@ -1,3 +1,3 @@
 # My Personal Website
 
-<www.PatrickCleary.com>
+www.PatrickCleary.com
