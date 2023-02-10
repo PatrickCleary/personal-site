@@ -26,6 +26,7 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
           className={`CS-Paragraph ${
             mobile ? "CS-Paragraph-Mobile" : "CS-Paragraph-DT"
           }`}
+          style={{ textAlign: contentItem.center ? "center" : "left" }}
         >
           {contentItem.text}
         </p>
@@ -74,7 +75,7 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
       return (
         <img
           src={contentItem.location}
-          width={"100%"}
+          width={mobile ? "85%" : "75%"}
           alt={contentItem.caption}
         />
       ); //TODO: add Alt text
@@ -82,6 +83,9 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
       return (
         <ol>
           {contentItem.text.map((listItem: any, index: number) => {
+            if (listItem.element) {
+              return listItem.element;
+            }
             return (
               <p
                 className={mobile ? "CS-Paragraph-Mobile" : "CS-Paragraph-DT"}
@@ -129,6 +133,11 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
           )}
         </div>
       );
+    }
+    if (contentItem.type === "custom") {
+      return mobile && contentItem.mobile
+        ? contentItem.mobile
+        : contentItem.content;
     }
   };
 

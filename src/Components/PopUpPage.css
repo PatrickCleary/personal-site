@@ -55,8 +55,8 @@
 }
 
 .Exit {
-  height: max(4vw, 4vh);
-  width: max(4vw, 4vh);
+  height: min(64px, max(4vw, 4vh));
+  width: min(64px, max(4vw, 4vh));
   justify-content: center;
   align-items: center;
   border-radius: 100%;
@@ -74,14 +74,17 @@
 }
 
 .Main-Content-Mobile {
-  width: 90vw;
+  width: 85vw;
 }
 .Main-Content-DT {
-  width: 70vw;
+  width: 50vw;
 }
 
 .Main-Content {
   padding-top: 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 4vw;
 }
 
@@ -98,6 +101,7 @@
 }
 
 .CS-Paragraph {
+  width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }

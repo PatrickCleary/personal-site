@@ -2,101 +2,270 @@ import TM_Header from "../Images/TM_Case_Study_Header_Photo.png";
 import MobileAccess from "../Images/MobileAccessScreenshot.png";
 import TMControls from "../Images/TMControlsScreenshots.png";
 import LandingComparison from "../Images/LandingComparison.png";
+import Homescreen from "../Images/homescreen.png";
+import OverTime from "../Images/OverTime.png";
+import Median from "../Images/median.png";
 
 export const transit = [
   { type: "h", text: "TransitMatters Data Dashboards" },
   {
-    type: "p",
-    text: `I joined TransitMatters - a public transit advocacy group in October, after hearing about their work through the Boston Globe. They were receiving publicity for their data dashboards, a tool that provides data about the conditions of the Massachusetts Bay Transportation Authority (MBTA) system.`,
+    type: "custom",
+    content: (
+      <p>
+        TransitMatters is a public transit advocacy group based in Boston. I
+        joined them as a volunteer software engineer, then began doing design
+        for a project to revamp their dashboards. I designed the updated version
+        of their dashboards, which are in development{" "}
+        <a
+          style={{ color: "white" }}
+          href="https://dashboard-v4-beta.labs.transitmatters.org/red"
+        >
+          here.
+        </a>
+      </p>
+    ),
   },
-  {
-    type: "p",
-    text: `I started out by doing software development for them, and I learned that they were working on a new version of their data dashboards. They had goals of improving usability, making it more mobile friendly, and supplying better information. They had lots of ideas, but needed someone to get it started with a design. I had some experience with that, so I decided to give it a shot. It turned out to be just what they needed, and now we are working on the development.`,
-  },
-  { type: "p", text: `Here's a few pictures:` },
+  { type: "p", text: `The new designs:` },
   { type: "img", location: TM_Header },
   {
-    type: "p",
-    text: `Working with the group, I realized there was a central theme to the hopes for the new data dashboard: Make it appeal to the everyday commuter (without losing functionality).`,
+    type: "h",
+    text: `Research`,
   },
   {
-    type: "p",
-    text: "Working on the design, I came to three main issues to solve for that goal.",
+    type: "custom",
+    content: (
+      <p>
+        Before I started the designs, I wanted to get a sense for how the
+        dashboards were being used and what goals we had for the the new
+        version. Luckily I had some great sources available to me:
+      </p>
+    ),
   },
   {
     type: "list",
     text: [
-      "Mobile Access",
-      "Require less background knowledge",
-      "Provide useful daily information upfront",
+      `User analytics`,
+      `Stakeholders (org. members)`,
+      `Tweets referencing dashboards`,
     ],
   },
-  { type: "h", text: "Mobile Access" },
+  {
+    type: "custom",
+    content: (
+      <p style={{ marginTop: "2rem" }}>
+        My research gave me some key insights:
+      </p>
+    ),
+  },
+  {
+    type: "custom",
+    content: (
+      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
+        <b>Mobile First</b>
+      </p>
+    ),
+  },
+  {
+    type: "custom",
+    content: (
+      <>
+        <p>
+          Talking to some organization members, I learned they wanted to improve
+          the mobile experience for the site. I decided to get data on what
+          percentage of our users were on mobile.
+        </p>
+        <p style={{ marginTop: "2rem", marginBottom: "2rem" }}>
+          It was <b>55%</b>.
+        </p>
+        <p>
+          I suspected that number would be even higher if the site was easier to
+          use on mobile. This made it clear the site should be designed with a
+          mobile device in mind.
+        </p>
+      </>
+    ),
+  },
+
+  {
+    type: "custom",
+    content: (
+      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
+        <b>Data Immediacy</b>
+      </p>
+    ),
+  },
+  {
+    type: "custom",
+    content: (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          rowGap: "1rem",
+        }}
+      >
+        <p style={{ paddingTop: "2rem", fontSize: "1.125rem" }}>
+          From the user analytics, I determined the homepage was the most
+          frequently visited page at just over <b>10%</b> of total views. The
+          homepage (below) confronted the user with a series of inputs required
+          to gather data. No analysis or visuals would be shown until the form
+          was complete.
+        </p>
+        <img
+          style={{ padding: ".5rem" }}
+          src={Homescreen}
+          width={"50%"}
+          alt={"The old homescreen"}
+        />
+        <p>
+          This is not a pleasant experience for new users. A person who stumbles
+          upon the site without a goal in mind is unlikely to find something of
+          interest. I wanted all pages to have engaging content to spark
+          interest.
+        </p>
+      </div>
+    ),
+  },
+  {
+    type: "custom",
+    content: (
+      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
+        <b>Packaged Analysis</b>
+      </p>
+    ),
+  },
+  {
+    type: "custom",
+    content: (
+      <div
+        style={{
+          paddingTop: "1rem",
+          rowGap: "1rem",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <p>
+          I looked through approximately 60 tweets which referenced the
+          dashboards. Almost every tweet highlighted a graph with one of the
+          following patterns:
+        </p>
+        <p>1. A drastic change in a particular metric over time</p>
+        <img
+          style={{ padding: ".5rem" }}
+          src={OverTime}
+          width={"50%"}
+          alt={"Tweet with change in metric"}
+        />
+        <p>2. A graph with a median/average outside the norm.</p>
+        <img
+          style={{ padding: ".5rem" }}
+          src={Median}
+          width={"50%"}
+          alt={"Tweet displaying high median"}
+        />
+      </div>
+    ),
+  },
+
+  {
+    type: "custom",
+    content: (
+      <p>
+        The second item was most interesting, because users <i>wanted</i> to
+        share an aggregate data point (median) but were forced to use a graph to
+        convey this.
+      </p>
+    ),
+  },
+
+  { type: "h", text: "What I Did" },
   {
     type: "p",
-    text: "The group had discussed improving the mobile experience for a while, but I was curious. How many of our users were accessing the site on mobile? I looked at the statistics, and it turns out it's more than 50%. The site hadn't been designed originally with a mobile-first mentality, and the experience was less than stellar.",
+    text: "I created a mock-up in Figma to address the issues I had discovered in my research.",
+  },
+  {
+    type: "custom",
+    content: (
+      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
+        <b>Redesigned Homepage</b>
+      </p>
+    ),
   },
   {
     type: "p",
-    text: "One of the major use cases for the dashboards, and a big source of new users is sharing. There are often screenshots posted on Twitter which receive attention and draw new users, and these screenshots are often from a mobile device. With the new design, I wanted to make screenshots aesthetically pleasing and easy to understand on mobile.",
+    text: "My first priority was to reduce the amount of searching a user needed to do to find valuable information. This meant redesigning the homepage.",
+  },
+  { type: "img", location: LandingComparison, width: "120%", caption: " " },
+
+  {
+    type: "p",
+    text: "The key to this homepage was a new user would be prevented with ideas for what they might want to find.",
+  },
+  {
+    type: "custom",
+    content: (
+      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
+        <b>Packaged Analysis + Screenshots</b>
+      </p>
+    ),
+  },
+
+  {
+    type: "p",
+    text: `As I discovered in my research, I wanted to add summary statistics to the dashboards. I also wanted to improve the layout so that a screenshot is both aesthetically pleasing and contains all relevant information.`,
   },
   {
     type: "p",
-    text: `Here's a comparison of a screenshot from before and after the redesign.`,
+    text: `Below is a picture an organization member shared of higher than normal headways. On the right, is what this screenshot would look like today.`,
   },
   {
     type: "img",
     location: MobileAccess,
-    caption: ``,
+    width: "120%",
+  },
+  {
+    type: "custom",
+    content: (
+      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
+        <b>Other Design Chocies</b>
+      </p>
+    ),
+  },
+  {
+    type: "list",
+    text: [
+      `Modular: I went for a widget-based approach. Members of the organization are constantly working on new data visualizations and new data analyses. Everything can be moved and adjusted easily to account for this.`,
+      `Consolidation: The organization has 4 unique websites. This design focused on only one, but integrates aspects of the other pages. The goal is to consolidate all the pages into this dashboard.`,
+    ],
+  },
+
+  { type: "h", text: "Results" },
+  {
+    type: "p",
+    text: `I shared my designs with the organization, and they were very enthused. We immediately began development.`,
   },
   {
     type: "p",
-    text: `The purpose of this screenshot was to share the median headway for the day, a frequently shared metric. In the old design, the user would need to interpret that from the graphs. Understanding the graphs might be quite confusing to someone who has not seen this before. In my design, I wanted to prioritze the aggregated statistics we most often use, and add widgets right at the top of the page with that information. That way the user doesn't have to search for the information they likely want.`,
+    text: `As the work has progressed we have received more input from stakeholders and users and adjusted the designs as we go. We also have used tailwind components for an easier developer experience, so some of the UI has changed.`,
   },
   {
-    type: "p",
-    text: `Another change I made was to consolidate the variables into the header and organize them by relevance. The type of data takes priority - Headways. That's the most important aspect. Then we have the line and date - most users will already know this since the color of the screenshot conveys the line (red) and the screenshots are typically shared with context of the date range (today). Also I made sure to add the description of the range "today" so the user doesn't have to read the date and compare to today's date.`,
+    type: "custom",
+    content: (
+      <p>
+        You can see the current progress{" "}
+        <a
+          style={{ color: "white" }}
+          href="https://dashboard-v4-beta.labs.transitmatters.org/red"
+        >
+          here.
+        </a>
+      </p>
+    ),
   },
-  { type: "h", text: `Require Less Background Knowledge` },
-  {
-    type: "p",
-    text: `Another issue I saw with our dashboards is the amount of information a user needs to have to interpret the graphs. This is where the pre-packaged analyses come in handy as well. Instead of simply being a source for data, I wanted it to be a guide to information.`,
-  },
-  {
-    type: "p",
-    text: `When thinking about this, I realized the important question is how did the user end up looking at the page they're currently on. The dashboards are often shared in news articles linking back to a page the journalist got the data from. Links to specific dashboards are also often shared on Twitter. This means the first experience someone has with the dashboard isn't typically began from the landing page. I realized this could be a great opportunity for encouraging the user's natural curiosity. If they clicked on a link about a dashboard, there's a good chance they will want to see another, similar dashboard. To aid and encourage this natural curiosity, I wanted to provide simple adjustments and filters to guide the user.`,
-  },
-  {
-    type: "p",
-    text: `One such case I imagined would be when someone clicks on a link to the dashboard showing that travel times are up along their commute today. For me, the next immediate thought would be “How does it compare to the past month?” In that case, the user will quickly see there are some filters at the bottom of the page to check out other analyses. In the previous version to see another date range, they would need to go into the start date and end date and make a decision about when to set those to get a good comparison.`,
-  },
-  { type: "img", location: TMControls, caption: "" },
-  {
-    type: "p",
-    text: `In the new design, the user is presented with a few interesting options right away in this filter bar. We've given them the tools they need to find what they are interested in without having to dig.`,
-  },
-  { type: "h", text: "Provide Useful Information Upfront" },
-  {
-    type: "p",
-    text: `This last challenge was my favorite part of the design, because it's my least favorite part of the current site. This is the current landing page. I've numbered each place you need to click and input information before the site will show you any information.`,
-  },
-  { type: "img", location: LandingComparison, caption: " " },
-  {
-    type: "p",
-    text: `That was my main focus when I started working on the design. I wanted the very first page the user sees to show them something they find interesting. That’s how I came up with the concept for a widget-based landing page. When the user opens the site now, this is the first thing they will see:`,
-  },
-  {
-    type: "p",
-    text: `This page will start up by giving the user a whole bunch of cool things to look at, and will help guide them where they want to go. Many people want to know the travel time of their commute, so I put that at the very top. We will have some default values for each widget. This allows the user to visually see how the app works rather than trying to figure it out. As they become more curious and explore the other widgets, they will have the opportunity to find things they otherwise may not have thought to look for.`,
-  },
-  {
-    type: "p",
-    text: "You can find the old dashboards at: https://dashboard.transitmatters.org/",
-  },
-  {
-    type: "p",
-    text: "The new dashboards are being worked on at: https://dashboard-v4-beta.labs.transitmatters.org/",
-  },
+
   {
     type: "links",
     githubLink:

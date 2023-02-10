@@ -31,7 +31,7 @@ const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
         },
         {
           root: null,
-          threshold: 0.75,
+          threshold: 0.65,
         }
       );
 

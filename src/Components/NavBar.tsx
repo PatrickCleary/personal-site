@@ -20,13 +20,18 @@ export const NavBar: React.FC<NavBarProps> = ({ refs, setClicked }) => {
         display: "flex",
         flexDirection: mobile ? "row" : "column",
         justifyContent: mobile ? "center" : "end",
+        backgroundColor: "#0a0d11e0",
+        paddingLeft: mobile ? "1rem" : 0,
+        paddingRight: mobile ? "1rem" : 0,
+        paddingTop: mobile ? ".75rem" : 0,
+        paddingBottom: mobile ? ".75rem" : 0,
+        borderRadius: ".5rem",
         cursor: "pointer",
         userSelect: "none",
         columnGap: "1rem",
         rowGap: "1rem",
-        width: mobile ? "100%" : "auto",
         marginRight: mobile ? "" : "2rem",
-        marginTop: "2rem",
+        marginTop: mobile ? ".5rem" : "2rem",
       }}
     >
       {navBarOptions.map((option, index) => {

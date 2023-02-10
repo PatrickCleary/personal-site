@@ -1,5 +1,5 @@
 .Portfolio {
-  background: linear-gradient( #020811, #0b0e11);
+  background: linear-gradient(#020811, #0b0e11);
   width: 100%;
   z-index: 20;
   padding-top: 6rem;
@@ -45,7 +45,7 @@ h2 {
 }
 .Portfolio-Item-Text-DT {
   justify-content: space-between;
-  width: 39vw;
+  width: 27vw;
 }
 .Right {
   right: 0px;
@@ -65,9 +65,9 @@ h2 {
 
 .Portfolio-Container {
   width: 80vw;
-  position:relative;
+  position: relative;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   padding: 2rem;
   display: flex;
   flex-direction: row;
@@ -99,7 +99,7 @@ h2 {
 }
 .Arrows {
   display: flex;
-  height:75%;
+  height: 75%;
   align-items: center;
   z-index: 10;
 }
