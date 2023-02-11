@@ -1,7 +1,7 @@
 import TM_Header from "../Images/TM_Case_Study_Header_Photo.png";
 import MobileAccess from "../Images/MobileAccessScreenshot.png";
 import LandingComparison from "../Images/LandingComparison.png";
-import Homescreen from "../Images/homescreen.png";
+import Homescreen from "../Images/homescreen2.png";
 import OverTime from "../Images/OverTime.png";
 import Median from "../Images/median.png";
 
@@ -47,8 +47,8 @@ export const transit = [
   {
     type: "custom",
     content: (
-      <p style={{ marginTop: "2rem" }}>
-        My research gave me some key insights:
+      <p style={{ marginTop: "2rem", textAlign: "left", width: "100%" }}>
+        Through these sources I was able to come to some key insights:
       </p>
     ),
   },
@@ -117,7 +117,7 @@ export const transit = [
         <img
           style={{ padding: ".5rem" }}
           src={Homescreen}
-          width={"50%"}
+          width={"80%"}
           alt={"The old homescreen"}
         />
         <p>

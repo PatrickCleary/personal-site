@@ -92,7 +92,7 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
     }, [contactInfoRefOne, contactInfoRefTwo, mobile]);
 
     return (
-      <div className="Contact" ref={ref} style={{ height: "100vh" }}>
+      <div className="Contact" ref={ref} style={{ height: "50vh" }}>
         {" "}
         <Header title="CONTACT" clicked={clickedLink} />
         <div
@@ -104,10 +104,18 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
             alignItems: "center",
           }}
         >
-          <p style={{ marginBottom: "1rem", userSelect: "none" }}>Email:</p>
+          <p
+            style={{
+              marginBottom: "1rem",
+              userSelect: "none",
+              fontSize: "1.5rem",
+            }}
+          >
+            Email:
+          </p>
           <p
             className="Email"
-            style={{ cursor: "pointer", fontSize: "1rem" }}
+            style={{ cursor: "pointer", fontSize: "2rem" }}
             onClick={() => {
               if (clickable) {
                 setClicked(true);
@@ -144,6 +152,7 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
               marginTop: "1rem",
               marginBottom: "1rem",
               userSelect: "none",
+              fontSize: "1.5rem",
             }}
           >
             Accounts:
