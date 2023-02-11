@@ -81,7 +81,9 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
       ); //TODO: add Alt text
     if (contentItem.type === "list") {
       return (
-        <ol>
+        <ol
+          style={{ rowGap: ".5rem", display: "flex", flexDirection: "column" }}
+        >
           {contentItem.text.map((listItem: any, index: number) => {
             if (listItem.element) {
               return listItem.element;

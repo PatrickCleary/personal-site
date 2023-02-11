@@ -1,6 +1,5 @@
 import TM_Header from "../Images/TM_Case_Study_Header_Photo.png";
 import MobileAccess from "../Images/MobileAccessScreenshot.png";
-import TMControls from "../Images/TMControlsScreenshots.png";
 import LandingComparison from "../Images/LandingComparison.png";
 import Homescreen from "../Images/homescreen.png";
 import OverTime from "../Images/OverTime.png";
@@ -36,18 +35,14 @@ export const transit = [
     content: (
       <p>
         Before I started the designs, I wanted to get a sense for how the
-        dashboards were being used and what goals we had for the the new
-        version. Luckily I had some great sources available to me:
+        dashboards were being used and what goals we had for the new version.
+        Luckily I had some great sources available to me:
       </p>
     ),
   },
   {
     type: "list",
-    text: [
-      `User analytics`,
-      `Stakeholders (org. members)`,
-      `Tweets referencing dashboards`,
-    ],
+    text: [`Tweets`, `User analytics`, `Stakeholders (org. members)`],
   },
   {
     type: "custom",
@@ -60,7 +55,7 @@ export const transit = [
   {
     type: "custom",
     content: (
-      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
+      <p style={{ fontSize: "1.25rem", marginTop: "4rem" }}>
         <b>Mobile First</b>
       </p>
     ),
@@ -68,28 +63,34 @@ export const transit = [
   {
     type: "custom",
     content: (
-      <>
+      <div
+        style={{
+          marginTop: "2rem",
+          display: "flex",
+          flexDirection: "column",
+          rowGap: "2rem",
+        }}
+      >
         <p>
           Talking to some organization members, I learned they wanted to improve
           the mobile experience for the site. I decided to get data on what
           percentage of our users were on mobile.
         </p>
-        <p style={{ marginTop: "2rem", marginBottom: "2rem" }}>
+        <p>
           It was <b>55%</b>.
         </p>
         <p>
-          I suspected that number would be even higher if the site was easier to
-          use on mobile. This made it clear the site should be designed with a
-          mobile device in mind.
+          This made it clear the site should be designed with a mobile device in
+          mind.
         </p>
-      </>
+      </div>
     ),
   },
 
   {
     type: "custom",
     content: (
-      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
+      <p style={{ fontSize: "1.25rem", marginTop: "4rem" }}>
         <b>Data Immediacy</b>
       </p>
     ),
@@ -99,13 +100,14 @@ export const transit = [
     content: (
       <div
         style={{
+          paddingTop: "2rem",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           rowGap: "1rem",
         }}
       >
-        <p style={{ paddingTop: "2rem", fontSize: "1.125rem" }}>
+        <p style={{ fontSize: "1.125rem" }}>
           From the user analytics, I determined the homepage was the most
           frequently visited page at just over <b>10%</b> of total views. The
           homepage (below) confronted the user with a series of inputs required
@@ -130,7 +132,7 @@ export const transit = [
   {
     type: "custom",
     content: (
-      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
+      <p style={{ fontSize: "1.25rem", marginTop: "4rem" }}>
         <b>Packaged Analysis</b>
       </p>
     ),
@@ -140,8 +142,8 @@ export const transit = [
     content: (
       <div
         style={{
-          paddingTop: "1rem",
-          rowGap: "1rem",
+          paddingTop: "2rem",
+          rowGap: "2rem",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -152,117 +154,170 @@ export const transit = [
           dashboards. Almost every tweet highlighted a graph with one of the
           following patterns:
         </p>
-        <p>1. A drastic change in a particular metric over time</p>
-        <img
-          style={{ padding: ".5rem" }}
-          src={OverTime}
-          width={"50%"}
-          alt={"Tweet with change in metric"}
-        />
-        <p>2. A graph with a median/average outside the norm.</p>
-        <img
-          style={{ padding: ".5rem" }}
-          src={Median}
-          width={"50%"}
-          alt={"Tweet displaying high median"}
-        />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <p>1. A drastic change in a particular metric over time</p>
+          <img
+            style={{ padding: ".5rem" }}
+            src={OverTime}
+            width={"50%"}
+            alt={"Tweet with change in metric"}
+          />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <p>2. A graph with a median/average outside the norm.</p>
+          <img
+            style={{ padding: ".5rem" }}
+            src={Median}
+            width={"50%"}
+            alt={"Tweet displaying high median"}
+          />
+        </div>
+        <p>
+          The second item was most interesting, because users <i>wanted</i> to
+          share an aggregate data point (median) but were forced to use a graph
+          to convey this.
+        </p>
       </div>
     ),
   },
 
-  {
-    type: "custom",
-    content: (
-      <p>
-        The second item was most interesting, because users <i>wanted</i> to
-        share an aggregate data point (median) but were forced to use a graph to
-        convey this.
-      </p>
-    ),
-  },
+  { type: "h", text: "Design" },
 
-  { type: "h", text: "What I Did" },
-  {
-    type: "p",
-    text: "I created a mock-up in Figma to address the issues I had discovered in my research.",
-  },
   {
     type: "custom",
     content: (
-      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
-        <b>Redesigned Homepage</b>
+      <p style={{ fontSize: "1.25rem", marginTop: "4rem" }}>
+        <b>Homepage</b>
       </p>
     ),
   },
   {
-    type: "p",
-    text: "My first priority was to reduce the amount of searching a user needed to do to find valuable information. This meant redesigning the homepage.",
-  },
-  { type: "img", location: LandingComparison, width: "120%", caption: " " },
-
-  {
-    type: "p",
-    text: "The key to this homepage was a new user would be prevented with ideas for what they might want to find.",
+    type: "custom",
+    content: (
+      <div
+        style={{
+          paddingTop: "2rem",
+          rowGap: "2rem",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <p>
+          My first priority was to reduce the amount of searching a user needed
+          to do to find valuable information. This meant redesigning the
+          homepage.
+        </p>
+        <img
+          style={{ padding: ".5rem" }}
+          src={LandingComparison}
+          width={"75%"}
+          alt={"Before and after homepage"}
+        />
+        <p>
+          The new homepage presents users with data they'll find interesting,
+          rather than asking them to search for it.
+        </p>
+      </div>
+    ),
   },
   {
     type: "custom",
     content: (
-      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
+      <p style={{ fontSize: "1.25rem", marginTop: "4rem" }}>
         <b>Packaged Analysis + Screenshots</b>
       </p>
     ),
   },
-
-  {
-    type: "p",
-    text: `As I discovered in my research, I wanted to add summary statistics to the dashboards. I also wanted to improve the layout so that a screenshot is both aesthetically pleasing and contains all relevant information.`,
-  },
-  {
-    type: "p",
-    text: `Below is a picture an organization member shared of higher than normal headways. On the right, is what this screenshot would look like today.`,
-  },
-  {
-    type: "img",
-    location: MobileAccess,
-    width: "120%",
-  },
   {
     type: "custom",
     content: (
-      <p style={{ fontSize: "1.25rem", marginTop: "2rem" }}>
-        <b>Other Design Chocies</b>
-      </p>
+      <div
+        style={{
+          paddingTop: "2rem",
+          rowGap: "2rem",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <p>
+          As I discovered in my research, I wanted to add summary statistics to
+          the dashboards. I also wanted to improve the layout so that a
+          screenshot is both aesthetically pleasing and contains all relevant
+          information.
+        </p>
+        <p>
+          Below is a picture an organization member shared of higher than normal
+          headways. On the right, is what this screenshot would look like today.
+        </p>
+        <img
+          style={{ padding: ".5rem" }}
+          src={MobileAccess}
+          width={"75%"}
+          alt={"Before and after headways"}
+        />
+        <p>
+          Many of our visitors are drawn to the dashboards from screenshots like
+          these. Making the screens simpler and more aesthetically pleasing is
+          key to attracting more users.
+        </p>
+      </div>
     ),
+  },
+
+  { type: "h", text: "Results and Next Steps" },
+  {
+    type: "p",
+    text: `I shared my designs with the organization, and they were enthralled. We immediately began development.`,
+  },
+  {
+    type: "p",
+    text: "My role has shifted as the project gains traction. Originally, as we began development I was writing a lot of code. Since then, two fantastic frontend engineers have jumped on, so I have turned my focus to other tasks:",
   },
   {
     type: "list",
     text: [
-      `Modular: I went for a widget-based approach. Members of the organization are constantly working on new data visualizations and new data analyses. Everything can be moved and adjusted easily to account for this.`,
-      `Consolidation: The organization has 4 unique websites. This design focused on only one, but integrates aspects of the other pages. The goal is to consolidate all the pages into this dashboard.`,
+      "Facilitate collaboration for smooth execution and to prevent blockers.",
+      "Seek out assistance from org. members for tasks such as DNS setup and CI/CD.",
+      "Organize meetings between frontend and backend.",
+      "Gather feedback, share progress, communicate with leadership, etc.",
+      "Update designs as we gather feedback",
     ],
   },
-
-  { type: "h", text: "Results" },
   {
     type: "p",
-    text: `I shared my designs with the organization, and they were very enthused. We immediately began development.`,
-  },
-  {
-    type: "p",
-    text: `As the work has progressed we have received more input from stakeholders and users and adjusted the designs as we go. We also have used tailwind components for an easier developer experience, so some of the UI has changed.`,
+    text: "The project has been a massive learning opportunity for me, and opened my eyes to what I love doing. I learned that designing user-focused products is something I care deeply about, and have endless motivation to do. This is the motivation behind my current goal of finding a job in product or UX design",
   },
   {
     type: "custom",
     content: (
-      <p>
-        You can see the current progress{" "}
-        <a
-          style={{ color: "white" }}
-          href="https://dashboard-v4-beta.labs.transitmatters.org/red"
+      <a href="https://dashboard-v4-beta.labs.transitmatters.org/red">
+        <div
+          style={{
+            backgroundColor: "white",
+            paddingLeft: "1rem",
+            paddingRight: "1rem",
+            paddingTop: ".5rem",
+            paddingBottom: ".5rem",
+            borderRadius: ".5rem",
+          }}
         >
-          here.
-        </a>
-      </p>
+          <p style={{ color: "#0a0a0a" }}>Check out our progress</p>
+        </div>
+      </a>
     ),
   },
 
