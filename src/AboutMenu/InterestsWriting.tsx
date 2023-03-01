@@ -1,20 +1,39 @@
 export const interests = [
+  { type: "h", text: "Things I Do & Enjoy:", center: true },
   {
     type: "ulist",
     text: [
-      `I ran my first marathon in October 2022 and I'm planning to do another in 2023.`,
-      "I am an avid bike rider and love using my bike to get around.",
-      `I snowboard and ski. Last year I landed my first backflip.`,
-      `I had always been a fan of public transit, but when I went to Europe in the spring of 2022 I realized how much improvement was needed in the US. Since then, I have joined the non-profit TransitMatters to assist them in their public transit advocacy in the boston area.`,
-      `Many of my favorite books are about psychology. This lends itself to my design work, I enjoy thinking about the human aspect of tech and how people will interact with what I create.`,
-      `I'm a fan of all Boston sports.`,
-      `I enjoy hiking. I've backpacked the entirety of the Vermont-NH section of the Appalachian trail. I also went solo backpacking in the mountains of Peru.`,
+      `Public Transit Advocate`,
+      "Avid bike rider",
+      `Snowboarding & Skiing`,
+      `Running (1st marathon in 2022)`,
+      `Psychology`,
+      `Boston sports`,
+      `Hiking`,
     ],
   },
-
+  {
+    type: "h",
+    text: `What I've Read Recently`,
+  },
   {
     type: "p",
-    text: `Some books I read in 2022:`,
+    text: `2023`,
+    center: "true",
+  },
+  {
+    type: "ulist",
+    text: [
+      "The Design of Everyday Things - Don Norman",
+      "Don't Make Me Think - Steve Krug",
+      "Calypso - David Sedaris",
+      "When We Cease to Understand the World - Benjamín Labatut",
+    ],
+  },
+  {
+    type: "p",
+    text: `2022`,
+    center: "true",
   },
   {
     type: "ulist",

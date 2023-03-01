@@ -100,7 +100,7 @@ const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
               >
                 founder
               </b>
-              , and now a UX/UI{" "}
+              , and a UX/UI{" "}
               <b
                 style={{
                   fontFamily: "ChillaxBold",

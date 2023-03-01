@@ -59,8 +59,9 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
           <div
             style={{
               backgroundColor: "#fff",
-
+              width: "100%",
               alignItems: "center",
+              borderRadius: "4px",
               boxShadow: "2px 2px 2px #dfdfdf",
               display: "flex",
               justifyContent: "center",

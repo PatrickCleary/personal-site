@@ -58,9 +58,15 @@ export const AboutMenu: React.FC<AboutMenuProps> = ({ page, setPage }) => {
             columnGap: "1rem",
           }}
         >
-          <AboutMenuItems
+          {/* <AboutMenuItems
             name="uxdesign"
             title="Why UX Design?"
+            page={page}
+            setPage={setPage}
+          /> */}
+          <AboutMenuItems
+            name="experience"
+            title="Experience"
             page={page}
             setPage={setPage}
           />
@@ -72,12 +78,6 @@ export const AboutMenu: React.FC<AboutMenuProps> = ({ page, setPage }) => {
           >
             <Interests />
           </AboutMenuItems>
-          <AboutMenuItems
-            name="software"
-            title="Software Experience"
-            page={page}
-            setPage={setPage}
-          />
         </div>
       </div>
     </>
