@@ -115,7 +115,7 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
           </p>
           <p
             className="Email"
-            style={{ cursor: "pointer", fontSize: "2rem" }}
+            style={{ cursor: "pointer", fontSize: "1.25rem" }}
             onClick={() => {
               if (clickable) {
                 setClicked(true);
