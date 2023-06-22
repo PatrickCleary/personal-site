@@ -3,7 +3,7 @@ import { WindowContext } from "../WindowContext";
 
 
 // I didn't end up using this, but I like it so will keep for now.
-export const Interests = () => {
+export const More = () => {
   const listRef = useRef<HTMLDivElement>(null);
   const { mobile } = useContext(WindowContext);
   useEffect(() => {

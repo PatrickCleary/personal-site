@@ -1,5 +1,5 @@
 import React, { SetStateAction, useContext, useEffect, useRef } from "react";
-import { Interests } from "../AboutMenu/Interests";
+import { More } from "../AboutMenu/More";
 import { PageNames } from "../AboutMenu/Pages";
 import "../animations.css";
 import { WindowContext } from "../WindowContext";
@@ -58,25 +58,13 @@ export const AboutMenu: React.FC<AboutMenuProps> = ({ page, setPage }) => {
             columnGap: "1rem",
           }}
         >
-          {/* <AboutMenuItems
-            name="uxdesign"
-            title="Why UX Design?"
-            page={page}
-            setPage={setPage}
-          /> */}
           <AboutMenuItems
-            name="experience"
-            title="Experience"
-            page={page}
-            setPage={setPage}
-          />
-          <AboutMenuItems
-            name="interests"
-            title="Interests"
+            name="more"
+            title="More"
             page={page}
             setPage={setPage}
           >
-            <Interests />
+            <More />
           </AboutMenuItems>
         </div>
       </div>

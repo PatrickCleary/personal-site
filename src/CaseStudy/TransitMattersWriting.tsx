@@ -13,18 +13,19 @@ export const transit = [
       <p>
         TransitMatters is a public transit advocacy group based in Boston. I
         joined them as a volunteer software engineer, then began doing design
-        for a project to revamp their dashboards. I designed the updated version
-        of their dashboards, which are in development{" "}
+        for a project to revamp their dashboards.
+        <br/>
+        <br/>
         <a
-          style={{ color: "white" }}
-          href="https://dashboard-v4-beta.labs.transitmatters.org/red"
+          style={{ color: "white", textDecorationStyle:'solid' }}
+          href="https://dashboard-v4-beta.labs.transitmatters.org"
         >
-          here.
+          View the dashboard here
         </a>
       </p>
     ),
   },
-  { type: "p", text: `The new designs:` },
+  { type: "p", text: `Some new designs:` },
   { type: "img", location: TM_Header },
   {
     type: "h",
