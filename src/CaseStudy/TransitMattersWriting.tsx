@@ -10,14 +10,14 @@ export const transit = [
   {
     type: "custom",
     content: (
-      <p>
+      <p className="pt-4">
         TransitMatters is a public transit advocacy group based in Boston. I
         joined them as a volunteer software engineer, then began doing design
         for a project to revamp their dashboards.
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a
-          style={{ color: "white", textDecorationStyle:'solid' }}
+          style={{ color: "white", textDecorationStyle: "solid" }}
           href="https://dashboard-v4-beta.labs.transitmatters.org"
         >
           View the dashboard here
@@ -104,7 +104,6 @@ export const transit = [
           paddingTop: "2rem",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
           rowGap: "1rem",
         }}
       >
@@ -147,7 +146,6 @@ export const transit = [
           rowGap: "2rem",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
         }}
       >
         <p>
@@ -158,7 +156,6 @@ export const transit = [
         <div
           style={{
             display: "flex",
-            alignItems: "center",
             flexDirection: "column",
           }}
         >
@@ -173,7 +170,6 @@ export const transit = [
         <div
           style={{
             display: "flex",
-            alignItems: "center",
             flexDirection: "column",
           }}
         >
@@ -213,7 +209,6 @@ export const transit = [
           rowGap: "2rem",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
         }}
       >
         <p>
@@ -251,7 +246,6 @@ export const transit = [
           rowGap: "2rem",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
         }}
       >
         <p>

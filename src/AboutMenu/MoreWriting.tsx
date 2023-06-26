@@ -1,18 +1,27 @@
 export const more = [
-  { type: "h", text: "Work", center: true },
+  { type: "h", text: "Work" },
 
   {
     type: "custom",
     content: (
       <p>
-        I started my career as a backend software engineer working at Amazon. I have since discovered that my interests fall more on the product side of software.
-        I built <a style={{color:'#00ffff'}} href="https://dashboard-v4-beta.labs.transitmatters.org/">this dashboard</a> for a non-profit and now I am looking for a role as a product designer or product manager.
-        <br/>
+        I started my career as a backend software engineer working at Amazon. I
+        have since discovered that my interests fall more on the product side of
+        software. I built{" "}
+        <a
+          style={{ color: "#00ffff" }}
+          href="https://dashboard-v4-beta.labs.transitmatters.org/"
+        >
+          this dashboard
+        </a>{" "}
+        for a non-profit and now I am looking for a role as a product designer
+        or product manager.
+        <br />
       </p>
     ),
   },
   { type: "button", label: "Resume", href: "/resume.pdf" },
-  { type: "h", text: "Things I Do & Enjoy:", center: true },
+  { type: "h", text: "Things I Do & Enjoy:" },
   {
     type: "ulist",
     text: [
@@ -32,7 +41,6 @@ export const more = [
   {
     type: "p",
     text: `2023`,
-    center: "true",
   },
   {
     type: "ulist",
@@ -45,13 +53,11 @@ export const more = [
       "When You Are Engulfed in Flames - David Sedaris",
       "Sources of Power - Gary Klein",
       "Tomorrow, and Tomorrow, and Tomorrow - Gabrielle Zevin",
-
     ],
   },
   {
     type: "p",
     text: `2022`,
-    center: "true",
   },
   {
     type: "ulist",

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { WindowContext } from "../WindowContext";
 
-
 // I didn't end up using this, but I like it so will keep for now.
 export const More = () => {
   const listRef = useRef<HTMLDivElement>(null);
@@ -51,25 +50,6 @@ export const More = () => {
         alignItems: "flex-end",
         overflow: "hidden",
       }}
-    >
-      {/* {InterestsList.map((interest) => {
-        return (
-          <p
-            className="Interests"
-            key={interest}
-            style={{
-              textAlign: "center",
-              fontSize: mobile ? "2rem" : "4rem",
-              opacity: 0,
-              gridArea: "1 / 1",
-              top: `-${randomOffset()}%`,
-              position: "relative",
-            }}
-          >
-            {interest}
-          </p>
-        );
-      })} */}
-    </div>
+    ></div>
   );
 };
