@@ -63,18 +63,7 @@ export const PortfolioSlider: React.FC<PortfolioSliderProps> = ({
   return (
     <div>
       <div
-        // className={`Portfolio-Container Invisible ${
-        //   mobile ? "Portfolio-Container-Mobile" : "Portfolio-Container-DT"
-        // }`}
-        className="
-        w-[80vw]
-        relative
-        justify-center
-        items-center
-        p-8
-        flex
-        flex-row
-        overflow-hidden"
+        className="w-[80vw] relative justify-center items-center p-8 flex flex-row overflow-visible"
         ref={portfolioRef}
       >
         <div

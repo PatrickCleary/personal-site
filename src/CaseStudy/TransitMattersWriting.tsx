@@ -301,7 +301,10 @@ export const transit: ContentItem[] = [
   {
     type: "custom",
     content: (
-      <a href="https://dashboard-v4-beta.labs.transitmatters.org/red">
+      <a
+        href="https://dashboard-v4-beta.labs.transitmatters.org/red"
+        className="w-fit"
+      >
         <div
           style={{
             backgroundColor: "white",

@@ -102,20 +102,20 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
     }
     if (contentItem.type === "links") {
       return (
-        <div className={`Links ${mobile ? "Links-Mobile" : "Links-DT"}`}>
+        <div className="flex flex-row pt-8 gap-y-12 gap-x-8">
           {contentItem.links.figmaLink && (
-            <div className={`Figma Link ${mobile && "Link-Mobile"}`}>
-              <a
-                href={`https://www.figma.com/file/bLBzzBX3r6tG2CoS6vWglD/Dashboard---V4?node-id=1%3A55&t=ci7douClyjtiNNaG-1`}
-              >
-                <img src={Figma} className="Link-Icon" alt={"Figma Link"} />
-              </a>
-            </div>
+            <a
+              href={`https://www.figma.com/file/bLBzzBX3r6tG2CoS6vWglD/Dashboard---V4?node-id=1%3A55&t=ci7douClyjtiNNaG-1`}
+            >
+              <div className="shadow-md rounded-lg flex p-2 mt-8 md:mt-0  w-24 h-24 cursor-pointer bg-[#323232] items-center justify-center">
+                <img src={Figma} className="w-12 h-12" alt={"Figma Link"} />
+              </div>
+            </a>
           )}
           {contentItem.links.githubLink && (
-            <div className={`Github Link ${mobile && "Link-Mobile"}`}>
+            <div className="shadow-md rounded-lg flex p-2 mt-8 md:mt-0  w-24 h-24 cursor-pointer bg-[#fff] items-center justify-center">
               <a href="https://github.com/transitmatters/t-performance-dash/tree/dashboard-v4">
-                <img src={Github} className="Link-Icon" alt={"Github Link"} />
+                <img src={Github} className="w-12 h-12" alt={"Github Link"} />
               </a>
             </div>
           )}
@@ -143,7 +143,7 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
       )}
 
       <div
-        className="Slide-Up-Pop-Up Pop-Up-Container"
+        className="Slide-Up-Pop-Up   fixed w-full h-[100vh] left-0 top-0 z-50 overflow-y-scroll bg-[#2e2d2c] flex flex-col"
         onScroll={() => handleScroll(pageRef)}
         ref={pageRef}
       >
@@ -170,7 +170,7 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
           </div>
         </div>
         <div
-          className="Main-Div"
+          className="flex justify-center width-full mb-8 pb-16"
           ref={pageRef}
           onScroll={() => {
             handleScroll(pageRef);
