@@ -1,19 +1,18 @@
-import React, { SetStateAction, useContext, useRef, useState } from "react";
-import { PageNames } from "../AboutMenu/Pages";
+import type { SetStateAction } from "react";
+import React, { useRef } from "react";
+import type { PageNames } from "../AboutMenu/Pages";
 
 interface AboutMenuItemsProps {
   name: PageNames;
   title: string;
   page: PageNames;
   setPage: React.Dispatch<SetStateAction<PageNames>>;
-  children?: React.ReactNode;
 }
 
 export const AboutMenuItems = React.forwardRef<
   HTMLDivElement,
   AboutMenuItemsProps
->(({ name, title, page, setPage, children }) => {
-  const [location, setLocation] = useState<DOMRect | null>(null);
+>(({ name, title, page, setPage }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const isSelected = name === page;
 
@@ -25,9 +24,6 @@ export const AboutMenuItems = React.forwardRef<
         if (!isSelected) {
           setPage(name);
           document.body.style.overflow = "hidden";
-          if (ref.current) {
-            setLocation(ref.current.getBoundingClientRect());
-          }
         }
       }}
     >

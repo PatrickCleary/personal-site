@@ -1,12 +1,12 @@
 import "./App.css";
-import AboutMe from "./Sections/AboutMe";
+import React, { useRef, useState } from "react";
 import { Portfolio } from "./Sections/Portfolio";
 import { Contact } from "./Sections/Contact";
 import { Hero } from "./Sections/Hero";
-import PopUpPage from "./Components/PopUpPage";
-import { useRef, useState } from "react";
-import { PageNames } from "./AboutMenu/Pages";
-import { NavBar } from "./Components/NavBar";
+import type { PageNames } from "./AboutMenu/Pages";
+import { NavBar } from "./components/NavBar";
+import { AboutMe } from "./Sections/AboutMe";
+import { PopUpPage } from "./components/PopUpPage";
 
 function App() {
   const [page, setPage] = useState<PageNames>(null);
@@ -35,4 +35,5 @@ function App() {
   );
 }
 
+// eslint-disable-next-line import/no-default-export
 export default App;

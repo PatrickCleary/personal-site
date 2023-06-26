@@ -1,4 +1,6 @@
-export const uxdesign = [
+import type { ContentItem } from "./Pages";
+
+export const uxdesign: ContentItem[] = [
   {
     type: "p",
     text: `I started working with the group TransitMatters in early October, after seeing their work referenced in the Boston Globe. They had developed a statistic known as “slow zones” which track degradations in the Boston subway system.`,

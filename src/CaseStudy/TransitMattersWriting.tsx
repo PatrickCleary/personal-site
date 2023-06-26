@@ -1,11 +1,13 @@
+import React from "react";
 import TM_Header from "../Images/TM_Case_Study_Header_Photo.png";
 import MobileAccess from "../Images/MobileAccessScreenshot.png";
 import LandingComparison from "../Images/LandingComparison.png";
 import Homescreen from "../Images/homescreen2.png";
 import OverTime from "../Images/OverTime.png";
 import Median from "../Images/median.png";
+import type { ContentItem } from "../AboutMenu/Pages";
 
-export const transit = [
+export const transit: ContentItem[] = [
   { type: "h", text: "TransitMatters Data Dashboards" },
   {
     type: "custom",
@@ -318,9 +320,11 @@ export const transit = [
 
   {
     type: "links",
-    githubLink:
-      "https://github.com/transitmatters/t-performance-dash/tree/dashboard-v4",
-    figmaLink:
-      "https://www.figma.com/file/bLBzzBX3r6tG2CoS6vWglD/Dashboard---V4?node-id=1%3A55&t=ci7douClyjtiNNaG-1",
+    links: {
+      githubLink:
+        "https://github.com/transitmatters/t-performance-dash/tree/dashboard-v4",
+      figmaLink:
+        "https://www.figma.com/file/bLBzzBX3r6tG2CoS6vWglD/Dashboard---V4?node-id=1%3A55&t=ci7douClyjtiNNaG-1",
+    },
   },
 ];

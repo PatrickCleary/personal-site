@@ -1,17 +1,19 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import PortfolioItem from "./PortfolioItem";
+import { useSwipeable } from "react-swipeable";
 import { portfolioItems } from "../CaseStudy/PortfolioItemObjects";
 import { ReactComponent as Arrow } from "../Images/Arrow.svg";
 import { ReactComponent as ArrowLeft } from "../Images/ArrowLeft.svg";
+import type { PageNames } from "../AboutMenu/Pages";
 import { WindowContext } from "../WindowContext";
-import { PageNames } from "../AboutMenu/Pages";
-import { useSwipeable } from "react-swipeable";
+import { PortfolioItem } from "./PortfolioItem";
 
 interface PortfolioSliderProps {
   setPage: React.Dispatch<React.SetStateAction<PageNames>>;
 }
 
-const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
+export const PortfolioSlider: React.FC<PortfolioSliderProps> = ({
+  setPage,
+}) => {
   const [selected, setSelected] = useState({ current: 0, previous: -1 });
   const { mobile } = useContext(WindowContext);
   const portfolioRef = useRef(null);
@@ -39,7 +41,7 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.remove("Invisible");
             entry.target.classList.add("Slide-In-From-Right");
@@ -61,9 +63,18 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
   return (
     <div>
       <div
-        className={`Portfolio-Container Invisible ${
-          mobile ? "Portfolio-Container-Mobile" : "Portfolio-Container-DT"
-        }`}
+        // className={`Portfolio-Container Invisible ${
+        //   mobile ? "Portfolio-Container-Mobile" : "Portfolio-Container-DT"
+        // }`}
+        className="
+        w-[80vw]
+        relative
+        justify-center
+        items-center
+        p-8
+        flex
+        flex-row
+        overflow-hidden"
         ref={portfolioRef}
       >
         <div
@@ -121,5 +132,3 @@ const PortfolioSlider: React.FC<PortfolioSliderProps> = ({ setPage }) => {
     </div>
   );
 };
-
-export default PortfolioSlider;

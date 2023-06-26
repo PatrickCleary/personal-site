@@ -1,6 +1,6 @@
-import React, { SetStateAction, useContext, useEffect, useRef } from "react";
-import { More } from "../AboutMenu/More";
-import { PageNames } from "../AboutMenu/Pages";
+import type { SetStateAction } from "react";
+import React, { useContext, useEffect, useRef } from "react";
+import type { PageNames } from "../AboutMenu/Pages";
 import "../animations.css";
 import { WindowContext } from "../WindowContext";
 import { AboutMenuItems } from "./AboutMenuItems";
@@ -63,9 +63,7 @@ export const AboutMenu: React.FC<AboutMenuProps> = ({ page, setPage }) => {
             title="More"
             page={page}
             setPage={setPage}
-          >
-            <More />
-          </AboutMenuItems>
+          />
         </div>
       </div>
     </>

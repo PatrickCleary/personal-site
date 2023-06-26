@@ -8,7 +8,7 @@ interface HeaderProps {
   clicked?: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ title, clicked }) => {
+export const Header: React.FC<HeaderProps> = ({ title, clicked }) => {
   const headerRef = useRef<HTMLDivElement>(null);
   const { mobile } = useContext(WindowContext);
 
@@ -61,5 +61,3 @@ const Header: React.FC<HeaderProps> = ({ title, clicked }) => {
     </div>
   );
 };
-
-export default Header;

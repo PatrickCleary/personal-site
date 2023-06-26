@@ -1,4 +1,6 @@
-export const more = [
+import React from "react";
+import type { ContentItem } from "./Pages";
+export const more: ContentItem[] = [
   { type: "h", text: "Work" },
 
   {

@@ -1,8 +1,9 @@
-import React, { SetStateAction } from "react";
+import type { SetStateAction } from "react";
+import React from "react";
 import "./Portfolio.css";
-import Header from "../Components/Header";
-import PortfolioSlider from "../Components/PortfolioSlider";
-import { PageNames } from "../AboutMenu/Pages";
+import type { PageNames } from "../AboutMenu/Pages";
+import { PortfolioSlider } from "../components/PortfolioSlider";
+import { Header } from "../components/Header";
 
 interface PortfolioProps {
   setPage: React.Dispatch<SetStateAction<PageNames>>;

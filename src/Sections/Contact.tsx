@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import "./Contact.css";
-import Header from "../Components/Header";
 import Github from "../Images/GitHubStyled.png";
 import LinkedIn from "../Images/LinkedInStyled.png";
 import Twitter from "../Images/TwitterStyled.png";
 import { WindowContext } from "../WindowContext";
-import { Footer } from "../Components/Footer";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
 
 const sites = [
   {
@@ -92,7 +92,7 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
     }, [contactInfoRefOne, contactInfoRefTwo, mobile]);
 
     return (
-      <div className="Contact" ref={ref} style={{ height: "50vh" }}>
+      <div className="Contact" ref={ref}>
         {" "}
         <Header title="CONTACT" clicked={clickedLink} />
         <div

@@ -1,7 +1,8 @@
 import RuleScheduling from "../Images/RuleSchedulingCarGo.png";
 import HeadImage from "../Images/CarGoHeadImage.png";
+import type { ContentItem } from "../AboutMenu/Pages";
 
-export const cargo = [
+export const cargo: ContentItem[] = [
   { type: "img", location: HeadImage },
   {
     type: "p",
@@ -42,7 +43,10 @@ export const cargo = [
     text: `With that information, I began working on a rule creation interface. The primary interaction was a “Repeating shift” scheduling interface. That looked like this:`,
   },
   { type: "img", location: RuleScheduling },
-  {type:"p", text:`On the left: The screen when it is opened. We set some reasonable defaults for a few values, but the user must select the days on which the shifts will be created. They also can optionally set an end date. The interaction we imagined was that most shifts would be long running standard shifts which are present every day. Then we could schedule the temporary busy-season shifts in advance and have them end on the schedule.`},
+  {
+    type: "p",
+    text: `On the left: The screen when it is opened. We set some reasonable defaults for a few values, but the user must select the days on which the shifts will be created. They also can optionally set an end date. The interaction we imagined was that most shifts would be long running standard shifts which are present every day. Then we could schedule the temporary busy-season shifts in advance and have them end on the schedule.`,
+  },
   {
     type: "p",
     text: `This Case study is a WIP. I will be updating this with more information soon.`,

@@ -6,7 +6,7 @@ import { WindowContext } from "../WindowContext";
 export const Hero = () => {
   const { clientHeight, clientWidth, mobile } = useContext(WindowContext);
   // Save height to prevent height from changing on mobile when the bottom nav bar disappears.
-  const height = React.useMemo(() => clientHeight, []);
+  const height = React.useMemo(() => clientHeight, [clientHeight]);
 
   return (
     <>

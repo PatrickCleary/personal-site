@@ -1,16 +1,17 @@
 import React, { useContext } from "react";
 import "./PortfolioItem.css";
 import { WindowContext } from "../WindowContext";
-import LearnMoreButton from "./LearnMoreButton";
+import type { PortfolioItem as PortfolioItemType } from "../CaseStudy/PortfolioItemObjects";
+import { LearnMoreButton } from "./LearnMoreButton";
 
 interface PortfolioItemProps {
   index: number;
   selected: { current: number; previous: number };
-  item: any;
-  setPage: React.Dispatch<React.SetStateAction<string>>;
+  item: PortfolioItemType;
+  setPage: (pageName?: string) => void;
 }
 
-const PortfolioItem: React.FC<PortfolioItemProps> = ({
+export const PortfolioItem: React.FC<PortfolioItemProps> = ({
   index,
   selected,
   item,
@@ -78,9 +79,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
             >
               {item.title}
             </h3>
-            {!mobile && (
-              <p style={{ color: item.secondaryColor }}>{item.text}</p>
-            )}
+            {!mobile && <p>{item.text}</p>}
           </div>
           <LearnMoreButton setPage={setPage} />
         </div>
@@ -101,11 +100,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           setPage={() => {
             setPage(item.name);
           }}
-         
         />
       )}
     </div>
   );
 };
-
-export default PortfolioItem;

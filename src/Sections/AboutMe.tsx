@@ -1,11 +1,12 @@
-import React, { useRef, useEffect, useContext, SetStateAction } from "react";
+import type { SetStateAction } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import Headshot from "../Images/Headshot.png";
 import "../animations.css";
 import "./AboutMe.css";
 import { WindowContext } from "../WindowContext";
-import { AboutMenu } from "../Components/AboutMenu";
-import Header from "../Components/Header";
-import { PageNames } from "../AboutMenu/Pages";
+import { AboutMenu } from "../components/AboutMenu";
+import type { PageNames } from "../AboutMenu/Pages";
+import { Header } from "../components/Header";
 
 interface AboutMeProps {
   page: PageNames;
@@ -13,7 +14,7 @@ interface AboutMeProps {
   setPage: React.Dispatch<SetStateAction<PageNames>>;
 }
 
-const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
+export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
   ({ page, setPage, clicked }, ref) => {
     const { clientWidth, mobile } = useContext(WindowContext);
     const topRowRef = useRef<HTMLDivElement>(null);
@@ -125,5 +126,3 @@ const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
     );
   }
 );
-
-export default AboutMe;

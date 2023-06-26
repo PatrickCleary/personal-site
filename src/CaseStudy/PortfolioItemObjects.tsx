@@ -1,10 +1,10 @@
+import type React from "react";
 import TMAppScreenshots from "../Images/TM_App_ScreenShots.png";
 import CarGoAppScreenshots from "../Images/CarGoAppScreenshots.png";
 import { ReactComponent as TM } from "../Images/TM.svg";
 import { ReactComponent as CG } from "../Images/CarGo.svg";
-import React from "react";
 
-interface PortfolioItems {
+export interface PortfolioItem {
   name: "transit" | "cargo";
   title: string;
   cardImage: string;
@@ -13,7 +13,7 @@ interface PortfolioItems {
   color: string;
 }
 
-export const portfolioItems: PortfolioItems[] = [
+export const portfolioItems: PortfolioItem[] = [
   {
     name: "transit",
     title: "TransitMatters",

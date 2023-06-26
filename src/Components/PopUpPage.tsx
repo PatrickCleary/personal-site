@@ -1,11 +1,16 @@
-import { useContext, useRef, useState } from "react";
-import { PageNames, PageNamesNonNull, Pages } from "../AboutMenu/Pages";
+import React, { useContext, useRef, useState } from "react";
+import type {
+  ContentItem,
+  PageNames,
+  PageNamesNonNull,
+} from "../AboutMenu/Pages";
+import { Pages } from "../AboutMenu/Pages";
 import "./PopUpPage.css";
 import { WindowContext } from "../WindowContext";
 import { ReactComponent as Close } from "../Images/Close.svg";
 import Figma from "../Images/Figma.png";
 import Github from "../Images/Github.png";
-import ScrollingAnimation from "./ScrollingAnimation";
+import { ScrollingAnimation } from "./ScrollingAnimation";
 
 interface PopUpPageProps {
   pageName: PageNamesNonNull;
@@ -17,32 +22,20 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const pageRef = useRef(null);
 
-  const content = Pages[pageName].content;
+  const { content } = Pages[pageName];
 
-  const renderContent = (contentItem: any) => {
+  const renderContent = (contentItem: ContentItem) => {
     if (contentItem.type === "p")
       return (
         <p
           className={`CS-Paragraph ${
             mobile ? "CS-Paragraph-Mobile" : "CS-Paragraph-DT"
           }`}
-          style={{ textAlign: contentItem.center ? "center" : "left" }}
         >
           {contentItem.text}
         </p>
       );
-    if (contentItem.type === "a")
-      return (
-        <a href={contentItem.href}>
-          <p
-            className={`CS-Paragraph ${
-              mobile ? "CS-Paragraph-Mobile" : "CS-Paragraph-DT"
-            }`}
-          >
-            {contentItem.href}
-          </p>
-        </a>
-      );
+
     if (contentItem.type === "h")
       return (
         <h3
@@ -73,24 +66,16 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
         </a>
       );
     if (contentItem.type === "img")
-      return (
-        <img
-          src={contentItem.location}
-          width={mobile ? "85%" : "75%"}
-          alt={contentItem.caption}
-        />
-      ); //TODO: add Alt text
+      return <img src={contentItem.location} width={mobile ? "85%" : "75%"} />; //TODO: add Alt text
     if (contentItem.type === "list") {
       return (
         <ol
           style={{ rowGap: ".5rem", display: "flex", flexDirection: "column" }}
         >
-          {contentItem.text.map((listItem: any, index: number) => {
-            if (listItem.element) {
-              return listItem.element;
-            }
+          {contentItem.text.map((listItem: string, index: number) => {
             return (
               <p
+                key={index}
                 className={mobile ? "CS-Paragraph-Mobile" : "CS-Paragraph-DT"}
               >{`${index + 1}. ${listItem}`}</p>
             );
@@ -101,9 +86,9 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
     if (contentItem.type === "ulist") {
       return (
         <ul>
-          {contentItem.text.map((listItem: any, index: number) => {
+          {contentItem.text.map((listItem: string, index: number) => {
             return (
-              <li style={{ color: "white" }}>
+              <li key={index} style={{ color: "white" }}>
                 <p
                   className={mobile ? "CS-Paragraph-Mobile" : "CS-Paragraph-DT"}
                 >
@@ -118,7 +103,7 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
     if (contentItem.type === "links") {
       return (
         <div className={`Links ${mobile ? "Links-Mobile" : "Links-DT"}`}>
-          {contentItem.figmaLink && (
+          {contentItem.links.figmaLink && (
             <div className={`Figma Link ${mobile && "Link-Mobile"}`}>
               <a
                 href={`https://www.figma.com/file/bLBzzBX3r6tG2CoS6vWglD/Dashboard---V4?node-id=1%3A55&t=ci7douClyjtiNNaG-1`}
@@ -127,7 +112,7 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
               </a>
             </div>
           )}
-          {contentItem.githubLink && (
+          {contentItem.links.githubLink && (
             <div className={`Github Link ${mobile && "Link-Mobile"}`}>
               <a href="https://github.com/transitmatters/t-performance-dash/tree/dashboard-v4">
                 <img src={Github} className="Link-Icon" alt={"Github Link"} />
@@ -138,9 +123,7 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
       );
     }
     if (contentItem.type === "custom") {
-      return mobile && contentItem.mobile
-        ? contentItem.mobile
-        : contentItem.content;
+      return contentItem.content;
     }
   };
 
@@ -198,7 +181,7 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
               mobile ? "Main-Content-Mobile" : "Main-Content-DT"
             }`}
           >
-            {content.map((contentItem: any) => {
+            {content.map((contentItem: ContentItem) => {
               return renderContent(contentItem);
             })}
           </div>
@@ -207,5 +190,3 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
     </>
   );
 };
-
-export default PopUpPage;

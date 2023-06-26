@@ -4,10 +4,12 @@ import { ReactComponent as ArrowTail } from "../Images/ArrowTail.svg";
 import { WindowContext } from "../WindowContext";
 
 interface LearnMoreButtonProps {
-  setPage: Function;
+  setPage: (pageName?: string) => void;
 }
 
-const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({ setPage }) => {
+export const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({
+  setPage,
+}) => {
   const { mobile } = useContext(WindowContext);
   return (
     // Need this div to prevent .Learn-More-Div from expanding to 100% width.
@@ -21,11 +23,9 @@ const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({ setPage }) => {
           document.body.style.overflow = "hidden";
         }}
       >
-        
         <p>Learn More</p>
         <ArrowTail width={mobile ? "1.2rem" : "2rem"} />
       </div>
     </div>
   );
 };
-export default LearnMoreButton;
