@@ -1,13 +1,12 @@
 .Portfolio-Item {
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 1px 2px #000;
   display: flex;
   grid-column: 1;
   grid-row: 1;
 }
 
 .Portfolio-Item-Mobile {
-  display:flex;
+  display: flex;
   align-items: center;
 }
 

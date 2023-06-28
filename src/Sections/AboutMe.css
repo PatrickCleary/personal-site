@@ -92,13 +92,9 @@ h3 {
 }
 
 .About-Me-Text {
-  border-color: #c8d4e6;
-  border-width: 2px;
-  border-style: solid;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;
 }
 
 .About-Menu-Item {

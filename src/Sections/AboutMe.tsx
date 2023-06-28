@@ -73,7 +73,7 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
                 : clientWidth * 0.2
             }px`}
             style={{
-              borderRadius: "0.5rem",
+              borderRadius: "0.25rem",
               alignItems: mobile ? "center" : "flex-start",
             }}
             src={Headshot}
