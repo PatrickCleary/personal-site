@@ -26,7 +26,7 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.remove("No-Show");
-              entry.target.classList.add("AboutMe-Top-Row-Fade-In");
+              entry.target.classList.add("Slide-Up");
             }
           });
         },
@@ -47,7 +47,7 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
 
     return (
       <div className="About-Me" ref={ref}>
-        <Header title={"ABOUT ME"} clicked={clicked} />
+        <Header title={"ABOUT"} clicked={clicked} />
         <div
           style={{
             display: "flex",
@@ -79,7 +79,7 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
             src={Headshot}
             alt="CarGoLogo"
           />
-          <div ref={topRowRef} className="About-Me-Text No-Show">
+          <div ref={topRowRef} className="md:p-4 flex flex-col No-Show">
             <p>
               I have experience as a full-stack software{" "}
               <b

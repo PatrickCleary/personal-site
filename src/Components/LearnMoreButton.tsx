@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./LearnMoreButton.css";
-import { ReactComponent as ArrowTail } from "../Images/ArrowTail.svg";
 import { WindowContext } from "../WindowContext";
 
 interface LearnMoreButtonProps {
@@ -15,16 +14,13 @@ export const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({
     // Need this div to prevent .Learn-More-Div from expanding to 100% width.
     <div style={{ display: "flex" }}>
       <div
-        className={`Learn-More-Div ${
-          mobile ? "Learn-More-Div-Mobile" : "Learn-More-Div-DT"
-        }`}
+        className="flex flex-row items-center gap-x-8 rounded-sm border-2 border-white cursor-pointer py-4 px-8 hover:bg-white group"
         onClick={() => {
           setPage();
           document.body.style.overflow = "hidden";
         }}
       >
-        <p>Learn More</p>
-        <ArrowTail width={mobile ? "1.2rem" : "2rem"} />
+        <p className="group-hover:text-black">Learn More</p>
       </div>
     </div>
   );

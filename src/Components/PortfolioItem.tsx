@@ -36,7 +36,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
   return (
     <div
       key={item.name}
-      className={`Portfolio-Item ${animationSelection} Invisible Gone ${
+      className={`Portfolio-Item ${animationSelection} Invisible ${
         mobile ? "Portfolio-Item-Mobile" : "Portfolio-Item-DT"
       }`}
       style={{

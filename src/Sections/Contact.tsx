@@ -105,15 +105,6 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
           }}
         >
           <p
-            style={{
-              marginBottom: "1rem",
-              userSelect: "none",
-              fontSize: "1.5rem",
-            }}
-          >
-            Email:
-          </p>
-          <p
             className="Email"
             style={{ cursor: "pointer", fontSize: "1.25rem" }}
             onClick={() => {
@@ -139,25 +130,10 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
           </p>
         </div>
         <div
-          className="No-Show"
+          className="No-Show flex flex-col items-center"
           ref={contactInfoRefTwo}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
         >
-          <p
-            style={{
-              marginTop: "1rem",
-              marginBottom: "1rem",
-              userSelect: "none",
-              fontSize: "1.5rem",
-            }}
-          >
-            Accounts:
-          </p>
-          <div className="Contact-Me-Main-Content">
+          <div className="Contact-Me-Main-Content mt-4">
             {sites.map((site) => {
               return (
                 <ContactBox

@@ -27,16 +27,3 @@
     opacity: 0;
   }
 }
-
-.Slide-Up {
-  animation: slideUpContact 0.5s cubic-bezier(0.68, 0.22, 0.43, 1.49) forwards;
-}
-
-@keyframes slideUpContact {
-  from {
-    transform: translateY(12rem);
-  }
-  to {
-    transform: translateY(0rem);
-  }
-}

@@ -16,13 +16,6 @@
   padding: 2vw;
 }
 
-.Portfolio-Item-Selected {
-  visibility: visible;
-}
-.Portfolio-Item-Unselected {
-  visibility: hidden;
-}
-
 .Slide-In-From-Right {
   animation: inFromRight 0.75s ease-in-out forwards;
 }
@@ -38,9 +31,9 @@
 
 @keyframes inFromRight {
   from {
-    visibility: visible;
     opacity: 0;
-    transform: translateX(90vw) scaleY(0.33);
+
+    transform: translateX(30vw) scaleY(0.7);
   }
   to {
     opacity: 1;
@@ -54,10 +47,8 @@
     transform: translateX(0vw) scaleY(1);
   }
   to {
-    visibility: hidden;
-
     opacity: 0;
-    transform: translateX(90vw) scaleY(0.33);
+    transform: translateX(30vw) scaleY(0.7);
   }
 }
 
@@ -67,18 +58,16 @@
     transform: translateX(0vw) scaleY(1);
   }
   to {
-    visibility: hidden;
-
     opacity: 0;
-    transform: translateX(-90vw) scaleY(0.33);
+
+    transform: translateX(-30vw) scaleY(0.7);
   }
 }
 
 @keyframes inFromLeft {
   from {
-    visibility: visible;
     opacity: 0;
-    transform: translateX(-90vw) scaleY(0.33);
+    transform: translateX(-30vw) scaleY(0.7);
   }
   to {
     opacity: 1;

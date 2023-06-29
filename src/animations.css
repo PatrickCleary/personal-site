@@ -1,9 +1,6 @@
 .Invisible {
   opacity: 0;
 }
-.Gone {
-  transform: translateX(100vw);
-}
 
 .Slide-Up {
   animation: slideUp 0.4s forwards linear;
@@ -11,7 +8,7 @@
 
 @keyframes slideUp {
   0% {
-    transform: translateY(100px);
+    transform: translateY(5rem);
     opacity: 0;
   }
   75% {
@@ -40,15 +37,12 @@
 @keyframes flowInText {
   0% {
     opacity: 0;
-    transform: scaleX(0.5) scaleY(0.5);
   }
   50% {
-    opacity: 0;
-    transform: scaleX(0.5) scaleY(0.5);
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
-    transform: scaleX(1) scaleY(1);
   }
 }
 
@@ -80,9 +74,9 @@
 @keyframes flowIn {
   0% {
     opacity: 0;
+    background: radial-gradient(ellipse at bottom, #fff, transparent 0%);
   }
   3.5% {
-    opacity: 1;
     background: radial-gradient(ellipse at bottom, #fff, transparent 5%);
   }
   7% {
