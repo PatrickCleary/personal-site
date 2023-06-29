@@ -4,9 +4,9 @@ import Headshot from "../Images/Headshot.png";
 import "../animations.css";
 import "./AboutMe.css";
 import { WindowContext } from "../WindowContext";
-import { AboutMenu } from "../components/AboutMenu";
+import { AboutMenu } from "../rename/AboutMenu";
 import type { PageNames } from "../AboutMenu/Pages";
-import { Header } from "../components/Header";
+import { Header } from "../rename/Header";
 
 interface AboutMeProps {
   page: PageNames;

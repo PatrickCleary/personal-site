@@ -4,8 +4,8 @@ import Github from "../Images/GitHubStyled.png";
 import LinkedIn from "../Images/LinkedInStyled.png";
 import Twitter from "../Images/TwitterStyled.png";
 import { WindowContext } from "../WindowContext";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
+import { Footer } from "../rename/Footer";
+import { Header } from "../rename/Header";
 
 const sites = [
   {

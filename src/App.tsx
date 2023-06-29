@@ -4,9 +4,9 @@ import { Portfolio } from "./Sections/Portfolio";
 import { Contact } from "./Sections/Contact";
 import { Hero } from "./Sections/Hero";
 import type { PageNames } from "./AboutMenu/Pages";
-import { NavBar } from "./components/NavBar";
 import { AboutMe } from "./Sections/AboutMe";
-import { PopUpPage } from "./components/PopUpPage";
+import { PopUpPage } from "./rename/PopUpPage";
+import { NavBar } from "./rename/NavBar";
 
 function App() {
   const [page, setPage] = useState<PageNames>(null);
