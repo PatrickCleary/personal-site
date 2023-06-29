@@ -5,8 +5,8 @@ import { Contact } from "./Sections/Contact";
 import { Hero } from "./Sections/Hero";
 import type { PageNames } from "./AboutMenu/Pages";
 import { AboutMe } from "./Sections/AboutMe";
-import { PopUpPage } from "./rename/PopUpPage";
-import { NavBar } from "./rename/NavBar";
+import { PopUpPage } from "./Components/PopUpPage";
+import { NavBar } from "./Components/NavBar";
 
 function App() {
   const [page, setPage] = useState<PageNames>(null);
