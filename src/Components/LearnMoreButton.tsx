@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./LearnMoreButton.css";
-import { WindowContext } from "../WindowContext";
 
 interface LearnMoreButtonProps {
   setPage: (pageName?: string) => void;
@@ -9,7 +8,6 @@ interface LearnMoreButtonProps {
 export const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({
   setPage,
 }) => {
-  const { mobile } = useContext(WindowContext);
   return (
     // Need this div to prevent .Learn-More-Div from expanding to 100% width.
     <div style={{ display: "flex" }}>
