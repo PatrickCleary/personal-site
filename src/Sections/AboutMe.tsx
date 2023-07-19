@@ -115,8 +115,8 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
               <br />
               <br />
               This multidisciplinary experience allows me to understand the
-              needs of the users in a unique way, and deliver on all aspects of
-              a project.
+              needs of users in a unique way, and deliver on all aspects of a
+              project.
             </p>
             <AboutMenu page={page} setPage={setPage} />
           </div>
