@@ -12,7 +12,7 @@ export const more: ContentItem[] = [
         software. I built{" "}
         <a
           style={{ color: "#00ffff" }}
-          href="https://dashboard-v4-beta.labs.transitmatters.org/"
+          href="https://dashboard.transitmatters.org/"
         >
           this dashboard
         </a>{" "}

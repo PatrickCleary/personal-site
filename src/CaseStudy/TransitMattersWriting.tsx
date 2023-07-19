@@ -20,7 +20,7 @@ export const transit: ContentItem[] = [
         <br />
         <a
           style={{ color: "white", textDecorationStyle: "solid" }}
-          href="https://dashboard-v4-beta.labs.transitmatters.org"
+          href="https://dashboard.transitmatters.org"
         >
           View the dashboard here
         </a>
@@ -301,10 +301,7 @@ export const transit: ContentItem[] = [
   {
     type: "custom",
     content: (
-      <a
-        href="https://dashboard-v4-beta.labs.transitmatters.org/red"
-        className="w-fit"
-      >
+      <a href="https://dashboard.transitmatters.org" className="w-fit">
         <div
           style={{
             backgroundColor: "white",
@@ -324,8 +321,7 @@ export const transit: ContentItem[] = [
   {
     type: "links",
     links: {
-      githubLink:
-        "https://github.com/transitmatters/t-performance-dash/tree/dashboard-v4",
+      githubLink: "https://github.com/transitmatters/t-performance-dash",
       figmaLink:
         "https://www.figma.com/file/bLBzzBX3r6tG2CoS6vWglD/Dashboard---V4?node-id=1%3A55&t=ci7douClyjtiNNaG-1",
     },

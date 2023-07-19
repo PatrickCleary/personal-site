@@ -114,7 +114,7 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
           )}
           {contentItem.links.githubLink && (
             <div className="shadow-md rounded-lg flex p-2 mt-8 md:mt-0  w-24 h-24 cursor-pointer bg-[#fff] items-center justify-center">
-              <a href="https://github.com/transitmatters/t-performance-dash/tree/dashboard-v4">
+              <a href="https://github.com/transitmatters/t-performance-dash">
                 <img src={Github} className="w-12 h-12" alt={"Github Link"} />
               </a>
             </div>
