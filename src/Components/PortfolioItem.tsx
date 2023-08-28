@@ -18,7 +18,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
   setPage,
 }) => {
   const { mobile } = useContext(WindowContext);
-  let animationSelection = "";
+  let animationSelection = "Slide-Out-To-Right"; // This is a hack. The second portfolio item was hovering on top of the first.
   if (selected.current === index) {
     if (selected.previous < selected.current) {
       animationSelection = "Slide-In-From-Right";
