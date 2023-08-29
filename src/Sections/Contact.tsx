@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Contact.css";
 import Github from "../Images/GitHubStyled.png";
 import LinkedIn from "../Images/LinkedInStyled.png";
@@ -63,47 +63,11 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
   ({ clickedLink }, ref) => {
     const [clicked, setClicked] = useState(false);
     const [clickable, setClickable] = useState(true);
-    const { mobile } = useContext(WindowContext);
-    const contactInfoRefOne = useRef(null);
-    const contactInfoRefTwo = useRef(null);
-
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.remove("No-Show");
-              entry.target.classList.add("Slide-Up");
-            }
-          });
-        },
-        {
-          root: null,
-          threshold: mobile ? 1 : 1,
-        }
-      );
-
-      if (contactInfoRefOne.current) {
-        observer.observe(contactInfoRefOne.current);
-      }
-      if (contactInfoRefTwo.current) {
-        observer.observe(contactInfoRefTwo.current);
-      }
-    }, [contactInfoRefOne, contactInfoRefTwo, mobile]);
 
     return (
       <div className="Contact" ref={ref}>
-        {" "}
         <Header title="CONTACT" clicked={clickedLink} />
-        <div
-          className="No-Show"
-          ref={contactInfoRefOne}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <div className="flex flex-col items-center">
           <p
             className="Email"
             style={{ cursor: "pointer", fontSize: "1.25rem" }}
@@ -129,11 +93,8 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
             Copied to clipboard!
           </p>
         </div>
-        <div
-          className="No-Show flex flex-col items-center"
-          ref={contactInfoRefTwo}
-        >
-          <div className="Contact-Me-Main-Content mt-4">
+        <div className="flex flex-col items-center">
+          <div className="mt-4 grid gap-8 grid-cols-3 ">
             {sites.map((site) => {
               return (
                 <ContactBox

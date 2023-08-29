@@ -49,19 +49,8 @@ export const PopUpPage: React.FC<PopUpPageProps> = ({ pageName, setPage }) => {
     if (contentItem.type === "button")
       return (
         <a href={contentItem.href} style={{ textDecoration: "none" }}>
-          <div
-            style={{
-              backgroundColor: "#fff",
-              width: "20rem",
-              alignItems: "center",
-              borderRadius: "4px",
-              boxShadow: "2px 2px 2px #dfdfdf",
-              display: "flex",
-              justifyContent: "center",
-              margin: "1rem",
-            }}
-          >
-            <p style={{ color: "#000" }}>{contentItem.label}</p>
+          <div className="bg-white w-64 items-center rounded-sm shadow-sm flex justify-center mt-1">
+            <p className="text-dark">{contentItem.label}</p>
           </div>
         </a>
       );

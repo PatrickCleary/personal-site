@@ -45,7 +45,8 @@ html {
 }
 
 .NamePlate {
-  animation: fillNamePlate 1.5s ease-in-out infinite alternate,
+  animation:
+    fillNamePlate 1.5s ease-in-out infinite alternate,
     pulsingLight 1.5s ease-in-out infinite alternate;
 }
 
@@ -104,10 +105,6 @@ html {
   }
 }
 
-.No-Show {
-  visibility: hidden;
-}
-
 .Fade-Out {
   animation: textGrow 1s ease-in-out forwards;
 }
@@ -160,12 +157,14 @@ p {
 
 @font-face {
   font-family: "ChillaxBold";
-  src: url(./Fonts/Chillax-Bold.ttf) format("truetype"),
+  src:
+    url(./Fonts/Chillax-Bold.ttf) format("truetype"),
     url(./Fonts/Chillax-Bold.otf) format("opentype");
 }
 @font-face {
   font-family: "Chillax";
-  src: url(./Fonts/Chillax-Regular.ttf) format("truetype"),
+  src:
+    url(./Fonts/Chillax-Regular.ttf) format("truetype"),
     url(./Fonts/Chillax-Regular.otf) format("opentype");
 }
 
@@ -184,5 +183,5 @@ p {
 }
 
 .Nav-Bar-Item:hover {
-  background: radial-gradient(ellipse at bottom, #c8d4e6, #0a0d11 45%);
+  background: radial-gradient(ellipse at center, #c8d4e6, #0a0d11 45%);
 }

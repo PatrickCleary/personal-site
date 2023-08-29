@@ -8,7 +8,7 @@ import Median from "../Images/median.png";
 import type { ContentItem } from "../AboutMenu/Pages";
 
 export const transit: ContentItem[] = [
-  { type: "h", text: "TransitMatters Data Dashboards" },
+  { type: "h", text: "TransitMatters Data Dashboard" },
   {
     type: "custom",
     content: (
@@ -18,10 +18,7 @@ export const transit: ContentItem[] = [
         for a project to revamp their dashboards.
         <br />
         <br />
-        <a
-          style={{ color: "white", textDecorationStyle: "solid" }}
-          href="https://dashboard.transitmatters.org"
-        >
+        <a className="text-sky-400" href="https://dashboard.transitmatters.org">
           View the dashboard here
         </a>
       </p>

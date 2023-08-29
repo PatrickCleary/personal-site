@@ -11,7 +11,7 @@ export const more: ContentItem[] = [
         have since discovered that my interests fall more on the product side of
         software. I built{" "}
         <a
-          style={{ color: "#00ffff" }}
+          className="text-sky-400"
           href="https://dashboard.transitmatters.org/"
         >
           this dashboard
@@ -23,17 +23,17 @@ export const more: ContentItem[] = [
     ),
   },
   { type: "button", label: "Resume", href: "/resume.pdf" },
-  { type: "h", text: "Things I Do & Enjoy:" },
+  { type: "h", text: "Interests" },
   {
     type: "ulist",
     text: [
-      `Public Transit Advocate`,
-      "Avid bike rider",
-      `Snowboarding & Skiing`,
-      `Running (1st marathon in 2022)`,
+      `Public Transit`,
+      "Vision Zero",
+      "Bicycling",
+      "Infrastructure",
+      `Running`,
       `Psychology`,
-      `Boston sports`,
-      `Hiking`,
+      `Snowboarding & Skiing`,
     ],
   },
   {
@@ -48,6 +48,7 @@ export const more: ContentItem[] = [
     type: "ulist",
     text: [
       "The Design of Everyday Things - Don Norman",
+      "The Death and Life of Great American Cities - Jane Jacobs",
       "Don't Make Me Think - Steve Krug",
       "Calypso - David Sedaris",
       "When We Cease to Understand the World - Benjamín Labatut",

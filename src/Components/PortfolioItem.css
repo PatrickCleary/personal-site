@@ -80,19 +80,6 @@
   right: -2rem;
 }
 
-.App-Screenshots:hover {
-  animation: rock 1s ease-in-out infinite alternate;
-}
-
-@keyframes rock {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(3deg);
-  }
-}
-
 .App-Screenshots {
   position: absolute;
   top: 0;

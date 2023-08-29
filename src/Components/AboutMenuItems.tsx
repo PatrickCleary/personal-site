@@ -19,7 +19,7 @@ export const AboutMenuItems = React.forwardRef<
   return (
     <div
       ref={ref}
-      className={"About-Menu-Item"}
+      className="w-full group px-2 py-1 rounded-sm border border-light border-opacity-20 bg-light bg-opacity-10 box-border flex cursor-pointer items-center justify-center hover:bg-opacity-100 hover:text-dark"
       onClick={() => {
         if (!isSelected) {
           setPage(name);
@@ -28,8 +28,8 @@ export const AboutMenuItems = React.forwardRef<
       }}
     >
       <p
+        className="text-center group-hover:text-dark"
         style={{
-          textAlign: "center",
           fontFamily: "chillax",
         }}
       >

@@ -1,5 +1,5 @@
 import type { SetStateAction } from "react";
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Headshot from "../Images/Headshot.png";
 import "../animations.css";
 import "./AboutMe.css";
@@ -17,34 +17,6 @@ interface AboutMeProps {
 export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
   ({ page, setPage, clicked }, ref) => {
     const { clientWidth, mobile } = useContext(WindowContext);
-    const topRowRef = useRef<HTMLDivElement>(null);
-    const headshotRef = useRef<HTMLImageElement>(null);
-
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.remove("No-Show");
-              entry.target.classList.add("Slide-Up");
-            }
-          });
-        },
-        {
-          root: null,
-          threshold: 0.65,
-        }
-      );
-
-      if (topRowRef.current) {
-        observer.observe(topRowRef.current);
-      }
-
-      if (headshotRef.current) {
-        observer.observe(headshotRef.current);
-      }
-    }, [topRowRef, headshotRef, mobile]);
-
     return (
       <div className="About-Me" ref={ref}>
         <Header title={"ABOUT"} clicked={clicked} />
@@ -60,8 +32,7 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
           }}
         >
           <img
-            className="No-Show Headshot"
-            ref={headshotRef}
+            className="Headshot"
             height={`${
               mobile
                 ? `${Math.min(clientWidth * 0.65, 240)}px`
@@ -77,9 +48,9 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
               alignItems: mobile ? "center" : "flex-start",
             }}
             src={Headshot}
-            alt="CarGoLogo"
+            alt="Headshot"
           />
-          <div ref={topRowRef} className="md:p-4 flex flex-col No-Show">
+          <div className="md:p-4 flex flex-col">
             <p>
               I have experience as a full-stack software{" "}
               <b

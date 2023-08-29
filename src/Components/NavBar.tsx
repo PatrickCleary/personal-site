@@ -1,6 +1,5 @@
 import type { SetStateAction } from "react";
-import React, { useContext } from "react";
-import { WindowContext } from "../WindowContext";
+import React from "react";
 
 interface NavBarProps {
   refs: React.RefObject<HTMLDivElement>[];
@@ -9,90 +8,15 @@ interface NavBarProps {
 
 export const NavBar: React.FC<NavBarProps> = ({ refs, setClicked }) => {
   const navBarOptions = ["About", "Portfolio", "Contact"];
-  const { mobile } = useContext(WindowContext);
-  if (mobile)
-    return (
-      <div
-        style={{
-          width: "100%",
-          justifyContent: "center",
-          alignItems: "center",
-          position: "fixed",
-          top: 0,
-          display: "flex",
-          zIndex: 49,
-        }}
-      >
-        <div
-          className="Nav-Bar"
-          style={{
-            display: "flex",
-            flexDirection: mobile ? "row" : "column",
-            justifyContent: mobile ? "center" : "end",
-            backgroundColor: "#0a0d11e0",
-            paddingLeft: mobile ? "1rem" : 0,
-            paddingRight: mobile ? "1rem" : 0,
-            paddingTop: mobile ? ".75rem" : 0,
-            paddingBottom: mobile ? ".75rem" : 0,
-            borderRadius: ".5rem",
-            cursor: "pointer",
-            userSelect: "none",
-            columnGap: "1rem",
-            rowGap: "1rem",
-            marginRight: mobile ? "" : "2rem",
-            marginTop: mobile ? ".5rem" : "2rem",
-          }}
-        >
-          {navBarOptions.map((option, index) => {
-            return (
-              <div
-                key={index}
-                className="Nav-Bar-Item"
-                onClick={() => {
-                  refs[index]?.current?.scrollIntoView();
-                  setClicked(index);
-                }}
-              >
-                <p style={{ textAlign: "center", fontSize: ".80rem" }}>
-                  {option}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
+
   return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        right: 0,
-        display: "flex",
-        zIndex: 49,
-      }}
-    >
-      <div
-        className="Nav-Bar"
-        style={{
-          display: "flex",
-          flexDirection: mobile ? "row" : "column",
-          justifyContent: mobile ? "center" : "end",
-          backgroundColor: "#0a0d11e0",
-          borderRadius: ".5rem",
-          cursor: "pointer",
-          userSelect: "none",
-          columnGap: "1rem",
-          rowGap: "1rem",
-          marginRight: mobile ? "" : "2rem",
-          marginTop: mobile ? ".5rem" : "2rem",
-        }}
-      >
+    <div className="w-full justify-center items-center fixed top-0 flex z-50 md:fixed md:top-0 md:right-0 md:w-auto">
+      <div className="flex w-full md:w-auto flex-row md:flex-col justify-center md:justify-end bg-dark px-4 md:px-0 py-1 md:py-0 rounded-md cursor-pointer select-none gap-2 md:mr-2  md:mt-2">
         {navBarOptions.map((option, index) => {
           return (
             <div
               key={index}
-              className="Nav-Bar-Item"
+              className="md:px-6 w-full text-sm py-1 rounded-sm border-light border-opacity-20 border-b bg-dark box-border hover:bg-light hover:bg-opacity-30"
               onClick={() => {
                 refs[index]?.current?.scrollIntoView();
                 setClicked(index);

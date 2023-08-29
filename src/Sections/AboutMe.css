@@ -91,27 +91,6 @@ h3 {
   justify-content: center;
 }
 
-.About-Menu-Item {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-radius: 0.25rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #fff;
-  box-sizing: border-box;
-  flex: 1;
-  cursor: pointer;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.About-Menu-Item:hover {
-  background: radial-gradient(ellipse at bottom, #c8d4e6, transparent 45%);
-}
-
 .No-Display {
   display: none;
 }

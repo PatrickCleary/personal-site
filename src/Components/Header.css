@@ -1,11 +1,10 @@
 .Header {
-  border-radius: .5rem;
-  margin-bottom: 6rem;
-  width:85vw;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  width: 85vw;
   overflow: hidden;
   isolation: isolate;
 }
-
 
 .Title {
   text-align: center;

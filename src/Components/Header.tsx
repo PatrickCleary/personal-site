@@ -46,8 +46,7 @@ export const Header: React.FC<HeaderProps> = ({ title, clicked }) => {
       style={{
         width: mobile ? "85%" : "40%",
         alignSelf: "center",
-        marginBottom: mobile ? "2rem" : "6rem",
-        background: `radial-gradient(ellipse at bottom, #fff , transparent 25%)`,
+        marginBottom: mobile ? "2rem" : "4rem",
       }}
     >
       <h1

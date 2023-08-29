@@ -10,12 +10,6 @@
   position: relative;
 }
 
-.Contact-Me-Main-Content {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: 2rem;
-}
-
 .Fade-Out-Clipboard {
   animation: fadeOutMessage 2s ease-in-out forwards;
 }
