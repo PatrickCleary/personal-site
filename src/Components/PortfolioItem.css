@@ -1,6 +1,4 @@
 .Portfolio-Item {
-  border-radius: 0.5rem;
-  display: flex;
   grid-column: 1;
   grid-row: 1;
 }
@@ -33,7 +31,7 @@
   from {
     opacity: 0;
 
-    transform: translateX(30vw) scaleY(0.7);
+    transform: translateX(50vw) scaleY(0.85);
   }
   to {
     opacity: 1;
@@ -48,7 +46,7 @@
   }
   to {
     opacity: 0;
-    transform: translateX(30vw) scaleY(0.7);
+    transform: translateX(50vw) scaleY(0.85);
   }
 }
 
@@ -60,14 +58,14 @@
   to {
     opacity: 0;
 
-    transform: translateX(-30vw) scaleY(0.7);
+    transform: translateX(-50vw) scaleY(0.85);
   }
 }
 
 @keyframes inFromLeft {
   from {
     opacity: 0;
-    transform: translateX(-30vw) scaleY(0.7);
+    transform: translateX(-50vw) scaleY(0.85);
   }
   to {
     opacity: 1;
@@ -76,7 +74,7 @@
 }
 
 .App-Screenshots-DT {
-  width: 27vw;
+  width: 24vw;
   right: -2rem;
 }
 
@@ -99,16 +97,6 @@
   top: 0;
   bottom: 0;
   text-align: center;
-}
-
-.Portfolio-Item-Text {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-}
-
-.Portfolio-Item-Text-Mobile {
-  margin-top: 1rem;
 }
 
 .App-Screenshots-Mobile {

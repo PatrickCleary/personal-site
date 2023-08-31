@@ -84,12 +84,12 @@ h2 {
 .Left-Arrow-Mobile {
   position: absolute;
   animation: bounceLeft 3s linear infinite;
-  left: 0.5rem;
+  left: -0.5rem;
   width: 8vw;
 }
 .Right-Arrow-Mobile {
   position: absolute;
-  right: 0.5rem;
+  right: -0.5rem;
   animation: bounceRight 3s linear infinite;
 
   width: 8vw;

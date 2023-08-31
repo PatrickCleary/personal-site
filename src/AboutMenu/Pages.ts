@@ -1,5 +1,6 @@
 import type React from "react";
 import { transit } from "../CaseStudy/TransitMattersWriting";
+import { bbdata } from "../CaseStudy/BBData";
 import { cargo } from "../CaseStudy/CarGo";
 import { experience } from "./Experience";
 import { uxdesign } from "./UXDesign";
@@ -11,6 +12,7 @@ export type PageNamesNonNull =
   | "experience"
   | "more"
   | "transit"
+  | "bbdata"
   | "cargo";
 
 export type textItem = { type: "p" | "h"; text: string };
@@ -52,5 +54,9 @@ export const Pages: {
   cargo: {
     title: "CarGo",
     content: cargo,
+  },
+  bbdata: {
+    title: "Blue Bike Data",
+    content: bbdata,
   },
 };

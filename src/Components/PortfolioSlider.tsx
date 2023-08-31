@@ -43,7 +43,7 @@ export const PortfolioSlider: React.FC<PortfolioSliderProps> = ({
       ref={portfolioRef}
     >
       <div
-        className={`Arrows ${mobile && "Left-Arrow-Mobile"} ${
+        className={`Arrows  ${mobile && "Left-Arrow-Mobile"} ${
           !mobile && "Arrows-DT"
         } Arrow-Left`}
         style={{

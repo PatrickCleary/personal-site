@@ -18,7 +18,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
   setPage,
 }) => {
   const { mobile } = useContext(WindowContext);
-  let animationSelection = "Slide-Out-To-Right"; // This is a hack. The second portfolio item was hovering on top of the first.
+  let animationSelection = ""; // This is a hack. The second portfolio item was hovering on top of the first.
   if (selected.current === index) {
     if (selected.previous < selected.current) {
       animationSelection = "Slide-In-From-Right";
@@ -36,8 +36,8 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
   return (
     <div
       key={item.name}
-      className={`Portfolio-Item ${animationSelection} Invisible ${
-        mobile ? "Portfolio-Item-Mobile" : "Portfolio-Item-DT"
+      className={`rounded-md translate-x-full flex ${animationSelection} Invisible Portfolio-Item ${
+        mobile ? "flex items-center py-8 gap-4" : "h-[30vw] m-[2vw] p-[2vw]"
       }`}
       style={{
         width: mobile ? "60vw" : "auto",
@@ -54,16 +54,8 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
         />
       )}
       {mobile && (
-        <div className="Portfolio-Item-Text Portfolio-Item-Text-Mobile">
-          <h3
-            className="Portfolio-Item-Title"
-            style={{
-              textAlign: "center",
-              fontSize: "1.6rem",
-            }}
-          >
-            {item.title}
-          </h3>
+        <div className=" flex flex-col gap-y-1">
+          <h3 className="text-2xl text-center">{item.title}</h3>
         </div>
       )}
 
@@ -71,7 +63,6 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
         <div className="Portfolio-Item-Text Portfolio-Item-Text-DT">
           <div>
             <h3
-              className="Portfolio-Item-Title"
               style={{
                 textAlign: "left",
                 fontSize: "3rem",
@@ -84,7 +75,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
           <LearnMoreButton setPage={setPage} />
         </div>
       )}
-      {!mobile && <div style={{ width: "27vw", display: "flex" }} />}
+      {!mobile && <div style={{ width: "24vw", display: "flex" }} />}
       <img
         style={{
           position: mobile ? "relative" : "absolute",
@@ -93,7 +84,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
           mobile ? "App-Screenshots-Mobile" : "App-Screenshots-DT"
         }`}
         src={item.cardImage}
-        alt="Screenshots of TransitMatters Site"
+        alt="Screenshots of Site"
       />
       {mobile && (
         <LearnMoreButton

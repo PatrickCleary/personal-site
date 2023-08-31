@@ -12,7 +12,7 @@ export const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({
     // Need this div to prevent .Learn-More-Div from expanding to 100% width.
     <div style={{ display: "flex" }}>
       <div
-        className="flex flex-row items-center gap-x-8 rounded-sm border-2 border-light border-opacity-20 bg-light bg-opacity-10  cursor-pointer py-4 px-8 hover:bg-opacity-100 group"
+        className="flex flex-row items-center gap-x-8 rounded-sm border-2 border-light border-opacity-20 bg-light bg-opacity-10  cursor-pointer  py-2 md:py-4 px-4 md:px-8 hover:bg-opacity-100 group"
         onClick={() => {
           setPage();
           document.body.style.overflow = "hidden";
