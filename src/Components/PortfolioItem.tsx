@@ -60,7 +60,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
       )}
 
       {!mobile && (
-        <div className="Portfolio-Item-Text Portfolio-Item-Text-DT">
+        <div className="Portfolio-Item-Text flex flex-col gap-y-1 Portfolio-Item-Text-DT">
           <div>
             <h3
               style={{

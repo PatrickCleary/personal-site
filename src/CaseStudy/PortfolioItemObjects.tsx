@@ -21,7 +21,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "TransitMatters",
     cardImage: TMAppScreenshots,
     logo: TM,
-    text: "I led the redesign of a high-profile and impactful transit advocacy tool for TransitMatters – a Boston based organization. The redesign provided a more mobile-friendly and intuitive experience.",
+    text: "I led the redesign of a high-profile and impactful transit advocacy tool for TransitMatters – a Boston based organization.",
     color: "#141313",
   },
 
