@@ -13,7 +13,7 @@ export const bbdata: ContentItem[] = [
         the micromobility network in Boston, MA.
         <br />
         <br />
-        <a className="text-sky-400" href="https://dev.bluebikedata.com">
+        <a className="text-sky-400" href="https://bluebikedata.com">
           Check it out
         </a>
       </p>
