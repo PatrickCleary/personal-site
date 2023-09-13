@@ -1,28 +1,8 @@
-import React from "react";
 import type { ContentItem } from "./Pages";
 export const more: ContentItem[] = [
-  { type: "h", text: "Work" },
+  { type: "h", text: "Resume" },
 
-  {
-    type: "custom",
-    content: (
-      <p>
-        I started my career as a backend software engineer working at Amazon. I
-        have since discovered that my interests fall more on the product side of
-        software. I built{" "}
-        <a
-          className="text-sky-400"
-          href="https://dashboard.transitmatters.org/"
-        >
-          this dashboard
-        </a>{" "}
-        for a non-profit and now I am looking for a role as a product designer
-        or product manager.
-        <br />
-      </p>
-    ),
-  },
-  { type: "button", label: "Resume", href: "/resume.pdf" },
+  { type: "button", label: "Open", href: "/resume.pdf" },
   { type: "h", text: "Interests" },
   {
     type: "ulist",

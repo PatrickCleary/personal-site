@@ -52,42 +52,27 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
           />
           <div className="md:p-4 flex flex-col">
             <p>
-              I have experience as a full-stack software{" "}
-              <b
-                style={{
-                  fontFamily: "ChillaxBold",
-                  position: "relative",
-                  borderRadius: "100px",
-                }}
+              Patrick is a technology and design generalist – capable of
+              developing and building aesthetic software solutions to complex
+              problems. He specializes in city planning and urban design tools.
+              <br />
+              <br />
+              Patrick's work on transportation has been used as a data source in
+              the{" "}
+              <a
+                className="text-sky-500"
+                href="https://www.bostonglobe.com/2023/08/23/metro/red-line-mbta-is-the-worst/"
               >
-                engineer
-              </b>
-              , a startup{" "}
-              <b
-                style={{
-                  fontFamily: "ChillaxBold",
-                  position: "relative",
-                  borderRadius: "100px",
-                }}
+                Boston Globe
+              </a>{" "}
+              and on{" "}
+              <a
+                className="text-sky-500"
+                href="https://www.cbsnews.com/boston/news/mbta-red-line-closure-slow-zone-travel-time/"
               >
-                founder
-              </b>
-              , and a UX/UI{" "}
-              <b
-                style={{
-                  fontFamily: "ChillaxBold",
-                  position: "relative",
-                  borderRadius: "100px",
-                }}
-              >
-                designer
-              </b>
+                CBS
+              </a>
               .
-              <br />
-              <br />
-              This multidisciplinary experience allows me to understand the
-              needs of users in a unique way, and deliver on all aspects of a
-              project.
             </p>
             <AboutMenu page={page} setPage={setPage} />
           </div>
