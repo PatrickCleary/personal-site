@@ -27,6 +27,8 @@ export const more: ContentItem[] = [
   {
     type: "ulist",
     text: [
+      "Thinking with Type - Ellen Lupton",
+      "And Then We Grew Up - Rachel Friedman",
       "The Design of Everyday Things - Don Norman",
       "The Death and Life of Great American Cities - Jane Jacobs",
       "Don't Make Me Think - Steve Krug",
