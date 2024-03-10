@@ -27,12 +27,7 @@ export const AboutMenuItems = React.forwardRef<
         }
       }}
     >
-      <p
-        className="text-center group-hover:text-dark"
-        style={{
-          fontFamily: "chillax",
-        }}
-      >
+      <p className="text-center group-hover:text-dark" style={{}}>
         {title}
       </p>
     </div>

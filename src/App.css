@@ -167,6 +167,10 @@ p {
     url(./Fonts/Chillax-Regular.ttf) format("truetype"),
     url(./Fonts/Chillax-Regular.otf) format("opentype");
 }
+@font-face {
+  font-family: "RogerexSemiBold";
+  src: url(./Fonts/RogerexSemiBold.ttf) format("truetype");
+}
 
 .Nav-Bar-Item {
   padding-left: 1.5rem;

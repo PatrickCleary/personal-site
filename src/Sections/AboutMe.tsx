@@ -18,8 +18,8 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
   ({ page, setPage, clicked }, ref) => {
     const { clientWidth, mobile } = useContext(WindowContext);
     return (
-      <div className="About-Me" ref={ref}>
-        <Header title={"ABOUT"} clicked={clicked} />
+      <div className="About-Me relative" ref={ref}>
+        <Header title={"about"} clicked={clicked} />
         <div
           style={{
             display: "flex",

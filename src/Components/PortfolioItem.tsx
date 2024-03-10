@@ -50,7 +50,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
           fill="#F4C743"
           width={"24vw"}
           height={"24vw"}
-          className="TransitMattersLogo Icon"
+          className="Project Icon"
         />
       )}
       {mobile && (

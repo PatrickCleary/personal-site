@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
+    fontFamily: {
+      "reg-sb": ["RegerexSemiBold"],
+    },
     extend: {
       colors: {
         dark: "#0a0d11",

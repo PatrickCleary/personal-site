@@ -16,7 +16,7 @@ function App() {
   const connectRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="App">
+    <div className="h-[100svh] w-[100vw]">
       <NavBar
         refs={[aboutRef, portfolioRef, connectRef]}
         setClicked={setClicked}

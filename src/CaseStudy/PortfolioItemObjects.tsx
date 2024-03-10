@@ -2,8 +2,8 @@ import type React from "react";
 import TMAppScreenshots from "../Images/transit_hero.png";
 import CarGoAppScreenshots from "../Images/CarGoAppScreenshots.png";
 import BBDataScreenshots from "../Images/BBData_portfolio_hero.png";
-import { ReactComponent as TM } from "../Images/TM.svg";
 import { ReactComponent as CG } from "../Images/CarGo.svg";
+import { ReactComponent as TM } from "../Images/TM.svg";
 import { ReactComponent as bb } from "../Images/bbdata.svg";
 
 export interface PortfolioItem {

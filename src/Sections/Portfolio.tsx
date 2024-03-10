@@ -13,8 +13,8 @@ interface PortfolioProps {
 export const Portfolio = React.forwardRef<HTMLDivElement, PortfolioProps>(
   ({ setPage, clicked }, ref) => {
     return (
-      <div className="Portfolio" ref={ref}>
-        <Header title="PORTFOLIO" clicked={clicked} />
+      <div className="Portfolio relative" ref={ref}>
+        <Header title="portfolio" clicked={clicked} />
         <PortfolioSlider setPage={setPage} />
       </div>
     );

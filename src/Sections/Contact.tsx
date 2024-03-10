@@ -65,8 +65,8 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
     const [clickable, setClickable] = useState(true);
 
     return (
-      <div className="Contact" ref={ref}>
-        <Header title="CONTACT" clicked={clickedLink} />
+      <div className="Contact relative" ref={ref}>
+        <Header title="contact" clicked={clickedLink} />
         <div className="flex flex-col items-center">
           <p
             className="Email"
