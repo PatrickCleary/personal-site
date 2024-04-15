@@ -45,7 +45,6 @@ export const Header: React.FC<HeaderProps> = ({ title, clicked }) => {
       className="Header Invisible"
       style={{
         width: mobile ? "85%" : "40%",
-        alignSelf: "center",
         marginBottom: mobile ? "2rem" : "4rem",
       }}
     >

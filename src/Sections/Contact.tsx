@@ -5,7 +5,6 @@ import LinkedIn from "../Images/LinkedInStyled.png";
 import Twitter from "../Images/TwitterStyled.png";
 import { WindowContext } from "../WindowContext";
 import { Footer } from "../Components/Footer";
-import { Header } from "../Components/Header";
 
 const sites = [
   {
@@ -36,8 +35,8 @@ const ContactBox: React.FC<ContactBoxProps> = ({ name, icon, link }) => {
   return (
     <div
       style={{
-        width: mobile ? 0.1 * clientWidth : 0.05 * clientWidth,
-        height: mobile ? 0.1 * clientWidth : 0.05 * clientWidth,
+        width: mobile ? 0.05 * clientWidth : 0.025 * clientWidth,
+        height: mobile ? 0.05 * clientWidth : 0.025 * clientWidth,
 
         display: "flex",
         alignItems: "center",
@@ -65,8 +64,10 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
     const [clickable, setClickable] = useState(true);
 
     return (
-      <div className="Contact" ref={ref}>
-        <Header title="CONTACT" clicked={clickedLink} />
+      <div
+        className="bg-slate-950 bg-opacity-90 backdrop-blur-lg w-full pt-1p6 pb-16 flex flex-col items-center relative"
+        ref={ref}
+      >
         <div className="flex flex-col items-center">
           <p
             className="Email"
@@ -94,7 +95,7 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
           </p>
         </div>
         <div className="flex flex-col items-center">
-          <div className="mt-4 grid gap-8 grid-cols-3 ">
+          <div className="mt-2 grid gap-4 grid-cols-3 ">
             {sites.map((site) => {
               return (
                 <ContactBox

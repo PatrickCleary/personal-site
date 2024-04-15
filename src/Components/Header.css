@@ -1,7 +1,4 @@
 .Header {
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
-  width: 85vw;
   overflow: hidden;
   isolation: isolate;
 }

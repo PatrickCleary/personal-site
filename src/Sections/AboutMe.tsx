@@ -6,7 +6,6 @@ import "./AboutMe.css";
 import { WindowContext } from "../WindowContext";
 import { AboutMenu } from "../Components/AboutMenu";
 import type { PageNames } from "../AboutMenu/Pages";
-import { Header } from "../Components/Header";
 
 interface AboutMeProps {
   page: PageNames;
@@ -18,30 +17,30 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
   ({ page, setPage, clicked }, ref) => {
     const { clientWidth, mobile } = useContext(WindowContext);
     return (
-      <div className="About-Me" ref={ref}>
-        <Header title={"ABOUT"} clicked={clicked} />
+      <div
+        className="z-10 relative pt-16 pb-16 flex flex-col bg-slate-950 backdrop-blur-lg bg-opacity-90"
+        ref={ref}
+      >
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
             flexDirection: mobile ? "column" : "row",
             gap: "4rem",
             padding: "2rem",
-            width: "66%",
           }}
         >
           <img
             className="Headshot"
             height={`${
               mobile
-                ? `${Math.min(clientWidth * 0.65, 240)}px`
-                : clientWidth * 0.2
+                ? `${Math.min(clientWidth * 0.45, 240)}px`
+                : clientWidth * 0.15
             }px`}
             width={`${
               mobile
-                ? `${Math.min(clientWidth * 0.65, 240)}px`
-                : clientWidth * 0.2
+                ? `${Math.min(clientWidth * 0.45, 240)}px`
+                : clientWidth * 0.15
             }px`}
             style={{
               borderRadius: "0.25rem",

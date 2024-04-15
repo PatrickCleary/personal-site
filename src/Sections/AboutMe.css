@@ -1,14 +1,4 @@
 .About-Me {
-  z-index: 10;
-  position: relative;
-  background: linear-gradient(to top, #020811, #040a12);
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 .No-Show {
   visibility: hidden;
