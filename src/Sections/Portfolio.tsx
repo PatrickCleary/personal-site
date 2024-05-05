@@ -15,6 +15,16 @@ export const Portfolio = React.forwardRef<HTMLDivElement, PortfolioProps>(
         className="bg-slate-950 bg-opacity-90 backdrop-blur-lg z-20 pt-16 pb-16 flex flex-row flex-wrap relative overflow-x-hidden w-full px-2 lg:px-8 gap-2 lg:gap-8"
         ref={ref}
       >
+        {" "}
+        <a
+          className="w-1/2 lg:w-1/3 hover:bg-slate-200 cursor-pointer group rounded-md"
+          href="https://parkingregulations.nyc"
+        >
+          <img src={"/portfolio/nycpr.jpg"} className="" />
+          <h3 className="text-lg italic group-hover:text-slate-950">
+            NYC Parking Regulations
+          </h3>
+        </a>
         <a
           className="w-1/2 lg:w-1/3 hover:bg-slate-200 cursor-pointer group rounded-md"
           href="https://bluebikedata.com"
@@ -39,7 +49,7 @@ export const Portfolio = React.forwardRef<HTMLDivElement, PortfolioProps>(
         >
           <img src={"/portfolio/hl.jpg"} />
           <h3 className="text-lg italic group-hover:text-slate-950">
-            Humanity Land
+            Humanity Land (Desktop only)
           </h3>
         </a>
         <a

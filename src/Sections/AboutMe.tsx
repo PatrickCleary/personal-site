@@ -1,6 +1,5 @@
 import type { SetStateAction } from "react";
 import React, { useContext } from "react";
-import Headshot from "../Images/Headshot.png";
 import "../animations.css";
 import "./AboutMe.css";
 import { WindowContext } from "../WindowContext";
@@ -43,10 +42,9 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
                 : clientWidth * 0.15
             }px`}
             style={{
-              borderRadius: "0.25rem",
               alignItems: mobile ? "center" : "flex-start",
             }}
-            src={Headshot}
+            src={"/headshot_1k.jpg"}
             alt="Headshot"
           />
           <div className="md:p-4 flex flex-col">
