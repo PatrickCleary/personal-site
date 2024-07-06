@@ -3,15 +3,14 @@ export const Footer = () => {
   return (
     <div
       style={{
-        position: "absolute",
         bottom: "0px",
         padding: ".5rem",
         display: "flex",
-        justifyContent: "center",
       }}
+      className="justify-center w-full"
     >
       <p
-        style={{ fontSize: ".8rem", paddingLeft: ".5rem" }}
+        style={{ fontSize: ".8rem" }}
       >{`© Patrick Cleary ${new Date().getFullYear()}`}</p>
     </div>
   );

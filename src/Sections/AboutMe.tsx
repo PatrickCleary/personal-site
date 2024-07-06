@@ -17,33 +17,12 @@ export const AboutMe = React.forwardRef<HTMLDivElement, AboutMeProps>(
     const { clientWidth, mobile } = useContext(WindowContext);
     return (
       <div
-        className="z-10 relative pt-16 pb-16 flex flex-col bg-slate-950 backdrop-blur-lg bg-opacity-90"
+        className=" flex items-center z-10 relative pb-8 pt-8 lg:pt-16 lg:pb-16 flex-col bg-slate-950 backdrop-blur-lg bg-opacity-90"
         ref={ref}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: mobile ? "column" : "row",
-            gap: "4rem",
-            padding: "2rem",
-          }}
-        >
+        <div className="max-w-[940px] w-full flex lg:items-center items-center lg:flex-row flex-col gap-8 h-fit px-4 lg:px-0">
           <img
-            className="Headshot"
-            height={`${
-              mobile
-                ? `${Math.min(clientWidth * 0.45, 240)}px`
-                : clientWidth * 0.15
-            }px`}
-            width={`${
-              mobile
-                ? `${Math.min(clientWidth * 0.45, 240)}px`
-                : clientWidth * 0.15
-            }px`}
-            style={{
-              alignItems: mobile ? "center" : "flex-start",
-            }}
+            className="lg:items-start items-center rounded-sm h-64 w-64"
             src={"/headshot_1k.jpg"}
             alt="Headshot"
           />

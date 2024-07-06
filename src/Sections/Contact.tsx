@@ -65,50 +65,29 @@ export const Contact = React.forwardRef<HTMLDivElement, ContactProps>(
 
     return (
       <div
-        className="bg-slate-950 bg-opacity-90 backdrop-blur-lg w-full pt-1p6 pb-16 flex flex-col items-center relative"
+        className="bg-slate-950 flex items-center bg-opacity-90 backdrop-blur-lg w-full pt-16 pb-2 flex-col relative"
         ref={ref}
       >
-        <div className="flex flex-col items-center">
-          <p
-            className="Email"
-            style={{ cursor: "pointer", fontSize: "1.25rem" }}
-            onClick={() => {
-              if (clickable) {
-                setClicked(true);
-                setClickable(false);
-                setTimeout(() => {
-                  setClickable(true);
-                  setClicked(false);
-                }, 2000);
-              }
-              navigator.clipboard.writeText("PatrickDavisCleary@gmail.com");
-            }}
-          >
-            PatrickDavisCleary@gmail.com
-          </p>
-
-          <p
-            className={clicked ? "Fade-Out-Clipboard" : "Invisible"}
-            style={{ fontSize: ".8rem", opacity: 0 }}
-          >
-            Copied to clipboard!
-          </p>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="mt-2 grid gap-4 grid-cols-3 ">
-            {sites.map((site) => {
-              return (
-                <ContactBox
-                  key={site.name}
-                  icon={site.icon}
-                  link={site.link}
-                  name={site.name}
-                />
-              );
-            })}
+        <div className="max-w-[940px] w-full items-center">
+          <div className="flex flex-col items-center relative">
+            <p className="text-base">patrickdaviscleary@gmail.com</p>
           </div>
+          <div className="flex flex-col items-center mb-4">
+            <div className="mt-2 grid gap-4 grid-cols-3 ">
+              {sites.map((site) => {
+                return (
+                  <ContactBox
+                    key={site.name}
+                    icon={site.icon}
+                    link={site.link}
+                    name={site.name}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     );
   }
